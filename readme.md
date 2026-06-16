@@ -1,3 +1,21 @@
+Requirements: 
+
+PySide6
+watchdog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ###########################  Start  ########################### 15.06.2026
 
 First version of the readme file. 
