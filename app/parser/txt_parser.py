@@ -19,9 +19,11 @@ ALLOWED_PREFIXES = [
 # Character Details
 
     "Character:",
+    "Faction:",
     "Class:",
+    "Average Item Level:",
     "Level:",
-
+    "Specialization:",
 
 # Currencies
 
@@ -31,15 +33,38 @@ ALLOWED_PREFIXES = [
     "Coffer Key Shards",
     "Restored Coffer Key",
     "Myth Dawncrest (ID: 3347)",
-   
+    "Brimming Arcana", 
+    "Field Accolade", 
+    "Luminous Dust", 
+    "Remnant of Anguish", 
+    "Shard of Dundun", 
+    "Unalloyed Abundance", 
+    "Uncontaminated Void Sample", 
+    "Dawnlight Manaflux", 
+    "Nebulous Voidcore", 
+    "Undercoin",
+    "Untainted Mana-Crystals", 
+    "Adventurer Dawncrest", 
+    "Veteran Dawncrest", 
+    "Champion Dawncrest",
+    "Hero Dawncrest", 
+    "Myth Dawncrest", 
+    "Radiant Spark Dust",    
 
 # Reputations
 
     "Amani Tribe", 
     "Hara'ti",
+    "Prey: Season 1",
+    "Ritual Sites",
     "Silvermoon Court",
     "The Singularity",
-  
+    "Blood Knights",
+    "Farstriders",
+    "Magisters",
+    "Shades of the Row",
+    "Slayer's Duellum",
+    "Valeera Sanguinar", 
 ]
 
 
