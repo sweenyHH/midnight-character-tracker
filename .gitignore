@@ -1,5 +1,13 @@
-/app/venv/
+# Virtual env
+venv/
+.env/
 
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
 
 # Python cache folders
 __pycache__/
