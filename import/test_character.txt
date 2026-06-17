@@ -1,0 +1,71 @@
+== Location ==
+Zone: Silvermoon City
+Subzone: The Bazaar
+Map: Silvermoon City
+Map ID: 2393
+Parent Map: Eversong Woods
+Parent Map ID: 2395
+Coordinates: 50.5, 65.5
+Hearthstone Location: Wayfarer's Rest
+
+Character Stats:
+Character: Sweeny-Earthen Ring
+Faction: Alliance
+Level: 90
+Race: Human
+Class: Priest
+Specialization: Holy (HEALER)
+Primary Stat: Intellect
+Average Item Level: 282.19
+Equipped Item Level: 282.19
+PvP Item Level: 282.19
+Health: n/a/447600
+XP: 0/100000000
+XP To Level: 100000000
+XP Progress: 0%
+Armor: 512
+== Primary Attributes ==
+Strength: 360
+Agility: 515
+Stamina: 22380
+Intellect: 2609
+Attack Power: 0
+== Combat Ratings ==
+Critical Strike: 870 rating / 23.91%
+Haste: 414 rating / 12.69%
+Mastery: 591 rating / 18.94%
+Versatility: 612 rating / 11.33%
+Leech: 249 rating / 3.61%
+Speed: 86 rating / 7.48%
+Avoidance: 0 rating / 0%
+
+Currencies:
+Gold: 7207g 41s 91c
+Currency Count: 23
+
+== Midnight ==
+Angler Pearls (ID: 3373) - Quantity: 167
+Artisan Enchanter's Moxie (ID: 3258) - Quantity: 1675 - Backpack
+Artisan Engineer's Moxie (ID: 3259) - Quantity: 1470 - Backpack
+Brimming Arcana (ID: 3379) - Quantity: 2000
+Field Accolade (ID: 3405) - Quantity: 849
+Luminous Dust (ID: 3385) - Quantity: 43
+Remnant of Anguish (ID: 3392) - Quantity: 9057
+Shard of Dundun (ID: 3376) - Quantity: 8/8 - Weekly: 0/8
+Unalloyed Abundance (ID: 3377) - Quantity: 600
+Uncontaminated Void Sample (ID: 3400) - Quantity: 0 - Total Earned: 7
+Voidlight Marl (ID: 3316) - Quantity: 51531 - Backpack
+
+== Season 1 ==
+Coffer Key Shards (ID: 3310) - Quantity: 91 - Weekly: 225/600
+Dawnlight Manaflux (ID: 3378) - Quantity: 6/8
+Nebulous Voidcore (ID: 3418) - Quantity: 5/16 - Total Earned: 16
+Restored Coffer Key (ID: 3028) - Quantity: 27
+Undercoin (ID: 2803) - Quantity: 22651
+Untainted Mana-Crystals (ID: 3356) - Quantity: 700/1000 - Weekly: 0/250
+Adventurer Dawncrest (ID: 3383) - Quantity: 19 - Total Earned: 849
+Veteran Dawncrest (ID: 3341) - Quantity: 84 - Total Earned: 1314
+Champion Dawncrest (ID: 3343) - Quantity: 3 - Total Earned: 1383
+Hero Dawncrest (ID: 3345) - Quantity: 85 - Total Earned: 1255
+Myth Dawncrest (ID: 3347) - Quantity: 35 - Total Earned: 505
+Radiant Spark Dust (ID: 3212) - Quantity: 15/15 - Total Earned: 15

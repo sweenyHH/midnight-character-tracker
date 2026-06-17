@@ -17,11 +17,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 
-To allow execution ot run_tests.sh:
+To allow execution of run_tests.sh:
 
 chmod +x run_tests.sh
 
+To allow execution of run_parse_debug.sh:
 
+chmod +x run_parse_debug.sh
 
 
 
@@ -60,8 +62,15 @@ midnightchartracker/
 ├── main.py
 ├── requirements.txt
 ├── readme.md
+├── run_parse_debug.sh
+├── run_tests.sh
 │
-├── import/                
+├── import/        
+│
+├── tests/   
+    ├── test_model.py
+    ├── test_parser.py
+    ├── test_parser_output.py                    
 │
 ├── app/
     ├── model/
@@ -72,9 +81,11 @@ midnightchartracker/
     │   ├── txt_parser.py      
     │
     ├── utils/
-        └── watcher.py         
+        └── watcher.py      
+
+(turns out to be super ugly on github... will need to investigate later on how to make it nice. I keep it here for personal orientation never the less)   
 
 
-The project root folder should only hold the main.py, a requirements.txt and the README.md file. Further, it should hold folders to help me structure my additional files. First, there is the import folder, which will be used to drop the character export .txt files I want to parse. The major part of my app will be located in the app folder, which will contain several subfolders. The names I picked are pretty straight forward, so my data models can be found in "model", the parser folder contains the parser to extract data from the source .txt files and utils will contain a watchdog to update data when I drop new character export files into the import folder. Additional utilities will go there too. 
+The project root folder should only hold the main.py, a requirements.txt, the README.md file and test scripts. Further, it should hold folders to help me structure my additional files. First, there is the import folder, which will be used to drop the character export .txt files I want to parse. The major part of my app will be located in the app folder, which will contain several subfolders. The names I picked are pretty straight forward, so my data models can be found in "model", the parser folder contains the parser to extract data from the source .txt files and utils will contain a watchdog to update data when I drop new character export files into the import folder. Additional utilities will go there too. Last but not least, we have a folder holding my tests.
 
 What is not yet included in the architecture tree above are folders related to the PySide6 frontend, as I'm not yet at the point where I understood what I all need. But certainly, whatever I will need will go to the app folder too.
