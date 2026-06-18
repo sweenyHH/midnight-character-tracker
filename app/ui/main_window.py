@@ -84,13 +84,25 @@ class MainWindow(QMainWindow):
         self.top_container = QWidget()
         self.top_layout = QHBoxLayout()
 
-# Box 1 (left side, 50% width)
+# Box 1 container (left side, will hold button + label)
 
-        self.box1 = QLabel("Box 1")
-        self.box1.setAlignment(Qt.AlignCenter)
-        self.box1.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+        self.box1_container = QWidget()
+        self.box1_layout = QVBoxLayout()
 
-# Box 2 (right side, 50% width)
+# Box 1 label
+
+        self.box1_label = QLabel("Box 1")
+        self.box1_label.setAlignment(Qt.AlignCenter)
+
+# Add button and label to Box 1 (button on top)
+
+        self.box1_layout.addWidget(self.select_button)
+        self.box1_layout.addWidget(self.box1_label)
+
+        self.box1_container.setLayout(self.box1_layout)
+        self.box1_container.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+
+# Box 2 (right side, text only)
 
         self.box2 = QLabel("Box 2")
         self.box2.setAlignment(Qt.AlignCenter)
@@ -98,7 +110,7 @@ class MainWindow(QMainWindow):
 
 # Add boxes to top layout (equal width)
 
-        self.top_layout.addWidget(self.box1)
+        self.top_layout.addWidget(self.box1_container)
         self.top_layout.addWidget(self.box2)
 
         self.top_container.setLayout(self.top_layout)
@@ -108,9 +120,8 @@ class MainWindow(QMainWindow):
         self.bottom_container = QWidget()
         self.bottom_layout = QVBoxLayout()
 
-# Keep original widgets inside bottom area
+# Keep original widgets inside bottom area (button removed from here)
 
-        self.bottom_layout.addWidget(self.select_button)
         self.bottom_layout.addWidget(self.table)
         self.bottom_layout.addWidget(self.back_button)
         self.bottom_layout.addWidget(self.detail_view)
