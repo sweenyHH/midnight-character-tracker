@@ -2,9 +2,9 @@
 
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QPushButton, QFileDialog,
-    QTableWidget, QTableWidgetItem
+    QTableWidget, QTableWidgetItem, QHBoxLayout, QLabel
 )
-from PySide6.QtCore import QTimer, Signal
+from PySide6.QtCore import QTimer, Signal, Qt
 
 from app.services.data_service import DataService
 from app.ui.detail_view import DetailView
@@ -75,12 +75,52 @@ class MainWindow(QMainWindow):
         self.back_button.clicked.connect(self.show_list)
         self.back_button.hide()
 
-# Layout structure
+# --------------------------------------------------
+# New layout structure (top boxes + bottom table area)
+# --------------------------------------------------
 
-        self.layout.addWidget(self.select_button)
-        self.layout.addWidget(self.table)
-        self.layout.addWidget(self.back_button)
-        self.layout.addWidget(self.detail_view)
+# Top container (holds Box1 and Box2 - 20% of window height)
+
+        self.top_container = QWidget()
+        self.top_layout = QHBoxLayout()
+
+# Box 1 (left side, 50% width)
+
+        self.box1 = QLabel("Box 1")
+        self.box1.setAlignment(Qt.AlignCenter)
+        self.box1.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+
+# Box 2 (right side, 50% width)
+
+        self.box2 = QLabel("Box 2")
+        self.box2.setAlignment(Qt.AlignCenter)
+        self.box2.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+
+# Add boxes to top layout (equal width)
+
+        self.top_layout.addWidget(self.box1)
+        self.top_layout.addWidget(self.box2)
+
+        self.top_container.setLayout(self.top_layout)
+
+# Bottom container (holds existing UI elements - 80% of window height)
+
+        self.bottom_container = QWidget()
+        self.bottom_layout = QVBoxLayout()
+
+# Keep original widgets inside bottom area
+
+        self.bottom_layout.addWidget(self.select_button)
+        self.bottom_layout.addWidget(self.table)
+        self.bottom_layout.addWidget(self.back_button)
+        self.bottom_layout.addWidget(self.detail_view)
+
+        self.bottom_container.setLayout(self.bottom_layout)
+
+# Add both sections to main layout with proportion (20% / 80%)
+
+        self.layout.addWidget(self.top_container, 2)
+        self.layout.addWidget(self.bottom_container, 8)
 
         self.container.setLayout(self.layout)
         self.setCentralWidget(self.container)
