@@ -45,6 +45,24 @@ class MainWindow(QMainWindow):
 # Folder selection button
 
         self.select_button = QPushButton("Select Data Folder")
+
+
+# Apply dark styling to button
+
+        self.select_button.setStyleSheet("""
+        QPushButton {
+                background-color: #3c3f41;
+                color: white;
+                border: 1px solid #555;
+                padding: 6px;
+        }
+        QPushButton:hover {
+                background-color: #484a4c;
+        }
+        """)
+
+
+
         self.select_button.clicked.connect(self.select_folder)
 
 # Character overview table
@@ -100,13 +118,25 @@ class MainWindow(QMainWindow):
         self.box1_layout.addWidget(self.box1_label)
 
         self.box1_container.setLayout(self.box1_layout)
-        self.box1_container.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+        
+        self.box1_container.setStyleSheet("""
+        background-color: #2b2b2b;
+        color: #ffffff;
+        border: 1px solid #444;
+        """)
+
 
 # Box 2 (right side, text only)
 
         self.box2 = QLabel("Box 2")
         self.box2.setAlignment(Qt.AlignCenter)
-        self.box2.setStyleSheet("background-color: lightgray; border: 1px solid black;")
+        
+        self.box2.setStyleSheet("""
+        background-color: #2b2b2b;
+        color: #ffffff;
+        border: 1px solid #444;
+        """)
+
 
 # Add boxes to top layout (equal width)
 
