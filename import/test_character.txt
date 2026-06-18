@@ -9,7 +9,7 @@ Coordinates: 50.5, 65.5
 Hearthstone Location: Wayfarer's Rest
 
 Character Stats:
-Character: Sweeny-Earthen Ring
+Character: TESTY____2-Test_Realm
 Faction: Alliance
 Level: 90
 Race: Human

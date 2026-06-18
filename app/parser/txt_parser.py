@@ -85,6 +85,7 @@ def parse_txt(file_path):
 
     character_name = file_path.split("/")[-1].split(".")[0]
     character = Character(character_name)
+    character.source_file = file_path
 
     with open(file_path, encoding="utf-8") as file:
         for line in file:

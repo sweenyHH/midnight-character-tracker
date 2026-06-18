@@ -94,3 +94,19 @@ https://www.geeksforgeeks.org/python/create-a-watchdog-in-python-to-look-for-fil
 Good step by step tutorial (annoying add popups) https://www.geeksforgeeks.org/python/create-a-watchdog-in-python-to-look-for-filesystem-changes/
 Minimal quickstart with code https://python-watchdog.readthedocs.io/en/stable/quickstart.html
 
+###########################  Update 3  ########################### 18.06.2026
+
+I managed to clean up things as planned. So I now have a dark theme for the app, I splited the readme and dev_diary files, I cleaned up my git mess and removed pycache that sneaked in my repository and I moved or better reinstalled venv in the project root (which I installed in the app subfolder by mistake). So things are cleaned up and nice now. 
+
+While testing the app, I noticed that I have a problem with my watchdogs. They were only active on new file creations, but I need them to tackle file changes / new versions of files with the same name, too. 
+I seems the issue was caused by my WSL on Windows situation, which forced my to use the PollingObserver. (see https://github.com/gorakhargosh/watchdog/issues/1072 and https://python-watchdog.readthedocs.io/en/stable/api.html?highlight=polling#module-watchdog.observers.polling). So I changed both watcher to use PollingObserver.
+
+The testing still not resulted in what I wanted to see: my app automatically updating when I drop a new file or version of a file in one of my import folders. That was... due to my manual code management. I simply moved a version of my main_window.py to the "official" projectfolder that did not include the update method def _update_ui(self):.
+
+Due to the tinkering with my watchdog, I now have a lot of debug print commands in my main_window.py that I will need to clean later. 
+
+While I came to the conclusion, that I lost a lot of time on the watcher issues sourcing from having WSL on Windows and not a clean Linux environment and thinking about to get a linux system for future work, I realized, that I now build something, that only works on WSL and will probably crash / break on Linux systems, not having a windows filesystem with a source folder to watch and copy files from there to the import folder in the project. I tried to solve this, by implementing "if not os.path.exists" condition into my watcher. 
+
+What I missed again, is to make frequent git commits. Something in me kind of refuses to commit / push code that is not yet done and tested. So even when in my official project folder, I tinker and tinker and don't commit anything. Again, my plan is to do better today, before I learn the hard way why one should frequently commit changes. 
+
+As by now the funcionality in general looks good, the goal for today is to get back to the parser, the main_window and the details_view with the goal to get to a good layout and the information I want to display.

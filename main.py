@@ -8,14 +8,21 @@ from app.ui.main_window import MainWindow
 
 
 def main():
-# Create the Qt application instance
+    # Create the Qt application instance
     app = QApplication(sys.argv)
 
-# Create and show main window
+    # Load dark theme stylesheet
+    try:
+        with open("assets/dark_theme.qss") as f:
+            app.setStyleSheet(f.read())
+    except FileNotFoundError:
+        print("No stylesheet found, running without theme.")
+
+    # Create and show main window
     window = MainWindow()
     window.show()
 
-# Start application event loop
+    # Start application event loop
     sys.exit(app.exec())
 
 if __name__ == "__main__":
