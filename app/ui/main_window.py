@@ -6,8 +6,6 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import QTimer, Signal, Qt
 
-import re
-
 from app.services.data_service import DataService
 from app.ui.detail_view import DetailView
 from app.utils.watcher import FolderWatcher
@@ -172,45 +170,36 @@ class MainWindow(QMainWindow):
 
     def update_reputation_box(self):
 
-        reputation = self.data_service.get_reputation()
-        
-        
-        reputation = self.data_service.get_reputation()
+        reputation_list = self.data_service.get_reputation()
 
-        if not reputation:
-                self.box2.setText("No reputation data available")
-                return
+        if not reputation_list:
+            self.box2.setText("No reputation data available")
+            return
 
 # Build HTML string (centered title, left-aligned content)
 
         text = "<h3 style='text-align:center;'>Reputation</h3>"
         text += "<div style='text-align:left;'>"
 
-        for key, value in reputation.items():
+        for rep in reputation_list:
 
 # Case 1: Renown reputations
 
-            if "Renown" in value:
-                renown_part = value.split("-")[0].strip()
-                text += f"<b>{key}</b>: {renown_part}<br>"
+            if rep.rep_type == "renown":
+                text += f"<b>{rep.name}</b>: Renown {rep.level}<br>"
 
-# Case 2: Normal reputations
+# Case 2: Standard reputations
 
             else:
-                parts = value.split("-")
-                level = parts[0].strip()
-
-                progress_match = re.search(r"\((.*?)\)", value)
-
-                if progress_match:
-                    numbers = progress_match.group(1)
-                    text += f"<b>{key}</b>: {level} ({numbers})<br>"
+                if rep.current is not None and rep.maximum is not None:
+                    text += f"<b>{rep.name}</b>: {rep.level} ({rep.current}/{rep.maximum})<br>"
                 else:
-                    text += f"<b>{key}</b>: {level}<br>"
+                    text += f"<b>{rep.name}</b>: {rep.level}<br>"
 
         text += "</div>"
 
         self.box2.setText(text)
+
 
 
 # --------------------------------------------------

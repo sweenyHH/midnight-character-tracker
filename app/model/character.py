@@ -23,3 +23,15 @@ class Character:
 
     def add_currency(self, currency):
         self.currencies.append(currency)
+
+
+class Reputation:
+
+# Represents a single reputation entry
+
+    def __init__(self, name, rep_type, level=None, current=None, maximum=None):
+        self.name = name              # e.g. "Amani Tribe"
+        self.rep_type = rep_type      # "renown" or "standard"
+        self.level = level            # "Neutral" OR integer for renown
+        self.current = current        # current progress
+        self.maximum = maximum        # max progress

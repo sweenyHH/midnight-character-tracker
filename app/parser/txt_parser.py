@@ -5,7 +5,7 @@ Character and Currency classes from app/model/character.py
 """
 
 import re
-from app.model.character import Character, Currency
+from app.model.character import Character, Currency, Reputation
 
 """
 -------------------------------
@@ -86,17 +86,10 @@ REPUTATION_PREFIXES = [
 
 
 def is_allowed_line(line: str) -> bool:
-    """
-    Checks whether a line should be parsed based on predefined prefixes.
-    """
     return any(line.startswith(prefix) for prefix in ALLOWED_PREFIXES)
 
 
 def parse_txt(file_path):
-    """
-    Parses a single TXT file and returns a Character object.
-    Only selected lines are imported.
-    """
 
 # Extract character name from filename (fallback)
 
@@ -104,12 +97,9 @@ def parse_txt(file_path):
     character = Character(character_name)
     character.source_file = file_path
 
+# Store reputation globally
 
-    # Store reputation globally (latest parsed file wins)
-
-    reputation_data = {}
-
-
+    reputation_data = []
 
     with open(file_path, encoding="utf-8") as file:
         for line in file:
@@ -118,38 +108,85 @@ def parse_txt(file_path):
             if not line:
                 continue
 
-# Apply filter: skip everything not explicitly allowed
+# Apply filter
+
             if not is_allowed_line(line):
                 continue
 
-
-# Reputation parsing (shared data)
+# -------------------------------
+# Reputation parsing
+# -------------------------------
 
             if any(line.startswith(prefix) for prefix in REPUTATION_PREFIXES):
-                if ":" in line:
-                    key, value = line.split(":", 1)
-                    reputation_data[key.strip()] = value.strip()
+
+# Extract name
+
+                name_match = re.match(r"^([^(]+)", line)
+                name = name_match.group(1).strip() if name_match else line
+
+# Case 1: Renown
+
+                renown_match = re.search(r"Renown\s+(\d+)", line)
+
+                if renown_match:
+                    renown_level = int(renown_match.group(1))
+
+                    progress_match = re.search(r"(\d+)/(\d+)", line)
+                    current = maximum = None
+
+                    if progress_match:
+                        current = int(progress_match.group(1))
+                        maximum = int(progress_match.group(2))
+
+                    reputation_data.append(Reputation(
+                        name=name,
+                        rep_type="renown",
+                        level=renown_level,
+                        current=current,
+                        maximum=maximum
+                    ))
+
+                    continue
+
+# Case 2: Standard reputation
+
+                level_match = re.search(r"\(([^)]+)\)", line)
+                progress_match = re.search(r"(\d+)/(\d+)", line)
+
+                level = level_match.group(1) if level_match else None
+
+                current = maximum = None
+                if progress_match:
+                    current = int(progress_match.group(1))
+                    maximum = int(progress_match.group(2))
+
+                reputation_data.append(Reputation(
+                    name=name,
+                    rep_type="standard",
+                    level=level,
+                    current=current,
+                    maximum=maximum
+                ))
+
                 continue
 
-            
-# Generic key-value parsing. Example: "Class: Paladin"
-            
-            if ":" in line and not "Quantity" in line:
+# -------------------------------
+# Generic key-value parsing
+# -------------------------------
+
+            if ":" in line and "Quantity" not in line:
                 key, value = line.split(":", 1)
 
-                key = key.strip()
-                value = value.strip()
+                character.location[key.strip()] = value.strip()
 
-                # Store in character.location
-                character.location[key] = value
-
-                # Special case: overwrite character name
-                if key == "Character":
-                    character.name = value
+                if key.strip() == "Character":
+                    character.name = value.strip()
 
                 continue
 
-# Currency parsing. Example:"Shard of Dundun (ID: 3376) - Quantity: 8/8"
+# -------------------------------
+# Currency parsing
+# -------------------------------
 
             match = re.match(r"(.+?) \(ID: \d+\) - Quantity: ([0-9/]+)", line)
 

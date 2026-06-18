@@ -18,7 +18,7 @@ class DataService:
 
 # Stores latest reputation data (shared across characters)
 
-        self.reputation_data = {}
+        self.reputation_data = []
 
 
 # Track file modification times to detect updates
@@ -76,13 +76,13 @@ class DataService:
 
 # Parse file
 
-                    character, reputation = parse_txt(full_path)
+                    character, reputation_list = parse_txt(full_path)
 
                     
 # Update global reputation (last parsed file wins)
-
-                    if reputation:
-                        self.reputation_data = reputation
+                
+                    if reputation_list:
+                        self.reputation_data = reputation_list
 
 
 # Store updated timestamp
