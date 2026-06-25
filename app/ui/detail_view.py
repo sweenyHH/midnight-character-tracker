@@ -1,7 +1,7 @@
 # Displays detailed information for a single character.
 
 from PySide6.QtWidgets import (
-    QWidget, QVBoxLayout, QLabel, QTabWidget,
+    QWidget, QVBoxLayout, QHBoxLayout, QLabel, QTabWidget,
     QTableWidget, QTableWidgetItem
 )
 from PySide6.QtCore import Qt
@@ -179,13 +179,25 @@ class DetailView(QWidget):
     # STATS (TABLES)
     # --------------------------------------------------
 
+
+
     def _update_stats(self):
         layout = self._get_layout(self.stats_tab)
 
+        # Create horizontal container
+        container = QWidget()
+        h_layout = QHBoxLayout(container)
+
         c = self.character
 
-        # Attributes
-        layout.addWidget(QLabel("<b>Primary Attributes</b>"))
+        # -------------------------
+        # LEFT: Attributes
+        # -------------------------
+
+        attr_widget = QWidget()
+        attr_layout = QVBoxLayout(attr_widget)
+
+        attr_layout.addWidget(QLabel("<b>Primary Attributes</b>"))
 
         attr_table = QTableWidget()
         attr_table.setColumnCount(2)
@@ -198,10 +210,18 @@ class DetailView(QWidget):
             attr_table.setItem(row, 0, QTableWidgetItem(k))
             attr_table.setItem(row, 1, QTableWidgetItem(str(v)))
 
-        layout.addWidget(attr_table)
+        attr_table.resizeColumnsToContents()
 
-        # Combat Ratings
-        layout.addWidget(QLabel("<b>Combat Ratings</b>"))
+        attr_layout.addWidget(attr_table)
+
+        # -------------------------
+        # RIGHT: Combat Ratings
+        # -------------------------
+
+        combat_widget = QWidget()
+        combat_layout = QVBoxLayout(combat_widget)
+
+        combat_layout.addWidget(QLabel("<b>Combat Ratings</b>"))
 
         combat_table = QTableWidget()
         combat_table.setColumnCount(2)
@@ -210,11 +230,36 @@ class DetailView(QWidget):
         combat = getattr(c, "combat_ratings", {})
         combat_table.setRowCount(len(combat))
 
+    
         for row, (k, v) in enumerate(combat.items()):
-            combat_table.setItem(row, 0, QTableWidgetItem(k))
-            combat_table.setItem(row, 1, QTableWidgetItem(str(v)))
 
-        layout.addWidget(combat_table)
+            rating = v.get("rating", "-") if isinstance(v, dict) else "-"
+            percent = v.get("percent", "-") if isinstance(v, dict) else "-"
+
+            if percent != "-":
+                percent = f"{percent}%"
+
+            combat_table.setItem(row, 0, QTableWidgetItem(k))
+            combat_table.setItem(row, 1, QTableWidgetItem(str(rating)))
+            combat_table.setItem(row, 2, QTableWidgetItem(str(percent)))
+
+
+        
+        combat_table.resizeColumnsToContents()  
+        combat_layout.addWidget(combat_table)
+
+        # -------------------------
+        # ADD TO HORIZONTAL LAYOUT
+        # -------------------------
+
+        h_layout.addWidget(attr_widget)
+        h_layout.addWidget(combat_widget)
+
+        # Optional: equal width
+        h_layout.setStretch(0, 1)
+        h_layout.setStretch(1, 1)
+
+        layout.addWidget(container)
 
     # --------------------------------------------------
     # REPUTATION (INTENTIONALLY EMPTY)
