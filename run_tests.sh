@@ -2,9 +2,6 @@
 
 echo "Running tests..."
 
-# optional: virt. env aktivieren
-# source venv/bin/activate
-
 pytest -v
 
 EXIT_CODE=$?
