@@ -12,7 +12,7 @@ from app.ui.colors import ITEM_QUALITY_COLORS
 class StatsTab(QWidget):
 
     
-    def _set_table_height(self, table):
+    def _set_table_height(self, table, extra_padding=8):
         row_count = table.rowCount()
 
         header_height = table.horizontalHeader().height()
@@ -22,7 +22,7 @@ class StatsTab(QWidget):
 
         total = header_height + (row_height * row_count)
 
-        table.setMinimumHeight(total + 4)
+        table.setMinimumHeight(total + extra_padding)
 
     def set_character(self, character):
         layout = get_layout(self)
@@ -35,13 +35,16 @@ class StatsTab(QWidget):
 # ==================================================
         left_widget = QWidget()
         left_layout = QVBoxLayout(left_widget)
+        left_widget.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
 
 # -------------------------------
 # ATTRIBUTES
 # -------------------------------
         attr_table = QTableWidget()
+        attr_table.verticalHeader().setVisible(False)
         attr_table.setColumnCount(2)
         attr_table.setHorizontalHeaderLabels(["Attribute", "Value"])
+
 
         attrs = getattr(character, "attributes", {})
         attr_table.setRowCount(len(attrs))
@@ -51,15 +54,19 @@ class StatsTab(QWidget):
             attr_table.setItem(row, 1, QTableWidgetItem(str(v)))
 
         attr_table.resizeColumnsToContents()
-        attr_table.resizeRowsToContents()
+        attr_table.verticalHeader().setDefaultSectionSize(30)
 
         attr_table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
 
-        self._set_table_height(attr_table)
+        
+        self._set_table_height(attr_table, extra_padding=12)
+        attr_table.setMaximumHeight(attr_table.minimumHeight())
+
 
         attr_box = QVBoxLayout()
         attr_container = QWidget()
         attr_container.setLayout(attr_box)
+        attr_container.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         attr_box.addWidget(QLabel("<b>Primary Attributes</b>"))
         attr_box.addWidget(attr_table)
 
@@ -67,8 +74,10 @@ class StatsTab(QWidget):
 # COMBAT RATINGS
 # -------------------------------
         combat_table = QTableWidget()
+        combat_table.verticalHeader().setVisible(False)
         combat_table.setColumnCount(3)
         combat_table.setHorizontalHeaderLabels(["Stat", "Rating", "%"])
+
 
         combat = getattr(character, "combat_ratings", {})
         combat_table.setRowCount(len(combat))
@@ -83,14 +92,18 @@ class StatsTab(QWidget):
             combat_table.setItem(row, 2, QTableWidgetItem(str(percent)))
 
         combat_table.resizeColumnsToContents()
-        combat_table.resizeRowsToContents()
+        combat_table.verticalHeader().setDefaultSectionSize(30)
 
         combat_table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
 
-        self._set_table_height(combat_table)
+        
+        self._set_table_height(combat_table, extra_padding=12)
+        combat_table.setMaximumHeight(combat_table.minimumHeight())
+
 
         combat_box = QVBoxLayout()
         combat_container = QWidget()
+        combat_container.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         combat_container.setLayout(combat_box)
         combat_box.addWidget(QLabel("<b>Combat Ratings</b>"))
         combat_box.addWidget(combat_table)
@@ -108,6 +121,7 @@ class StatsTab(QWidget):
         equipment_layout.addWidget(QLabel("<b>Equipment</b>"))
 
         table = QTableWidget()
+        table.verticalHeader().setVisible(False)
         table.setColumnCount(5)
         table.setHorizontalHeaderLabels([
             "Slot",
@@ -173,7 +187,7 @@ class StatsTab(QWidget):
         header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
         header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
 
-        table.resizeRowsToContents()
+        table.verticalHeader().setDefaultSectionSize(30)
 
 # ensure all 18 rows visible
         self._set_table_height(table)
@@ -187,6 +201,6 @@ class StatsTab(QWidget):
         main_layout.addWidget(equipment_widget)
 
         main_layout.setStretch(0, 1)
-        main_layout.setStretch(1, 1)
+        main_layout.setStretch(1, 3)
 
         layout.addWidget(container)
