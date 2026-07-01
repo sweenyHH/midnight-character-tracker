@@ -1,7 +1,7 @@
 import re
 from app.model.character import Reputation
 
-# Prefixes of the Midnight reputations (warband wide)
+# Prefixes of the Midnight reputations (warband wide) to be used in the upper panel
 
 REPUTATION_PREFIXES = [
     "Amani Tribe",
@@ -18,25 +18,6 @@ REPUTATION_PREFIXES = [
     "Valeera Sanguinar",
 ]
 
-# Identification of Reputation Lines
-
-def is_reputation_line(line: str) -> bool:
-    if not any(line.startswith(prefix) for prefix in REPUTATION_PREFIXES):
-        return False
-
-    if "Renown" in line:
-        return True
-
-    if "(ID:" in line:
-        return False
-
-    level_match = re.search(r"\(([A-Za-z\s]+)\)", line)
-    progress_match = re.search(r"\d+/\d+", line)
-
-    if level_match and progress_match:
-        return True
-
-    return False
 
 # Parsing of reputation lines and split depending on renown faction or other faction
 

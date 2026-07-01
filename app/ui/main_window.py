@@ -63,7 +63,7 @@ class MainWindow(QMainWindow):
         print("DEBUG characters count:", len(characters))
 
         self.table.load_characters(characters)
-        self.top_panel.update_reputation(self.data_service.get_reputation())
+        self.top_panel.update_reputation(self.data_service.get_top_reputations())
 
 # --------------------------------------------------
 

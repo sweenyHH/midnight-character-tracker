@@ -13,9 +13,8 @@ class TopPanel(QWidget):
         main_layout = QVBoxLayout(self)
 
 # --------------------------------------------------
-# ROW 1 — BUTTONS (HORIZONTAL)
+# ROW 1 — BUTTONS
 # --------------------------------------------------
-
         button_row = QHBoxLayout()
 
         self.select_btn = QPushButton("Select Data Folder")
@@ -36,9 +35,8 @@ class TopPanel(QWidget):
         main_layout.addLayout(button_row)
 
 # --------------------------------------------------
-# ROW 2 — REPUTATION GRID
+# ROW 2 — REPUTATION
 # --------------------------------------------------
-
         self.rep_container = QWidget()
         self.rep_layout = QVBoxLayout(self.rep_container)
 
@@ -47,10 +45,9 @@ class TopPanel(QWidget):
 # --------------------------------------------------
 # UPDATE METHOD
 # --------------------------------------------------
-
     def update_reputation(self, reputation_list):
 
-        # Clear previous content
+# Clear previous content
         while self.rep_layout.count():
             item = self.rep_layout.takeAt(0)
             if item.widget():
@@ -60,69 +57,55 @@ class TopPanel(QWidget):
             self.rep_layout.addWidget(QLabel("No reputation data available"))
             return
 
-        # Split data
+# Split 
         renown = [r for r in reputation_list if r.rep_type == "renown"]
         normal = [r for r in reputation_list if r.rep_type != "renown"]
 
         renown.sort(key=lambda r: r.name)
         normal.sort(key=lambda r: r.name)
 
-        # Helper: chunk list into groups of 3
         def chunk(lst, size=3):
             return [lst[i:i + size] for i in range(0, len(lst), size)]
 
         renown_chunks = chunk(renown)
         normal_chunks = chunk(normal)
 
-        # --------------------------------------------------
-        # MAIN ROW (RENOWN | STANDARD)
-        # --------------------------------------------------
-
         main_row = QHBoxLayout()
 
-        # --------------------------------------------------
-        # RENOWN BLOCK
-        # --------------------------------------------------
-
+# -------------------------------
+# RENOWN BLOCK
+# -------------------------------
         renown_widget = QWidget()
         renown_layout = QVBoxLayout(renown_widget)
 
         renown_title = QLabel("Renown:")
-        renown_title.setAlignment(Qt.AlignLeft)
         renown_layout.addWidget(renown_title)
 
         renown_grid = QGridLayout()
 
-        def add_group_to_grid(rep_group, col_offset):
-            for row, rep in enumerate(rep_group):
-                name = QLabel(rep.name)
-                value = QLabel(str(rep.level))
+        def add_group(grid, group, col_offset):
+            for row, rep in enumerate(group):
+                grid.addWidget(QLabel(rep.name), row, col_offset)
+                grid.addWidget(QLabel(str(rep.level)), row, col_offset + 1)
 
-                renown_grid.addWidget(name, row, col_offset)
-                renown_grid.addWidget(value, row, col_offset + 1)
-
-        # max 2 groups (left + right)
         for i, group in enumerate(renown_chunks[:2]):
-            add_group_to_grid(group, col_offset=i * 2)
+            add_group(renown_grid, group, i * 2)
 
         renown_layout.addLayout(renown_grid)
 
-        # --------------------------------------------------
-        # STANDARD BLOCK
-        # --------------------------------------------------
-
+# -------------------------------
+# STANDARD BLOCK
+# -------------------------------
         normal_widget = QWidget()
         normal_layout = QVBoxLayout(normal_widget)
 
         normal_title = QLabel("Standard:")
-        normal_title.setAlignment(Qt.AlignLeft)
         normal_layout.addWidget(normal_title)
 
         normal_grid = QGridLayout()
 
-        def add_standard_group(rep_group, col_offset):
-            for row, rep in enumerate(rep_group):
-
+        def add_standard(grid, group, col_offset):
+            for row, rep in enumerate(group):
                 name = QLabel(rep.name)
 
                 if rep.current and rep.maximum:
@@ -130,18 +113,17 @@ class TopPanel(QWidget):
                 else:
                     value = QLabel(str(rep.level))
 
-                normal_grid.addWidget(name, row, col_offset)
-                normal_grid.addWidget(value, row, col_offset + 1)
+                grid.addWidget(name, row, col_offset)
+                grid.addWidget(value, row, col_offset + 1)
 
         for i, group in enumerate(normal_chunks[:2]):
-            add_standard_group(group, col_offset=i * 2)
+            add_standard(normal_grid, group, i * 2)
 
         normal_layout.addLayout(normal_grid)
 
-        # --------------------------------------------------
-        # ADD BOTH BLOCKS SIDE BY SIDE
-        # --------------------------------------------------
-
+# -------------------------------
+# FINAL LAYOUT
+# -------------------------------
         main_row.addWidget(renown_widget)
         main_row.addWidget(normal_widget)
         main_row.setStretch(0, 1)

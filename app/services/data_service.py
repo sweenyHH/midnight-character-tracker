@@ -2,8 +2,8 @@
 
 import os
 from app.parser.base_parser import parse_txt
+from app.parser.reputation_parser import REPUTATION_PREFIXES
 
-# Central service responsible for loading character data from files.
 
 class DataService:
 
@@ -11,34 +11,31 @@ class DataService:
         self.folder_path = None
 
 # Stores parsed character objects
-
         self.characters = []
 
 # Stores latest reputation data (shared across characters)
-
         self.reputation_data = []
 
 # Track file modification times to detect updates
-
         self.file_timestamps = {}
 
+# --------------------------------------------------
+# SET FOLDER
+# --------------------------------------------------
     def set_folder(self, path):
-
-# Sets the directory where character files are located.
 
         self.folder_path = path
 
-# Reset everything when switching folder
-
+        # Reset everything when switching folder
         self.characters = []
         self.file_timestamps = {}
 
         self.load_data()
 
+# --------------------------------------------------
+# LOAD DATA
+# --------------------------------------------------
     def load_data(self):
-
-# Loads all character files from the selected directory.
-# Detects new and updated files.
 
         if not self.folder_path:
             return
@@ -49,8 +46,6 @@ class DataService:
 
         for file in os.listdir(self.folder_path):
 
-# Only process .txt files
-
             if not file.endswith(".txt"):
                 continue
 
@@ -59,8 +54,7 @@ class DataService:
             try:
                 last_modified = os.path.getmtime(full_path)
 
-# Check if file is new or updated
-
+# NEW or UPDATED file
                 if (
                     full_path not in self.file_timestamps
                     or self.file_timestamps[full_path] != last_modified
@@ -73,27 +67,21 @@ class DataService:
                     )
                     print(f"[DataService] {status} file: {file}")
 
-# Parser returns only character
-
                     character = parse_txt(full_path)
 
-# Reputations as attribute of character
-
+# store reputations (latest snapshot)
                     if hasattr(character, "reputations") and character.reputations:
                         self.reputation_data = character.reputations
 
-# Store updated timestamp
-                    
                     self.file_timestamps[full_path] = last_modified
 
-
                 else:
+# unchanged → reuse
                     character = self._get_existing_character(full_path)
 
-# Re-parse if missing
+                    # fallback (safety)
                     if character is None:
                         character = parse_txt(full_path)
-
 
                 if character:
                     updated_characters.append(character)
@@ -105,11 +93,11 @@ class DataService:
                 print(f"[DataService] Error processing {file}: {e}")
 
 # Replace character list
-
         self.characters = updated_characters
 
-# Returns already loaded character for unchanged file.
-
+# --------------------------------------------------
+# EXISTING CHARACTER LOOKUP
+# --------------------------------------------------
     def _get_existing_character(self, file_path):
 
         for character in self.characters:
@@ -118,15 +106,23 @@ class DataService:
 
         return None
 
-# Returns all loaded characters.
-
+# --------------------------------------------------
+# DATA ACCESS
+# --------------------------------------------------
     def get_characters(self):
-
         return self.characters
 
-# Returns latest reputation data
-
     def get_reputation(self):
-
         return self.reputation_data
+
+# FILTERED REPUTATIONS FOR TOP PANEL
+    def get_top_reputations(self):
+
+        if not self.reputation_data:
+            return []
+
+        return [
+            rep for rep in self.reputation_data
+            if any(rep.name.startswith(prefix) for prefix in REPUTATION_PREFIXES)
+        ]
 

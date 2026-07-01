@@ -5,6 +5,7 @@
 import sys
 from PySide6.QtWidgets import QApplication
 from app.ui.main_window import MainWindow
+from app.ui.theme_manager import ThemeManager
 
 
 def main():
@@ -15,11 +16,7 @@ def main():
 
 # Load dark theme stylesheet
 
-    try:
-        with open("assets/dark_theme.qss") as f:
-            app.setStyleSheet(f.read())
-    except FileNotFoundError:
-        print("No stylesheet found, running without theme.")
+    ThemeManager.load_theme(app, "dark")
 
 # Create and show main window
 

@@ -1,6 +1,7 @@
 /* =====================
    GLOBAL
 ===================== */
+
 QWidget {
     background-color: #2b2b2b;
     color: #eeeeee;
@@ -11,11 +12,12 @@ QWidget {
 /* =====================
    BUTTONS
 ===================== */
+
 QPushButton {
     background-color: #3c3f41;
     color: #ffffff;
     border: 1px solid #555;
-    padding: 6px;
+    padding: 6px 10px;
     border-radius: 6px;
 }
 
@@ -25,80 +27,83 @@ QPushButton:hover {
 
 
 /* =====================
-   TABLE
+   TABLE (NEW CONSISTENT STYLE ✅)
 ===================== */
+
 QTableWidget {
-    background-color: #2b2b2b;   
+    background-color: #1e1e1e;
+    color: #dddddd;
     border: 1px solid #444;
-    gridline-color: #2b2b2b;    
-    selection-background-color: #505357
+    gridline-color: #444;
+    selection-background-color: #3a6ea5;
+    selection-color: #ffffff;
+    alternate-background-color: #252525;
 }
 
+/* cells */
 QTableWidget::item {
-    background-color: #121212;   
-    padding: 6px;               
-    border-radius: 4px;
-    margin: 2px;         
-}
-
-QTableWidget::item:selected {
-    background-color: #505357;
-}
-
-
-QHeaderView::section {
-    background-color: #3c3f41;
-    color: #ffffff;
     padding: 6px;
     border: none;
-    font-weight: bold;
-    font-size: 15px;
+}
+
+/* alternating rows */
+QTableWidget::item:alternate {
+    background-color: #252525;
+}
+
+/* hover */
+QTableWidget::item:hover {
+    background-color: #2f4f6f;
+}
+
+/* selected */
+QTableWidget::item:selected {
+    background-color: #3a6ea5;
 }
 
 
-
 /* =====================
-   TOP CONTAINERS
+   TABLE HEADERS
 ===================== */
 
-/* Box 1 (left) */
-#box1_container {
+QHeaderView::section {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 6px;
+    border: 1px solid #444;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* corner button */
+QTableCornerButton::section {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+}
+
+
+/* =====================
+   CONTAINERS / BOXES
+===================== */
+
+#BoxWidget,
+#box1_container,
+#box2 {
     background-color: #2b2b2b;
     border: 1px solid #444;
     border-radius: 6px;
     padding: 8px;
 }
 
-/* Box 2 (right / reputation) */
-#box2 {
-    background-color: #2b2b2b;
-    border: 1px solid #555;
-    border-radius: 6px;
-    padding: 6px;
-}
-
 
 /* =====================
-   GENERIC BOX (DetailView)
-===================== */
-#BoxWidget {
-    border: 1px solid #555;
-    border-radius: 6px;
-    background-color: #2b2b2b;
-    padding: 8px;
-}
-
-
-/* =====================
-   TEXT PANELS (IMPORTANT!)
+   TEXT / CONTENT BLOCKS
 ===================== */
 
-/* ALL label blocks get the dark-card look */
 QLabel {
     background-color: transparent;
 }
 
-/* Row-style content (used everywhere) */
 .content-item {
     background-color: #121212;
     padding: 4px 6px;
@@ -106,7 +111,6 @@ QLabel {
     margin: 1px 0;
 }
 
-/* Titles */
 .content-title {
     background-color: #121212;
     padding: 6px;
@@ -119,17 +123,11 @@ QLabel {
 /* =====================
    REPUTATION PANEL
 ===================== */
-.reputation-title {
-    background-color: #121212;
-    padding: 6px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-bottom: 4px;
-}
 
+.reputation-title,
 .reputation-header {
     background-color: #121212;
-    padding: 5px;
+    padding: 6px;
     border-radius: 4px;
     font-weight: bold;
 }
@@ -143,31 +141,37 @@ QLabel {
 
 
 /* =====================
-   GRID HEADERS (Weekly Table)
+   GRID (Weekly / Vault)
 ===================== */
+
 .grid-header {
     background-color: #121212;
-    padding: 4px;
+    padding: 5px;
     border-radius: 4px;
     font-weight: bold;
 }
 
+QGridLayout {
+    margin: 0px;
+}
+
 
 /* =====================
-   SCROLL AREAS
+   SCROLLBARS
 ===================== */
+
 QScrollArea {
     border: none;
 }
 
 QScrollBar:vertical {
-    background: #2b2b2b;
+    background: #1e1e1e;
     width: 10px;
 }
 
 QScrollBar::handle:vertical {
     background: #555;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 QScrollBar::handle:vertical:hover {
@@ -178,6 +182,7 @@ QScrollBar::handle:vertical:hover {
 /* =====================
    PROGRESS BARS
 ===================== */
+
 QProgressBar {
     background-color: #333;
     border-radius: 5px;
@@ -191,8 +196,9 @@ QProgressBar::chunk {
 
 
 /* =====================
-   OPTIONAL STATES
+   STATUS COLORS
 ===================== */
+
 .currency-high {
     color: #4caf50;
 }
@@ -202,17 +208,112 @@ QProgressBar::chunk {
 }
 
 
+/* =====================
+   CHECKBOXES ✅
+===================== */
 
-/* Weekly grid cells (inherits from content-item) */
-.grid-header {
-    background-color: #121212;
-    padding: 5px;
-    border-radius: 4px;
-    font-weight: bold;
+/* base */
+QCheckBox {
+    spacing: 6px;
+    color: #eeeeee;
 }
 
-/* Ensure consistent spacing look */
-QGridLayout {
-    margin: 0px;
+/* indicator box */
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1px solid #777;
+    background-color: #1e1e1e;
+}
+
+/* hover */
+QCheckBox::indicator:hover {
+    border: 1px solid #aaa;
+    background-color: #2a2a2a;
+}
+
+/* checked */
+QCheckBox::indicator:checked {
+    background-color: #3a6ea5;
+    border: 1px solid #6ea6e6;
+}
+
+/* checked + hover */
+QCheckBox::indicator:checked:hover {
+    background-color: #4a7ec5;
+}
+
+/* disabled */
+QCheckBox::indicator:disabled {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+/* =====================
+   INPUT FIELDS ✅
+===================== */
+
+/* single-line input */
+QLineEdit {
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+/* focus state */
+QLineEdit:focus {
+    border: 1px solid #3a6ea5;
+    background-color: #222;
+}
+
+/* hover */
+QLineEdit:hover {
+    border: 1px solid #777;
+}
+
+
+/* =====================
+   TEXT EDIT (Notes etc.)
+===================== */
+
+QTextEdit {
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+/* focus */
+QTextEdit:focus {
+    border: 1px solid #3a6ea5;
+    background-color: #222;
+}
+
+
+/* =====================
+   PLACEHOLDER TEXT
+===================== */
+
+QLineEdit:disabled,
+QTextEdit:disabled {
+    background-color: #2a2a2a;
+    color: #888;
+}
+
+
+/* =====================
+   DIALOGS (Paste Dialog polish)
+===================== */
+
+QDialog {
+    background-color: #2b2b2b;
+}
+
+QDialog QLabel {
+    font-weight: bold;
 }
 
