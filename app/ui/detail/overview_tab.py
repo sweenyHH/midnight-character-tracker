@@ -2,7 +2,6 @@ from PySide6.QtWidgets import (
     QWidget, QLabel, QTableWidget, QTableWidgetItem,
     QHBoxLayout, QVBoxLayout, QHeaderView
 )
-from PySide6.QtGui import QColor
 from PySide6.QtCore import Qt
 
 from .utils import format_gold
@@ -11,7 +10,7 @@ from app.weekly_duties.widget import WeeklyDutiesWidget
 from app.ui.detail.vault_progress import VaultProgressWidget
 
 from app.ui.colors import CLASS_COLORS
-from app.ui.theme_manager import ThemeManager
+from app.ui.character_table_helpers import adjust_class_color
 
 
 class OverviewTab(QWidget):
@@ -29,14 +28,6 @@ class OverviewTab(QWidget):
 
 # --------------------------------------------------
     def set_character(self, character):
-
-
-        
-        print(
-            "OverviewTab rebuild:",
-            character.name,
-            ThemeManager.current_theme
-        )
 
 
 # FULL LAYOUT CLEAR
@@ -61,43 +52,14 @@ class OverviewTab(QWidget):
         class_name = getattr(character, "character_class", "-")
 
         info_label = QLabel(
-            f"Level {getattr(character, 'level', '-')}, "
-            f"{getattr(character, 'race', '-')}, "
-            f"{class_name} "
-            f"({getattr(character, 'specialization', '-')})"
+            f"<b>Level {getattr(character, 'level', '-')}, </b>"
+            f"<b>{getattr(character, 'race', '-')}, </b>"
+            f"<b>{class_name} </b>"
+            f"<b>({getattr(character, 'specialization', '-')})</b>"
         )
 
-# APPLY CLASS COLOR
-
-        def _adjust_class_color(color_hex):
-            theme = (ThemeManager.current_theme or "").lower()
-
-            # Only adjust for light-style themes
-            if theme in ("light", "modern"):
-
-                # Handle pure white directly
-                if color_hex.lower() == "#ffffff":
-                    return "#333333"
-
-                color = QColor(color_hex)
-                r, g, b = color.red(), color.green(), color.blue()
-
-                brightness = 0.299 * r + 0.587 * g + 0.114 * b
-
-                # Handle "almost white"
-                if brightness > 220:
-                    return "#333333"
-
-            
-            print("DEBUG theme:", ThemeManager.current_theme)
-            print("DEBUG color:", color_hex)
-
-
-# otherwise keep original color
-            return color_hex
-
         if class_name in CLASS_COLORS:
-            adjusted = _adjust_class_color(CLASS_COLORS[class_name])
+            adjusted = adjust_class_color(CLASS_COLORS[class_name])
             info_label.setStyleSheet(f"color: {adjusted};")
 
 
@@ -106,6 +68,24 @@ class OverviewTab(QWidget):
         gold = next((x for x in character.currencies if x.name == "Gold"), None)
         if gold:
             general_layout.addWidget(QLabel(f"<b>Gold:</b> {format_gold(gold.quantity)}"))
+
+
+# OTHER CURRENCIES
+        other_currencies = [
+            c for c in character.currencies
+            if getattr(c, "groups", None)
+            and "Other" in c.groups
+            and c.name != "Gold"
+        ]
+
+        for currency in sorted(other_currencies, key=lambda x: x.name):
+            general_layout.addWidget(
+                QLabel(
+                    f"<b>{currency.name}:</b> {currency.quantity}"
+                )
+            )
+
+            
 
         general_layout.addStretch()
 

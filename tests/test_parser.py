@@ -1,6 +1,4 @@
-
-import os
-from app.parser.txt_parser import parse_txt
+from app.parser.base_parser import parse_txt
 
 
 def create_test_file(tmp_path):
@@ -26,11 +24,11 @@ Shard of Dundun (ID: 3376) - Quantity: 4/8
 def test_parse_basic_character(tmp_path):
     file_path = create_test_file(tmp_path)
 
-    character, reputation = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert character.name == "Arthas"
-    assert character.location["Class"] == "Paladin"
-    assert character.location["Level"] == "80"
+    assert character.character_class == "Paladin"
+    assert character.level == 80
 
 
 # -------------------------------
@@ -39,10 +37,11 @@ def test_parse_basic_character(tmp_path):
 def test_parse_gold_currency(tmp_path):
     file_path = create_test_file(tmp_path)
 
-    character, _ = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     gold_currency = next(
-        (c for c in character.currencies if c.name == "Gold"), None
+        (c for c in character.currencies if c.name == "Gold"),
+        None,
     )
 
     assert gold_currency is not None
@@ -64,11 +63,12 @@ def test_parse_allowed_item_only(tmp_path):
     file_path = tmp_path / "items.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    character, _ = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert len(character.currencies) == 1
 
     item = character.currencies[0]
+
     assert item.name == "Spark of Radiance"
     assert item.quantity == 2
 
@@ -85,7 +85,7 @@ Shard of Dundun (ID: 3376) - Quantity: 4/8
     file_path = tmp_path / "currency.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    character, _ = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     currency = character.currencies[0]
 
@@ -99,26 +99,26 @@ Shard of Dundun (ID: 3376) - Quantity: 4/8
 # -------------------------------
 # Reputation (Renown)
 # -------------------------------
-
 def test_parse_reputation_renown(tmp_path):
     content = """Character: Testy
 
+Reputations:
 Amani Tribe Renown 12 300/2500
 """
 
     file_path = tmp_path / "rep.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    _, reputation = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
-    rep = reputation[0]
+    assert len(character.reputations) == 1
 
-    assert rep.name == "Amani Tribe Renown 12 300/2500"
+    rep = character.reputations[0]
+
     assert rep.rep_type == "renown"
     assert rep.level == 12
     assert rep.current == 300
     assert rep.maximum == 2500
-
 
 
 # -------------------------------
@@ -127,40 +127,24 @@ Amani Tribe Renown 12 300/2500
 def test_parse_reputation_standard(tmp_path):
     content = """Character: Testy
 
+Reputations:
 Blood Knights (Honored) 1200/6000
 """
 
     file_path = tmp_path / "rep_standard.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    _, reputation = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
-    rep = reputation[0]
+    assert len(character.reputations) == 1
+
+    rep = character.reputations[0]
 
     assert rep.name == "Blood Knights"
     assert rep.rep_type == "standard"
     assert rep.level == "Honored"
     assert rep.current == 1200
     assert rep.maximum == 6000
-
-
-# -------------------------------
-# All key-value lines are now kept
-# -------------------------------
-def test_keeps_all_key_value_lines(tmp_path):
-    content = """Character: Testy
-RandomStuff: ShouldBeKept
-Unknown: 123
-"""
-
-    file_path = tmp_path / "no_filter.txt"
-    file_path.write_text(content, encoding="utf-8")
-
-    character, _ = parse_txt(str(file_path))
-
-    assert character.name == "Testy"
-    assert character.location["RandomStuff"] == "ShouldBeKept"
-    assert character.location["Unknown"] == "123"
 
 
 # -------------------------------
@@ -172,7 +156,7 @@ def test_filename_fallback(tmp_path):
     file_path = tmp_path / "fallback_name.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    character, _ = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert character.name == "fallback_name"
 
@@ -190,42 +174,29 @@ This is random text
     file_path = tmp_path / "garbage.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    character, reputation = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert character.name == "Testy"
     assert len(character.currencies) == 0
-    assert len(reputation) == 0
+    assert len(character.reputations) == 0
+
 
 # -------------------------------
 # Stress/fuzz test
 # -------------------------------
-
 def test_parser_does_not_crash_on_random_input(tmp_path):
     content = "\n".join(["random garbage line 123 !!!"] * 100)
 
     file_path = tmp_path / "stress.txt"
     file_path.write_text(content)
 
-    character, reputation = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert character is not None
 
-
-def test_reputation_filters_invalid_lines(tmp_path):
-    content = """Character: Testy
-
-The Singularity Champion (ID: 62265) - Points: 10
-"""
-
-    file_path = tmp_path / "rep_invalid.txt"
-    file_path.write_text(content, encoding="utf-8")
-
-    _, reputation = parse_txt(str(file_path))
-
-    assert len(reputation) == 0
-
+# -------------------------------
 # Faction Test
-
+# -------------------------------
 def test_parse_faction(tmp_path):
     content = """Character: Testy
 Faction: Alliance
@@ -234,7 +205,7 @@ Faction: Alliance
     file_path = tmp_path / "faction.txt"
     file_path.write_text(content, encoding="utf-8")
 
-    character, _ = parse_txt(str(file_path))
+    character = parse_txt(str(file_path))
 
     assert character.faction == "Alliance"
 

@@ -5,11 +5,11 @@ Map: Silvermoon City
 Map ID: 2393
 Parent Map: Eversong Woods
 Parent Map ID: 2395
-Coordinates: 50.6, 65.6
+Coordinates: 50.1, 74.6
 Hearthstone Location: Wayfarer's Rest
 
 Character Stats:
-Character: Parrya-Earthen Ring
+Character: Testerella-The Tester Realm
 Faction: Alliance
 Level: 90
 Race: Human
@@ -814,26 +814,3 @@ Wrathion (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
 [Debug] Retail reputation API entries: 110
 [Debug] Major faction entries: 26
 [Debug] Total reputation entries: 119
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

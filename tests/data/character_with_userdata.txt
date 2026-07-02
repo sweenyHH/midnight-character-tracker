@@ -9,7 +9,7 @@ Coordinates: 50.1, 74.6
 Hearthstone Location: Wayfarer's Rest
 
 Character Stats:
-Character: Sweeny-Earthen Ring
+Character: Testerus-The Testers Brotherhood
 Faction: Alliance
 Level: 90
 Race: Human
@@ -170,108 +170,108 @@ Spirit Shard (ID: 1704) - Quantity: 9/200
 
 Bags:
 == Backpack (1/20) ==
-[Unknown Item] x1 [ID: 274069, iLvl: n/a]
+[Warbound Pack of Hero Dawncrests] x1 [ID: 274069, iLvl: 90, Q: 4]
 
 == Bag 1 (0/36) ==
 [Empty]
 
 == Bag 2 (15/36) ==
-[Unknown Item] x25 [ID: 45038, iLvl: n/a]
-[Unknown Item] x1 [ID: 97287, iLvl: n/a]
-[Unknown Item] x1 [ID: 270562, iLvl: n/a]
-[Unknown Item] x20 [ID: 23246, iLvl: n/a]
-[Unknown Item] x20 [ID: 23246, iLvl: n/a]
-[Unknown Item] x3 [ID: 138777, iLvl: n/a]
-[Unknown Item] x1 [ID: 275391, iLvl: n/a]
-[Unknown Item] x1 [ID: 256988, iLvl: n/a]
-[Unknown Item] x1 [ID: 250047, iLvl: n/a]
-[Unknown Item] x1 [ID: 249308, iLvl: n/a]
-[Unknown Item] x1 [ID: 249319, iLvl: n/a]
-[Unknown Item] x1 [ID: 249315, iLvl: n/a]
-[Unknown Item] x1 [ID: 251167, iLvl: n/a]
-[Unknown Item] x1 [ID: 249620, iLvl: n/a]
-[Unknown Item] x1 [ID: 251789, iLvl: n/a]
+[Fragment of Val'anyr] x25 [ID: 45038, iLvl: 14, Q: 5]
+[Challenge Card: The Bear and the Lady Fair] x1 [ID: 97287, iLvl: 1, Q: 1]
+[Tainted Sample] x1 [ID: 270562, iLvl: 1, Q: 1]
+[Fiery Festival Brew] x20 [ID: 23246, iLvl: 1, Q: 1]
+[Fiery Festival Brew] x20 [ID: 23246, iLvl: 1, Q: 1]
+[Drowned Mana] x3 [ID: 138777, iLvl: 1, Q: 1]
+[Lightveil Data Decrypter] x1 [ID: 275391, iLvl: 1, Q: 2]
+[Lumenbloom Lantern] x1 [ID: 256988, iLvl: 240, Q: 2]
+[Blind Oath's Wraps] x1 [ID: 250047, iLvl: 279, Q: 4]
+[Despotic Raiment] x1 [ID: 249308, iLvl: 263, Q: 4]
+[Endless March Waistwrap] x1 [ID: 249319, iLvl: 259, Q: 4]
+[Voracious Wristwraps] x1 [ID: 249315, iLvl: 263, Q: 4]
+[Nightprey Stalkers] x1 [ID: 251167, iLvl: 276, Q: 3]
+[Vibrant Wilderloop] x1 [ID: 249620, iLvl: 276, Q: 4]
+[Consecrated Chalice] x1 [ID: 251789, iLvl: 259, Q: 4]
 
 == Bag 3 (36/36) ==
-[Unknown Item] x1 [ID: 250258, iLvl: n/a]
-[Unknown Item] x1 [ID: 264701, iLvl: n/a]
-[Unknown Item] x1 [ID: 250144, iLvl: n/a]
-[Unknown Item] x3 [ID: 268650, iLvl: n/a]
-[Unknown Item] x9 [ID: 259361, iLvl: n/a]
-[Unknown Item] x1 [ID: 255825, iLvl: n/a]
-[Unknown Item] x2 [ID: 269010, iLvl: n/a]
-[Unknown Item] x1 [ID: 249689, iLvl: n/a]
-[Unknown Item] x1 [ID: 254384, iLvl: n/a]
-[Unknown Item] x1 [ID: 252607, iLvl: n/a]
-[Unknown Item] x1 [ID: 265543, iLvl: n/a]
-[Unknown Item] x1 [ID: 241145, iLvl: n/a]
-[Unknown Item] x1 [ID: 260439, iLvl: n/a]
-[Unknown Item] x469 [ID: 267051, iLvl: n/a]
-[Unknown Item] x1 [ID: 263897, iLvl: n/a]
-[Unknown Item] x2 [ID: 71083, iLvl: n/a]
-[Unknown Item] x1 [ID: 253342, iLvl: n/a]
-[Unknown Item] x126 [ID: 246951, iLvl: n/a]
-[Unknown Item] x12 [ID: 258556, iLvl: n/a]
-[Unknown Item] x1 [ID: 81407, iLvl: n/a]
-[Unknown Item] x2 [ID: 266985, iLvl: n/a]
-[Unknown Item] x116 [ID: 242771, iLvl: n/a]
-[Unknown Item] x20 [ID: 242299, iLvl: n/a]
-[Unknown Item] x1 [ID: 254385, iLvl: n/a]
-[Unknown Item] x1 [ID: 254388, iLvl: n/a]
+[Vessel of Tortured Souls] x1 [ID: 250258, iLvl: 266, Q: 3]
+[Cosmic Bell] x1 [ID: 264701, iLvl: 259, Q: 4]
+[Emberwing Feather] x1 [ID: 250144, iLvl: 266, Q: 3]
+[Ascendant Voidshard] x3 [ID: 268650, iLvl: 1, Q: 4]
+[Vile Essence] x9 [ID: 259361, iLvl: 1, Q: 1]
+[Disarmed Trap] x1 [ID: 255825, iLvl: 1, Q: 2]
+[Essence of Lumber] x2 [ID: 269010, iLvl: 1, Q: 3]
+[Ghostflower Tea with Sunfruit] x1 [ID: 249689, iLvl: 1, Q: 2]
+[Lady Marilin's Arcwine Reserve] x1 [ID: 254384, iLvl: 1, Q: 1]
+[Abundant Beacon] x1 [ID: 252607, iLvl: 1, Q: 2]
+[Tempered Amani Spearhead] x1 [ID: 265543, iLvl: 90, Q: 3]
+[Lucky Loa Lure] x1 [ID: 241145, iLvl: 1, Q: 2]
+[Silence and Shadow Champion's Badge] x1 [ID: 260439, iLvl: 1, Q: 2]
+[Dark Particle] x469 [ID: 267051, iLvl: 1, Q: 2]
+[Radiant Jewelbinder] x1 [ID: 263897, iLvl: 24, Q: 4]
+[Darkmoon Game Token] x2 [ID: 71083, iLvl: 1, Q: 2]
+[Beacon of Hope] x1 [ID: 253342, iLvl: 1, Q: 3]
+[Stormarion Core] x126 [ID: 246951, iLvl: 1, Q: 3]
+[Thalassian Token of Merit] x12 [ID: 258556, iLvl: 24, Q: 4]
+[Four Wind Soju] x1 [ID: 81407, iLvl: 14, Q: 1]
+[Hearty Silvermoon Parade] x2 [ID: 266985, iLvl: 90, Q: 4]
+[Hearty Spiced Biscuits] x116 [ID: 242771, iLvl: 24, Q: 3]
+[Sanguithorn Tea] x20 [ID: 242299, iLvl: 23, Q: 2]
+[Landraelanis' Muskmelon Draught] x1 [ID: 254385, iLvl: 1, Q: 1]
+[Nara's Essence of Butterfly] x1 [ID: 254388, iLvl: 1, Q: 1]
 [Silvermoon Health Potion] x9 [ID: 241305, iLvl: 278, Q: 1]
 [Light's Potential] x21 [ID: 241309, iLvl: 278, Q: 1]
 [Potent Healing Potion] x394 [ID: 258138, iLvl: 1, Q: 1]
 [Lightfused Mana Potion] x14 [ID: 241301, iLvl: 278, Q: 1]
-[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x3 [ID: 241320, iLvl: n/a]
-[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x2 [ID: 243734, iLvl: n/a]
-[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x1 [ID: 241284, iLvl: n/a]
-[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x1 [ID: 241318, iLvl: n/a]
-[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x1 [ID: 245880, iLvl: n/a]
-[Unknown Item] x5 [ID: 268552, iLvl: n/a]
-[Unknown Item] x1 [ID: 81415, iLvl: n/a]
+[Flask of Thalassian Resistance] x3 [ID: 241320, iLvl: 295, Q: 1]
+[Thalassian Phoenix Oil] x2 [ID: 243734, iLvl: 295, Q: 2]
+[Voidlight Potion Cauldron] x1 [ID: 241284, iLvl: 68, Q: 4]
+[Cauldron of Sin'dorei Flasks] x1 [ID: 241318, iLvl: 62, Q: 4]
+[Vantus Rune: Radiant] x1 [ID: 245880, iLvl: 295, Q: 3]
+[Ascendant Voidcore] x5 [ID: 268552, iLvl: 1, Q: 4]
+[Pandaren Plum Wine] x1 [ID: 81415, iLvl: 15, Q: 1]
 
 == Bag 4 (36/36) ==
-[Unknown Item] x34 [ID: 81054, iLvl: n/a]
-[Unknown Item] x69 [ID: 253750, iLvl: n/a]
-[Unknown Item] x2 [ID: 242693, iLvl: n/a]
-[Unknown Item] x1 [ID: 63359, iLvl: n/a]
-[Unknown Item] x11 [ID: 242298, iLvl: n/a]
-[Unknown Item] x1 [ID: 21203, iLvl: n/a]
-[Unknown Item] x250 [ID: 246951, iLvl: n/a]
-[Unknown Item] x1 [ID: 264503, iLvl: n/a]
-[Unknown Item] x1 [ID: 71634, iLvl: n/a]
+[Kafa'kota Berry] x34 [ID: 81054, iLvl: 1, Q: 1]
+[Luckydo] x69 [ID: 253750, iLvl: 1, Q: 1]
+[Kafaccino] x2 [ID: 242693, iLvl: 1, Q: 1]
+[Banner of Cooperation] x1 [ID: 63359, iLvl: 1, Q: 2]
+[Argentleaf Tea] x11 [ID: 242298, iLvl: 23, Q: 2]
+[Signet Ring of the Bronze Dragonflight] x1 [ID: 21203, iLvl: 13, Q: 4]
+[Stormarion Core] x250 [ID: 246951, iLvl: 1, Q: 3]
+[Cracked Core] x1 [ID: 264503, iLvl: 1, Q: 3]
+[Darkmoon Adventurer's Guide] x1 [ID: 71634, iLvl: 1, Q: 1]
 [Emergency Soul Link] x5 [ID: 269586, iLvl: 580, Q: 2]
-[Unknown Item] x3 [ID: 244193, iLvl: n/a]
-[|A:Professions-ChatIcon-Quality-Tier3:17:15::1|a] x1 [ID: 244712, iLvl: n/a]
-[Unknown Item] x36 [ID: 259085, iLvl: n/a]
-[Unknown Item] x1 [ID: 253802, iLvl: n/a]
+[L00T RAID-R Mini] x3 [ID: 244193, iLvl: 1, Q: 3]
+[Sin'dorei Angler's Rod] x1 [ID: 244712, iLvl: 218, Q: 3]
+[Void-Touched Augment Rune] x36 [ID: 259085, iLvl: 24, Q: 3]
+[Deed of Patronage] x1 [ID: 253802, iLvl: 1, Q: 3]
 [Ethereal Augment Rune] x1 [ID: 243191, iLvl: 23, Q: 3]
-[Unknown Item] x1 [ID: 68729, iLvl: n/a]
+[Elementium Lockbox] x1 [ID: 68729, iLvl: 14, Q: 2]
 [Jeeves] x1 [ID: 49040, iLvl: 1, Q: 4]
-[Unknown Item] x3 [ID: 221957, iLvl: n/a]
-[Unknown Item] x1 [ID: 144341, iLvl: n/a]
-[Unknown Item] x1 [ID: 87216, iLvl: n/a]
-[Unknown Item] x2 [ID: 221959, iLvl: n/a]
-[Unknown Item] x1 [ID: 228431, iLvl: n/a]
-[Unknown Item] x1 [ID: 95566, iLvl: n/a]
-[Unknown Item] x1 [ID: 247882, iLvl: n/a]
-[Unknown Item] x34 [ID: 221945, iLvl: n/a]
-[Unknown Item] x12 [ID: 231099, iLvl: n/a]
-[Unknown Item] x1 [ID: 114943, iLvl: n/a]
-[Unknown Item] x2 [ID: 153512, iLvl: n/a]
-[Unknown Item] x5 [ID: 109076, iLvl: n/a]
-[Unknown Item] x1 [ID: 225415, iLvl: n/a]
-[Unknown Item] x1 [ID: 234389, iLvl: n/a]
-[Unknown Item] x1 [ID: 202046, iLvl: n/a]
-[Unknown Item] x1 [ID: 128353, iLvl: n/a]
-[Unknown Item] x1 [ID: 251161, iLvl: n/a]
-[Unknown Item] x1 [ID: 40585, iLvl: n/a]
+[Algari Repair Bot 11O] x3 [ID: 221957, iLvl: 23, Q: 2]
+[Rechargeable Reaves Battery] x1 [ID: 144341, iLvl: 16, Q: 3]
+[Thermal Anvil] x1 [ID: 87216, iLvl: 15, Q: 1]
+[Portable Profession Possibility Projector] x2 [ID: 221959, iLvl: 23, Q: 3]
+[Rock Buddy] x1 [ID: 228431, iLvl: 1, Q: 0]
+[Ra'sha's Sacrificial Dagger] x1 [ID: 95566, iLvl: 1, Q: 3]
+[Phase Regulator] x1 [ID: 247882, iLvl: 23, Q: 3]
+[Irresistible Red Button] x34 [ID: 221945, iLvl: 80, Q: 2]
+[Back-Strapped Missile] x12 [ID: 231099, iLvl: 1, Q: 3]
+[Ultimate Gnomish Army Knife] x1 [ID: 114943, iLvl: 15, Q: 3]
+[XA-1000 Surface Skimmer] x2 [ID: 153512, iLvl: 1, Q: 1]
+[Goblin Glider Kit] x5 [ID: 109076, iLvl: 1, Q: 1]
+[Caddy Caller] x1 [ID: 225415, iLvl: 1, Q: 1]
+[Gallagio Loyalty Rewards Card: Silver] x1 [ID: 234389, iLvl: 1, Q: 1]
+[Lucky Tortollan Charm] x1 [ID: 202046, iLvl: 17, Q: 3]
+[Admiral's Compass] x1 [ID: 128353, iLvl: 1, Q: 3]
+[Shroud of the Soulhunter] x1 [ID: 251161, iLvl: 289, Q: 3]
+[Signet of the Kirin Tor] x1 [ID: 40585, iLvl: 15, Q: 4]
 [Hearthstone] x1 [ID: 6948, iLvl: 1, Q: 1]
 
 == Reagent Bag (3/38) ==
-[Unknown Item] x10 [ID: 232875, iLvl: n/a]
-[Unknown Item] x9 [ID: 245345, iLvl: n/a]
-[Unknown Item] x6 [ID: 69237, iLvl: n/a]
+[Spark of Radiance] x10 [ID: 232875, iLvl: 24, Q: 4]
+[Fused Vitality] x9 [ID: 245345, iLvl: 23, Q: 3]
+[Living Ember] x6 [ID: 69237, iLvl: 13, Q: 3]
 
 Bank:
 [Using cached bank data - last updated: 2026-07-01 11:47:34.]
@@ -870,7 +870,7 @@ Equipment:
 - Equip Slot: Neck
 - Item String: item:50228::240983::::::90:257::35:5:13440:6652:13668:12699:12804::::::
 - Gems:
-  - Socket 1: Indecipherable Eversong Diamond [ID: 240983]
+  - Socket 1: [ID: 240983]
 - Bonus IDs: 13440, 6652, 13668, 12699, 12804
 - STA: 914
 - CRIT: 185
@@ -1032,7 +1032,7 @@ Equipment:
 - Item String: item:151308:7997:240910::::::90:257::35:5:13440:6652:13668:12699:12806::::::
 - Enchant ID: 7997
 - Gems:
-  - Socket 1: Flawless Versatile Garnet [ID: 240910]
+  - Socket 1: [ID: 240910]
 - Bonus IDs: 13440, 6652, 13668, 12699, 12806
 - STA: 995
 - CRIT: 118
@@ -1048,7 +1048,7 @@ Equipment:
 - Item String: item:266317:7995:240908::::::90:257::11:2:13447:12798:1:28:3313:::::
 - Enchant ID: 7995
 - Gems:
-  - Socket 1: Flawless Masterful Garnet [ID: 240908]
+  - Socket 1: [ID: 240908]
 - Bonus IDs: 13447, 12798
 - STA: 848
 - MAST: 74
@@ -1296,13 +1296,23 @@ Zandalar Tribe (Friendly) - Value: 7538 (3000-9000) - Progress: 4538/6000
 
 ### USER_DATA_START ###
 Vault:
-0_0=233
-0_1=233
-0_2=233
-1_0=233
-1_1=233
-1_2=233
+0_0=269
+0_1=269
+0_2=263
+1_0=272
+1_1=272
 2_0=233
 2_1=233
 2_2=233
+WeeklyDuties:
+0_0=1
+0_1=1
+0_2=1
+0_3=1
+2_0=1
+4_0=1
+7_0=1
+7_1=1
+Notes:
+This is a testnote
 ### USER_DATA_END ###

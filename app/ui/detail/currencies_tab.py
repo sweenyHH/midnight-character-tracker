@@ -13,17 +13,21 @@ from .utils import get_layout
 # --------------------------------------------------
 
 GROUP_ORDER = [
+
     "Midnight",
     "War Within",
     "Shadowlands",
     "Legion",
-    "Burning Crusade",
+    "Mists of Pandaria",
+    "Wrath of the Lich King",
     "Player vs. Player",
 
     "Season 1",
     "Dragonflight", 
     "Battle for Azeroth",
     "Warlords of Draenor",
+    "Cataclysm",
+    "Burning Crusade",
     "Miscellaneous",
     "Other"
 ]
@@ -166,9 +170,7 @@ class CurrenciesTab(QWidget):
 
         grouped = {k: v for k, v in grouped.items() if v}
 
-        print("DEBUG GROUPS:")
-        for k, v in grouped.items():
-            print(k, len(v))
+
 
 # SORT GROUPS
         def sort_groups(grouped):

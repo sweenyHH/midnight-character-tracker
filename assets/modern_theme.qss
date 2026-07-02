@@ -277,3 +277,27 @@ QDialog {
 QDialog QLabel {
     font-weight: bold;
 }
+
+
+/* =====================
+   VAULT
+===================== */
+
+QLabel#vaultRowLabel {
+    color: #475569;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+QLabel#vaultBox {
+    background-color: #ffffff;
+    color: #0f172a;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    padding: 10px;
+
+    font-size: 28px;
+    font-weight: bold;
+}

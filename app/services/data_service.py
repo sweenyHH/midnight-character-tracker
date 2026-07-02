@@ -86,9 +86,6 @@ class DataService:
                 if character:
                     updated_characters.append(character)
 
-                    print("DEBUG Character:", character.name)
-                    print("DEBUG currencies:", len(character.currencies))
-
             except Exception as e:
                 print(f"[DataService] Error processing {file}: {e}")
 

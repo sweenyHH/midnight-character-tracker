@@ -12,7 +12,7 @@ from .character_table_helpers import (
     adjust_class_color,
 )
 
-from .vault_loader import load_user_vault
+from app.storage.vault_storage import load_user_vault
 
 
 class CharacterTable(QTableWidget):

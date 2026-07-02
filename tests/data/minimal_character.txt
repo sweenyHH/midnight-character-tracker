@@ -1,0 +1,5 @@
+
+Character: Testy
+Faction: Alliance
+Class: Paladin
+Level: 80

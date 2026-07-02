@@ -5,7 +5,7 @@ import os
 import re
 
 # import safe write function
-from app.utils.user_data import extract_user_data
+from app.storage.user_data_storage import extract_user_data
 
 
 def write_character_file_with_user_data(path, new_content):
@@ -28,12 +28,22 @@ def write_character_file_with_user_data(path, new_content):
             f.writelines(user_block)
 
 
+
 class PasteDialog(QDialog):
 
-    def __init__(self, target_folder):
+
+    def __init__(self):
         super().__init__()
 
-        self.target_folder = target_folder
+        self.target_folder = os.path.join(
+            os.getcwd(),
+            "import"
+        )
+
+        os.makedirs(
+            self.target_folder,
+            exist_ok=True
+        )
 
         self.setWindowTitle("Paste Character Data")
         self.setMinimumSize(700, 500)
@@ -98,7 +108,5 @@ class PasteDialog(QDialog):
 # SAVE FILE (SAFE OVERWRITE)
 # -------------------------------
         write_character_file_with_user_data(full_path, text)
-
-        print(f"[PasteDialog] Saved file (safe): {full_path}")
 
         self.accept()

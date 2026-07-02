@@ -1,6 +1,12 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit
+from PySide6.QtCore import QTimer
 import os
 
+
+from app.storage.user_data_storage import (
+    load_section,
+    save_section,
+)
 
 class NotesWidget(QWidget):
 
@@ -24,7 +30,13 @@ class NotesWidget(QWidget):
         self.layout.addWidget(self.textbox)
 
         self.textbox.textChanged.connect(self._limit_length)
-        self.textbox.textChanged.connect(self._save_notes)
+        
+        self.save_timer = QTimer()
+        self.save_timer.setSingleShot(True)
+        self.save_timer.timeout.connect(self._save_notes)
+
+        self.textbox.textChanged.connect(self._schedule_save)
+
 
         self.current_file = None
 
@@ -35,86 +47,53 @@ class NotesWidget(QWidget):
 
         self.current_file = character.source_file
 
-        self.textbox.blockSignals(True)
-        self.textbox.setPlainText(self._load_notes(self.current_file))
-        self.textbox.blockSignals(False)
+        
+        new_text = self._load_notes(self.current_file)
+
+        if new_text != self.textbox.toPlainText():
+            self.textbox.blockSignals(True)
+            self.textbox.setPlainText(new_text)
+            self.textbox.blockSignals(False)
 
 # --------------------------------------------------
 # LOAD NOTES (FROM USER BLOCK)
 # --------------------------------------------------
+
     def _load_notes(self, file_path):
 
-        if not file_path or not os.path.exists(file_path):
-            return ""
+        lines = load_section(
+            file_path,
+            "Notes"
+        )
 
-        notes = []
-        in_user_block = False
-        in_notes = False
+        return "\n".join(lines).strip()
 
-        with open(file_path, encoding="utf-8") as f:
-            for line in f:
-
-                stripped = line.strip()
-
-                if stripped == "### USER_DATA_START ###":
-                    in_user_block = True
-                    continue
-
-                if stripped == "### USER_DATA_END ###":
-                    break
-
-                if in_user_block and stripped == "Notes:":
-                    in_notes = True
-                    continue
-
-                if in_notes:
-                    if stripped.endswith(":") and stripped != "Notes:":
-                        break
-                    notes.append(line.rstrip())
-
-        return "\n".join(notes).strip()
 
 # --------------------------------------------------
 # SAVE NOTES (MERGE SAFE)
 # --------------------------------------------------
+
+    def _schedule_save(self):
+
+        self.save_timer.start(3000)
+
     def _save_notes(self):
 
-        if not self.current_file or not os.path.exists(self.current_file):
+        if not self.current_file:
             return
-
-        with open(self.current_file, encoding="utf-8") as f:
-            lines = f.readlines()
 
         text = self.textbox.toPlainText().strip()
 
-# -------------------------------
-# EXTRACT EXISTING USER DATA
-# -------------------------------
-        in_user_block = False
-        existing_duties = []
+        note_lines = []
 
-        new_lines = []
+        if text:
+            note_lines = text.splitlines()
 
-        for line in lines:
-            stripped = line.strip()
-
-            if stripped == "### USER_DATA_START ###":
-                in_user_block = True
-                continue
-
-            if stripped == "### USER_DATA_END ###":
-                in_user_block = False
-                continue
-
-            if in_user_block:
-                # preserve WeeklyDuties
-                if stripped.startswith("WeeklyDuties:") or "=" in stripped:
-                    existing_duties.append(line)
-                    continue
-
-                # skip existing notes
-            else:
-                new_lines.append(line)
+        save_section(
+            self.current_file,
+            "Notes",
+            note_lines
+        )
 
 # -------------------------------
 # BUILD NEW USER BLOCK

@@ -2,8 +2,14 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel,
     QGridLayout, QLineEdit, QPushButton
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer
 import os
+
+from app.storage.user_data_storage import (
+    load_section,
+    save_section,
+)
+
 
 
 class VaultProgressWidget(QWidget):
@@ -32,8 +38,7 @@ class VaultProgressWidget(QWidget):
                 field.setAlignment(Qt.AlignCenter)
                 field.setMaxLength(3)
 
-
-                field.textChanged.connect(self._save)
+                field.textChanged.connect(self._schedule_save)
 
                 self.grid.addWidget(field, row, col + 1)
                 self.fields[(row, col)] = field
@@ -44,6 +49,12 @@ class VaultProgressWidget(QWidget):
         self.clear_btn = QPushButton("Clear All")
         self.clear_btn.clicked.connect(self.clear_all)
         self.layout.addWidget(self.clear_btn)
+
+
+# Debounced saving
+        self.save_timer = QTimer(self)
+        self.save_timer.setSingleShot(True)
+        self.save_timer.timeout.connect(self._save)
 
         self.current_file = None
 
@@ -66,7 +77,14 @@ class VaultProgressWidget(QWidget):
         for field in self.fields.values():
             field.setText("")
 
-        self._save()
+        self._schedule_save()
+
+
+# --------------------------------------------------
+# DEBOUNCED SAVE
+# --------------------------------------------------
+    def _schedule_save(self):
+        self.save_timer.start(3000)
 
 # --------------------------------------------------
 # LOAD (USER BLOCK)
@@ -75,108 +93,41 @@ class VaultProgressWidget(QWidget):
 
         result = {}
 
-        if not self.current_file or not os.path.exists(self.current_file):
-            return result
+        lines = load_section(self.current_file, "Vault")
 
-        in_user_block = False
-        in_vault = False
+        for stripped in lines:
 
-        with open(self.current_file, encoding="utf-8") as f:
-            for line in f:
+            if "=" not in stripped:
+                continue
 
-                stripped = line.strip()
-
-                if stripped == "### USER_DATA_START ###":
-                    in_user_block = True
-                    continue
-
-                if stripped == "### USER_DATA_END ###":
-                    break
-
-                if in_user_block and stripped == "Vault:":
-                    in_vault = True
-                    continue
-
-                if in_vault:
-                    if "=" in stripped:
-                        k, v = stripped.split("=")
-                        result[k] = v
-                    elif stripped.endswith(":"):
-                        break
+            k, v = stripped.split("=")
+            result[k] = v
 
         return result
+   
 
 # --------------------------------------------------
 # SAVE (MERGE SAFE)
 # --------------------------------------------------
     def _save(self):
 
-        if not self.current_file or not os.path.exists(self.current_file):
+        if not self.current_file:
             return
 
-        with open(self.current_file, encoding="utf-8") as f:
-            lines = f.readlines()
-
-# extract existing USER data
-        in_user_block = False
-
-        notes_lines = []
-        duties_lines = []
-        new_lines = []
-
-        for line in lines:
-            stripped = line.strip()
-
-            if stripped == "### USER_DATA_START ###":
-                in_user_block = True
-                continue
-
-            if stripped == "### USER_DATA_END ###":
-                in_user_block = False
-                continue
-
-            if in_user_block:
-                if stripped.startswith("Notes:") or notes_lines:
-                    notes_lines.append(line)
-                    continue
-
-                if stripped.startswith("WeeklyDuties:") or "=" in stripped:
-                    duties_lines.append(line)
-                    continue
-
-            else:
-                new_lines.append(line)
-
-# build vault data
         vault_lines = []
+
         for (row, col), field in self.fields.items():
+
             value = field.text().strip()
+
             if value:
-                vault_lines.append(f"{row}_{col}={value}\n")
+                vault_lines.append(f"{row}_{col}={value}")
 
-# rebuild USER block
-        user_block = []
+        save_section(
+            self.current_file,
+            "Vault",
+            vault_lines
+        )
 
-        if notes_lines or duties_lines or vault_lines:
 
-            user_block.append("### USER_DATA_START ###\n")
-
-            if notes_lines:
-                user_block.extend(notes_lines)
-
-            if duties_lines:
-                user_block.extend(duties_lines)
-
-            if vault_lines:
-                user_block.append("Vault:\n")
-                user_block.extend(vault_lines)
-
-            user_block.append("### USER_DATA_END ###\n")
-
-# write file
-        with open(self.current_file, "w", encoding="utf-8") as f:
-            f.writelines(new_lines)
-
-            if user_block:
-                f.write("\n")
-                f.writelines(user_block)
+ 

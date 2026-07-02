@@ -24,16 +24,20 @@ SPECIAL_ITEM_NAMES = {
 
 CURRENCY_GROUPS = {
     "Midnight",
-    "Season 1",
-    "Miscellaneous",
-    "Player vs. Player",
     "War Within",
-    "Dragonflight",
     "Shadowlands",
-    "Battle for Azeroth",
     "Legion",
+    "Mists of Pandaria",
+    "Wrath of the Lich King",
+    "Player vs. Player",
+
+    "Season 1",
+    "Dragonflight", 
+    "Battle for Azeroth",
     "Warlords of Draenor",
+    "Cataclysm",
     "Burning Crusade",
+    "Miscellaneous",
 }
 
 

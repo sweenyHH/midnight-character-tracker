@@ -2,12 +2,16 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel,
     QGridLayout, QCheckBox, QPushButton
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer
 
 from app.ui.colors import STATUS_COLORS
 
 from .config import ROWS_CONFIG
-from .storage import load_state, save_state
+
+from app.storage.weekly_duties_storage import (
+    load_state,
+    save_state,
+)
 
 
 class WeeklyDutiesWidget(QWidget):
@@ -35,8 +39,12 @@ class WeeklyDutiesWidget(QWidget):
         self.checkboxes = []
         self.row_labels = []
 
+        # Debounced saving
+        self.save_timer = QTimer(self)
+        self.save_timer.setSingleShot(True)
+        self.save_timer.timeout.connect(self._save)
 
-# Style checkboxes (green when checked)
+        # Style checkboxes (green when checked)
         self.setStyleSheet(f"""
         QCheckBox::indicator {{
             width: 14px;
@@ -55,23 +63,35 @@ class WeeklyDutiesWidget(QWidget):
         """)
 
 # --------------------------------------------------
+    def _schedule_save(self):
+        self.save_timer.start(3000)
+
+# --------------------------------------------------
+    def _save(self):
+
+        if not self.current_file:
+            return
+
+        save_state(
+            self.current_file,
+            self.checkboxes
+        )
+
+# --------------------------------------------------
     def _update_row_visuals(self):
 
         for (row_index, boxes), label in zip(self.checkboxes, self.row_labels):
 
-# reset style
+            # reset style
             label.setStyleSheet("")
 
             checked = sum(1 for cb in boxes if cb.isChecked())
             total = len(boxes)
 
-
             if checked == total:
                 style = f"color: {STATUS_COLORS['success']}; font-weight: bold;"
-
             else:
                 style = f"color: {STATUS_COLORS['error']};"
-
 
             label.setStyleSheet(style)
 
@@ -81,7 +101,7 @@ class WeeklyDutiesWidget(QWidget):
         self.current_file = character.source_file
         self.row_labels = []
 
-# clear grid properly
+        # clear grid properly
         while self.grid.count():
             item = self.grid.takeAt(0)
             widget = item.widget()
@@ -97,7 +117,7 @@ class WeeklyDutiesWidget(QWidget):
 
         for row_index, (name, count) in enumerate(self.rows_config):
 
-# spacer row
+            # spacer row
             if name == "__SPACER__":
                 spacer = QLabel("")
                 spacer.setFixedHeight(12)
@@ -105,12 +125,9 @@ class WeeklyDutiesWidget(QWidget):
                 current_row += 1
                 continue
 
-# label
-            
+            # label
             label = QLabel(f"<b>{name}</b>")
             label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-
-
 
             label.setStyleSheet("")
 
@@ -128,11 +145,7 @@ class WeeklyDutiesWidget(QWidget):
                     if saved_state.get(key):
                         cb.setChecked(True)
 
-# connect signals with storage
-                    cb.stateChanged.connect(
-                        lambda _, rf=self.current_file, cbs=self.checkboxes:
-                        save_state(rf, cbs)
-                    )
+                    cb.stateChanged.connect(self._schedule_save)
                     cb.stateChanged.connect(self._update_row_visuals)
 
                     self.grid.addWidget(cb, current_row, col + 1)
@@ -155,4 +168,4 @@ class WeeklyDutiesWidget(QWidget):
             for cb in boxes:
                 cb.setChecked(False)
 
-        save_state(self.current_file, self.checkboxes)
+        self._schedule_save()

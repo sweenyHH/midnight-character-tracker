@@ -10,7 +10,7 @@ from app.ui.theme_manager import ThemeManager
 
 class TopPanel(QWidget):
 
-    def __init__(self, select_cb, paste_cb, back_cb):
+    def __init__(self, paste_cb, back_cb):
         super().__init__()
 
         main_layout = QVBoxLayout(self)
@@ -20,9 +20,6 @@ class TopPanel(QWidget):
 # --------------------------------------------------
         button_row = QHBoxLayout()
 
-        self.select_btn = QPushButton("Select Data Folder")
-        self.select_btn.clicked.connect(select_cb)
-
         self.paste_btn = QPushButton("Paste Character Data")
         self.paste_btn.clicked.connect(paste_cb)
 
@@ -30,7 +27,6 @@ class TopPanel(QWidget):
         self.back_btn.clicked.connect(back_cb)
         self.back_btn.hide()
 
-        button_row.addWidget(self.select_btn)
         button_row.addWidget(self.paste_btn)
         button_row.addWidget(self.back_btn)
 

@@ -4,6 +4,7 @@ from app.parser.reputation_parser import parse_reputation
 from app.parser.section_parser import handle_section
 from app.parser.equipment_parser import parse_equipment
 
+from pathlib import Path
 
 FIELD_MAPPING = {
     "Character": "name",
@@ -32,7 +33,7 @@ FIELD_MAPPING = {
 
 def parse_txt(file_path):
 
-    character_name = file_path.split("/")[-1].split(".")[0]
+    character_name = Path(file_path).stem
     character = Character(character_name)
     character.source_file = file_path
 
@@ -50,18 +51,18 @@ def parse_txt(file_path):
 # PARSE EQUIPMENT (separate parser)
     character.equipment = parse_equipment(lines)
 
-
-    print("DEBUG Equipment Count:", len(character.equipment))
-    for e in character.equipment:
-        print("  ", e.slot, "|", e.name)
-
-
 # MAIN PARSING LOOP
     for line in lines:
         line = line.strip()
 
         if not line:
             continue
+
+# Fast exit at user data block start
+
+        if line.startswith("### USER_DATA_START ###"):
+            break
+
 
 # -------------------------------
 # EQUIPMENT SECTION (SKIP IN MAIN LOOP)
@@ -89,10 +90,13 @@ def parse_txt(file_path):
 # EXIT REPUTATION SECTION
 # -------------------------------
 
-        if in_reputation_section and (
-            line.endswith(":") and line != "Reputations:"
-        or line.startswith("### USER_DATA")):
-            in_reputation_section = False
+        if in_reputation_section:
+
+            if line.startswith("### USER_DATA"):
+                in_reputation_section = False
+
+            elif line.endswith(":") and line != "Reputations:":
+                in_reputation_section = False
 
 # -------------------------------
 # SECTION HEADERS
@@ -117,30 +121,6 @@ def parse_txt(file_path):
                 current_currency_group = group_name
             else:
                 current_currency_group = None
-
-            continue
-
-# -------------------------------
-# VAULT PARSING 
-# -------------------------------
-        if line.startswith("Vault Row"):
-            import re
-
-            match = re.match(r"Vault Row (\d):\s*(.*)", line)
-
-            if match:
-                row_num = match.group(1)
-                values_str = match.group(2)
-
-                values = []
-
-                if values_str:
-                    for v in values_str.split(","):
-                        v = v.strip()
-                        if v.isdigit():
-                            values.append(int(v))
-
-                character.vault[f"row{row_num}"] = values
 
             continue
 
@@ -184,7 +164,8 @@ def parse_txt(file_path):
                 if rep and rep.name:
                     reputations.append(rep)
 
-            except:
+
+            except Exception:
                 pass
 
             continue

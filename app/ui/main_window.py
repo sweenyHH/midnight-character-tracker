@@ -6,7 +6,6 @@ from app.ui.detail_view import DetailView
 from app.ui.character_table import CharacterTable
 from app.ui.top_panel import TopPanel
 from app.utils.watcher import FolderWatcher
-from app.utils.windows_to_import import WindowsToImportWatcher
 from app.ui.paste_dialog import PasteDialog
 
 import os
@@ -33,7 +32,6 @@ class MainWindow(QMainWindow):
         self.current_character = None
 
         self.top_panel = TopPanel(
-            self.select_folder,
             self.open_paste_dialog,
             self.show_list
         )
@@ -53,7 +51,13 @@ class MainWindow(QMainWindow):
 
         if os.path.exists(default_folder):
             self.data_service.set_folder(default_folder)
+
+            self.start_watcher(default_folder)
+
             self.reload_all()
+
+
+
 
 # --------------------------------------------------
 
@@ -62,7 +66,6 @@ class MainWindow(QMainWindow):
         self.data_service.load_data()
 
         characters = self.data_service.get_characters()
-        print("DEBUG characters count:", len(characters))
         
         self.table.load_characters(characters)
         self.top_panel.update_reputation(
@@ -93,39 +96,34 @@ class MainWindow(QMainWindow):
         self.top_panel.back_btn.hide()
 
 # --------------------------------------------------
-
+ 
     def open_paste_dialog(self):
-        dialog = PasteDialog(self.data_service.folder_path)
+
+        dialog = PasteDialog()
         dialog.exec()
+
         self.reload_all()
 
-    def select_folder(self):
-        from PySide6.QtWidgets import QFileDialog
-
-        folder = QFileDialog.getExistingDirectory(self, "Select Folder")
-
-        if folder:
-            self.data_service.set_folder(folder)
-            self.reload_all()
-            self.start_watcher(folder)
-
 # --------------------------------------------------
-
+        
     def start_watcher(self, folder):
-        self.watcher = FolderWatcher(folder, self.files_changed_signal.emit)
+        self.watcher = FolderWatcher(
+            folder,
+            self.files_changed_signal.emit
+        )
         self.watcher.start()
 
-        self.win_to_import_watcher = WindowsToImportWatcher()
-        self.win_to_import_watcher.start()
 
     def _update_ui(self):
         import time
         time.sleep(1.0)
         self.reload_all()
 
+
     def closeEvent(self, event):
+
         if hasattr(self, "watcher"):
             self.watcher.stop()
-        if hasattr(self, "win_to_import_watcher"):
-            self.win_to_import_watcher.stop()
+
         event.accept()
+

@@ -42,7 +42,7 @@ Avoidance: 0 rating / 0%
 
 Currencies:
 Gold: 1000g 45s 43c
-Currency Count: 59
+Currency Count: 60
 
 == Midnight ==
 Artisan Alchemist's Moxie (ID: 3256) - Quantity: 960
@@ -67,6 +67,9 @@ Champion Dawncrest (ID: 3343) - Quantity: 177 - Total Earned: 357
 Hero Dawncrest (ID: 3345) - Quantity: 305 - Total Earned: 755
 Myth Dawncrest (ID: 3347) - Quantity: 62 - Total Earned: 132
 Radiant Spark Dust (ID: 3212) - Quantity: 9/18 - Total Earned: 9
+
+== Dungeon and Raid ==
+Timewarped Badge (ID: 1166) - Quantity: 1330
 
 == Miscellaneous ==
 Bronze Celebration Token (ID: 3100) - Quantity: 0
@@ -127,66 +130,66 @@ Spirit Shard (ID: 1704) - Quantity: 12/200
 
 Bags:
 == Backpack (1/20) ==
-[Mark of the Illidari] x9 [ID: 32897, iLvl: 13, Q: 2]
+[Unknown Item] x9 [ID: 32897, iLvl: n/a]
 
 == Bag 1 (0/34) ==
 [Empty]
 
 == Bag 2 (2/30) ==
-[Spurned Val'kyr Shoulderguards] x1 [ID: 50233, iLvl: 272, Q: 4]
-[Spiritseal Ring] x1 [ID: 249622, iLvl: 250, Q: 4]
+[Unknown Item] x1 [ID: 50233, iLvl: n/a]
+[Unknown Item] x1 [ID: 249622, iLvl: n/a]
 
 == Bag 3 (19/34) ==
-[Sylvan Wakrapuku] x1 [ID: 251784, iLvl: 259, Q: 4]
-[Withered Saptor's Paw] x1 [ID: 251782, iLvl: 259, Q: 4]
-[Tangle of Vibrant Vines] x1 [ID: 252957, iLvl: 263, Q: 2]
-[Preyseeker's Circle] x1 [ID: 259914, iLvl: 263, Q: 2]
-[Crucible of Erratic Energies] x1 [ID: 264507, iLvl: 246, Q: 4]
-[Drum of Renewed Bonds] x1 [ID: 248583, iLvl: 259, Q: 2]
-[Lost Idol of the Hash'ey] x1 [ID: 251783, iLvl: 259, Q: 4]
-[Noble's Signet Ring] x1 [ID: 265814, iLvl: 1, Q: 1]
-[Novice Combatant's Medallion] x1 [ID: 267076, iLvl: 201, Q: 3]
-[Recruit's Signet] x1 [ID: 273831, iLvl: 201, Q: 2]
-[Resilient Seed] x3 [ID: 237497, iLvl: 23, Q: 3]
-[Haranir Phial of Finesse] x1 [ID: 241311, iLvl: 278, Q: 1]
-[Latent Arcana] x84 [ID: 242241, iLvl: 1, Q: 2]
-[Another's Treasure] x1 [ID: 238494, iLvl: 1, Q: 1]
-[Darkmoon Game Token] x8 [ID: 71083, iLvl: 1, Q: 2]
-[Darkmoon Ride Ticket] x4 [ID: 81055, iLvl: 1, Q: 1]
-[Stormarion Core] x152 [ID: 246951, iLvl: 1, Q: 3]
+[Unknown Item] x1 [ID: 251784, iLvl: n/a]
+[Unknown Item] x1 [ID: 251782, iLvl: n/a]
+[Unknown Item] x1 [ID: 252957, iLvl: n/a]
+[Unknown Item] x1 [ID: 259914, iLvl: n/a]
+[Unknown Item] x1 [ID: 264507, iLvl: n/a]
+[Unknown Item] x1 [ID: 248583, iLvl: n/a]
+[Unknown Item] x1 [ID: 251783, iLvl: n/a]
+[Unknown Item] x1 [ID: 265814, iLvl: n/a]
+[Unknown Item] x1 [ID: 267076, iLvl: n/a]
+[Unknown Item] x1 [ID: 273831, iLvl: n/a]
+[Unknown Item] x3 [ID: 237497, iLvl: n/a]
+[|A:Professions-ChatIcon-Quality-12-Tier1:17:15::1|a] x1 [ID: 241311, iLvl: n/a]
+[Unknown Item] x84 [ID: 242241, iLvl: n/a]
+[Unknown Item] x1 [ID: 238494, iLvl: n/a]
+[Unknown Item] x8 [ID: 71083, iLvl: n/a]
+[Unknown Item] x4 [ID: 81055, iLvl: n/a]
+[Unknown Item] x152 [ID: 246951, iLvl: n/a]
 [Thalassian Token of Merit] x8 [ID: 258556, iLvl: 24, Q: 4]
-[Brawler's Fight Tonic of Agility] x8 [ID: 253015, iLvl: 10, Q: 1]
+[Unknown Item] x8 [ID: 253015, iLvl: n/a]
 
 == Bag 4 (24/30) ==
-[Royal Roast] x47 [ID: 242275, iLvl: 24, Q: 3]
-[Ascendant Voidshard] x1 [ID: 268650, iLvl: 1, Q: 4]
-[Primal Philosopher's Stone] x1 [ID: 241291, iLvl: 171, Q: 3]
-[Novice Combatant's Insignia of Alacrity] x1 [ID: 267469, iLvl: 201, Q: 3]
-[Novice Combatant's Cloak] x1 [ID: 267491, iLvl: 217, Q: 3]
-[L00T RAID-R Mini] x2 [ID: 244193, iLvl: 1, Q: 3]
-[Essence of Lumber] x2 [ID: 269010, iLvl: 1, Q: 3]
+[Unknown Item] x47 [ID: 242275, iLvl: n/a]
+[Unknown Item] x1 [ID: 268650, iLvl: n/a]
+[|A:Professions-ChatIcon-Quality-Tier3:17:15::1|a] x1 [ID: 241291, iLvl: n/a]
+[Unknown Item] x1 [ID: 267469, iLvl: n/a]
+[Unknown Item] x1 [ID: 267491, iLvl: n/a]
+[Unknown Item] x2 [ID: 244193, iLvl: n/a]
+[Unknown Item] x2 [ID: 269010, iLvl: n/a]
 [Potent Healing Potion] x38 [ID: 258138, iLvl: 1, Q: 1]
-[Silvermoon Health Potion] x5 [ID: 241305, iLvl: 278, Q: 1]
-[Flask of the Shattered Sun] x4 [ID: 241326, iLvl: 295, Q: 1]
-[Flask of the Shattered Sun] x2 [ID: 241327, iLvl: 278, Q: 1]
-[Gallagio Loyalty Rewards Card: Silver] x1 [ID: 234389, iLvl: 1, Q: 1]
-[Thermal Anvil] x1 [ID: 87216, iLvl: 15, Q: 1]
-[Phial of Enhanced Ambidexterity] x3 [ID: 212311, iLvl: 23, Q: 1]
-[Twilight-Spiced Grouper] x14 [ID: 212492, iLvl: 1, Q: 1]
-[Sweet Eclipse] x5 [ID: 212491, iLvl: 1, Q: 1]
-[Hydrocane] x1 [ID: 9452, iLvl: 33, Q: 3]
-[Gnomish Army Knife] x1 [ID: 40772, iLvl: 13, Q: 1]
-[Goblin Glider Kit] x3 [ID: 109076, iLvl: 1, Q: 1]
-[Thermal Anvil] x1 [ID: 87216, iLvl: 15, Q: 1]
-[Phase Regulator] x1 [ID: 247882, iLvl: 23, Q: 3]
-[Cypher of Relocation] x1 [ID: 180817, iLvl: 19, Q: 1]
+[|A:Professions-ChatIcon-Quality-12-Tier1:17:15::1|a] x5 [ID: 241305, iLvl: n/a]
+[|A:Professions-ChatIcon-Quality-12-Tier2:17:15::1|a] x4 [ID: 241326, iLvl: n/a]
+[|A:Professions-ChatIcon-Quality-12-Tier1:17:15::1|a] x2 [ID: 241327, iLvl: n/a]
+[Unknown Item] x1 [ID: 234389, iLvl: n/a]
+[Unknown Item] x1 [ID: 87216, iLvl: n/a]
+[|A:Professions-ChatIcon-Quality-Tier1:17:15::1|a] x3 [ID: 212311, iLvl: n/a]
+[Unknown Item] x14 [ID: 212492, iLvl: n/a]
+[Unknown Item] x5 [ID: 212491, iLvl: n/a]
+[Unknown Item] x1 [ID: 9452, iLvl: n/a]
+[Unknown Item] x1 [ID: 40772, iLvl: n/a]
+[Unknown Item] x3 [ID: 109076, iLvl: n/a]
+[Unknown Item] x1 [ID: 87216, iLvl: n/a]
+[Unknown Item] x1 [ID: 247882, iLvl: n/a]
+[Unknown Item] x1 [ID: 180817, iLvl: n/a]
 [Wrap of Unity] x1 [ID: 63206, iLvl: 12, Q: 3]
 [Hearthstone] x1 [ID: 6948, iLvl: 1, Q: 1]
 
 == Reagent Bag (3/32) ==
 [Spark of Radiance] x6 [ID: 232875, iLvl: 24, Q: 4]
-[Fused Vitality] x13 [ID: 245345, iLvl: 23, Q: 3]
-[Oil of Heartwood] x6 [ID: 247811, iLvl: 23, Q: 1]
+[Unknown Item] x13 [ID: 245345, iLvl: n/a]
+[Unknown Item] x6 [ID: 247811, iLvl: n/a]
 
 Bank:
 [Using cached bank data - last updated: 2026-07-01 08:00:49.]
@@ -537,229 +540,99 @@ Bank:
 
 Equipment:
 == Head ==
-[Primal Sentry's Maw] x1 [ID: 249988, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249988, iLvl: n/a]
 - Durability: 78/100
-- Type: Armor / Mail
-- Equip Slot: Head
 - Item String: item:249988:7991:::::::90:254::108:5:13338:6652:12667:13575:12798::::::
 - Enchant ID: 7991
 - Bonus IDs: 13338, 6652, 12667, 13575, 12798
-- Binding: Bind on Use
-- AGI: 110
-- STA: 1507
-- ARMOR: 150
-- CRIT: 104
-- HASTE: 50
 
 == Neck ==
-[Arboreal Vine Collar] x1 [ID: 249627, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Neck
-- Equip Slot: Neck
+[Unknown Item] x1 [ID: 249627, iLvl: n/a]
 - Item String: item:249627::240983::::::90:254::110:3:42:13668:12798:1:28:6015:::::
 - Gems:
   - Socket 1: [ID: 240983]
 - Bonus IDs: 42, 13668, 12798
-- STA: 848
-- CRIT: 160
-- VERS: 113
-- Prismatic Socket: 1
-- Speed: 47
 
 == Shoulder ==
-[Primal Sentry's Trophies] x1 [ID: 249986, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249986, iLvl: n/a]
 - Durability: 79/100
-- Type: Armor / Mail
-- Equip Slot: Shoulder
 - Item String: item:249986:8031:::::::90:254::108:4:13340:6652:13574:12798::::::
 - Enchant ID: 8031
 - Bonus IDs: 13340, 6652, 13574, 12798
-- Binding: Bind on Use
-- AGI: 82
-- STA: 1130
-- ARMOR: 138
-- HASTE: 77
-- VERS: 39
 
 == Back ==
-[Elder Mossveil] x1 [ID: 249625, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Back
-- Equip Slot: Back
+[Unknown Item] x1 [ID: 249625, iLvl: n/a]
 - Item String: item:249625::::::::90:254::110:3:42:13577:12798:1:28:6015:::::
 - Bonus IDs: 42, 13577, 12798
-- Binding: Bind on Pickup
-- AGI: 62
-- STA: 848
-- ARMOR: 54
-- HASTE: 54
-- VERS: 32
-- Speed: 37
 
 == Chest ==
-[Primal Sentry's Scaleplate] x1 [ID: 249991, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249991, iLvl: n/a]
 - Durability: 131/165
-- Type: Armor / Mail
-- Equip Slot: Chest
 - Item String: item:249991:7987:::::::90:254::108:4:13336:6652:13575:12798::::::
 - Enchant ID: 7987
 - Bonus IDs: 13336, 6652, 13575, 12798
-- Binding: Bind on Use
-- AGI: 110
-- STA: 1507
-- ARMOR: 200
-- CRIT: 46
-- HASTE: 108
 
 == Shirt ==
 [Empty]
 
 == Tabard ==
-[Renowned Guild Tabard] x1 [ID: 69210, iLvl: 1, Q: 4]
-- Rarity: Epic
-- Item Level: 1
-- Type: Tabard
-- Equip Slot: Tabard
+[Unknown Item] x1 [ID: 69210, iLvl: n/a]
 - Item String: item:69210::::::::90:254::14:::::::
 
 == Wrist ==
-[Elder Mossbands] x1 [ID: 249652, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249652, iLvl: n/a]
 - Durability: 42/55
-- Type: Armor / Mail
-- Equip Slot: Wrist
 - Item String: item:249652::::::::90:254::110:4:6652:12667:13577:12798:1:28:6015:::::
 - Bonus IDs: 6652, 12667, 13577, 12798
-- Binding: Bind on Use
-- AGI: 62
-- STA: 848
-- ARMOR: 100
-- HASTE: 36
-- VERS: 51
 
 == Hands ==
-[Primal Sentry's Talonguards] x1 [ID: 249989, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249989, iLvl: n/a]
 - Durability: 45/55
-- Type: Armor / Mail
-- Equip Slot: Hands
 - Item String: item:249989::::::::90:254::110:4:6652:13337:13574:12798::::::
 - Bonus IDs: 6652, 13337, 13574, 12798
-- Binding: Bind on Use
-- AGI: 82
-- STA: 1130
-- ARMOR: 113
-- CRIT: 34
-- MAST: 81
 
 == Waist ==
-[Elder Mosscinch] x1 [ID: 249651, iLvl: 263, Q: 4]
-- Rarity: Epic
-- Item Level: 263
+[Unknown Item] x1 [ID: 249651, iLvl: n/a]
 - Durability: 44/55
-- Type: Armor / Mail
-- Equip Slot: Waist
 - Item String: item:249651::::::::90:254::109:4:6652:12667:13577:12790:1:28:6015:::::
 - Bonus IDs: 6652, 12667, 13577, 12790
-- Binding: Bind on Use
-- AGI: 73
-- STA: 961
-- ARMOR: 105
-- CRIT: 63
-- MAST: 45
 
 == Legs ==
-[Primal Sentry's Legguards] x1 [ID: 249987, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249987, iLvl: n/a]
 - Durability: 93/120
-- Type: Armor / Mail
-- Equip Slot: Legs
 - Item String: item:249987:8159:::::::90:254::108:4:6652:13339:13575:12798::::::
 - Enchant ID: 8159
 - Bonus IDs: 6652, 13339, 13575, 12798
-- Binding: Bind on Use
-- AGI: 110
-- STA: 1507
-- ARMOR: 175
-- CRIT: 103
-- MAST: 51
 
 == Feet ==
-[Primal Sentry's Swiftsteps] x1 [ID: 249990, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
+[Unknown Item] x1 [ID: 249990, iLvl: n/a]
 - Durability: 63/80
-- Type: Armor / Mail
-- Equip Slot: Feet
 - Item String: item:249990:7993:::::::90:254::110:2:6652:12798::::::
 - Enchant ID: 7993
 - Bonus IDs: 6652, 12798
-- Binding: Bind on Use
-- AGI: 82
-- STA: 1130
-- ARMOR: 125
-- CRIT: 80
-- MAST: 35
 
 == Finger 1 ==
-[Novice Combatant's Ring] x1 [ID: 266317, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Finger
-- Equip Slot: Finger
+[Unknown Item] x1 [ID: 266317, iLvl: n/a]
 - Item String: item:266317:7997:240908::::::90:254::11:2:13447:12798:1:28:3313:::::
 - Enchant ID: 7997
 - Gems:
   - Socket 1: [ID: 240908]
 - Bonus IDs: 13447, 12798
-- STA: 848
-- MAST: 74
-- VERS: 199
-- Prismatic Socket: 1
 
 == Finger 2 ==
-[Omission of Light] x1 [ID: 251093, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Finger
-- Equip Slot: Finger
+[Unknown Item] x1 [ID: 251093, iLvl: n/a]
 - Item String: item:251093::::::::90:254::35:5:13440:6652:13668:12699:12802::::::
 - Bonus IDs: 13440, 6652, 13668, 12699, 12802
-- STA: 848
-- HASTE: 160
-- MAST: 113
-- Prismatic Socket: 1
 
 == Trinket 1 ==
-[Void-Reaper's Libram] x1 [ID: 251785, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Trinket
-- Equip Slot: Trinket
+[Unknown Item] x1 [ID: 251785, iLvl: n/a]
 - Item String: item:251785::::::::90:254::55:2:6652:12798::::::
 - Bonus IDs: 6652, 12798
-- AGI: 104
 
 == Trinket 2 ==
-[Glorious Crusader's Keepsake] x1 [ID: 251792, iLvl: 276, Q: 4]
-- Rarity: Epic
-- Item Level: 276
-- Type: Trinket
-- Equip Slot: Trinket
+[Unknown Item] x1 [ID: 251792, iLvl: n/a]
 - Item String: item:251792::::::::90:254::110:2:6652:12798:1:28:6015:::::
 - Bonus IDs: 6652, 12798
-- AGI: 104
 
 == Main Hand ==
 [P.O.W. x3] x1 [ID: 268477, iLvl: 285, Q: 4]
