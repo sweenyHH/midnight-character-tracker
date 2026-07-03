@@ -20,6 +20,3 @@ To allow execution of run_tests.sh:
 
 chmod +x run_tests.sh
 
-To allow execution of run_parse_debug.sh:
-
-chmod +x run_parse_debug.sh
