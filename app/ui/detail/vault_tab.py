@@ -1,3 +1,4 @@
+
 from PySide6.QtWidgets import (
     QWidget,
     QLabel,
@@ -12,7 +13,35 @@ from app.storage.user_data_storage import load_section
 
 class VaultTab(QWidget):
 
+    def __init__(self):
+        super().__init__()
+
+        # -------------------------------
+        # ROOT LAYOUT (CREATE ONCE)
+        # -------------------------------
+        self.root = QVBoxLayout(self)
+
+        self.root.setContentsMargins(
+            20,
+            20,
+            20,
+            20
+        )
+
+        self.grid = QGridLayout()
+        self.grid.setSpacing(20)
+
+        self.root.addLayout(
+            self.grid,
+            1
+        )
+
     def set_character(self, character):
+
+        print(
+            "[VaultTab] Existing layout:",
+            self.layout()
+        )
 
         print(
             f"[VaultTab] set_character: "
@@ -25,31 +54,14 @@ class VaultTab(QWidget):
         )
 
         # -------------------------------
-        # CLEAN OLD LAYOUT
+        # CLEAR GRID CONTENTS
         # -------------------------------
-        old_layout = self.layout()
+        while self.grid.count():
 
-        if old_layout:
+            item = self.grid.takeAt(0)
 
-            while old_layout.count():
-                item = old_layout.takeAt(0)
-
-                if item.widget():
-                    item.widget().deleteLater()
-
-            QWidget().setLayout(old_layout)
-
-        # -------------------------------
-        # ROOT LAYOUT
-        # -------------------------------
-        root = QVBoxLayout()
-        root.setContentsMargins(20, 20, 20, 20)
-        self.setLayout(root)
-
-        grid = QGridLayout()
-        grid.setSpacing(20)
-
-        root.addLayout(grid, 1)
+            if item.widget():
+                item.widget().deleteLater()
 
         # -------------------------------
         # LOAD VAULT DATA FROM STORAGE
@@ -77,6 +89,7 @@ class VaultTab(QWidget):
                     continue
 
                 try:
+
                     key, value = line.split(
                         "=",
                         1
@@ -165,7 +178,7 @@ class VaultTab(QWidget):
                     else "-"
                 )
 
-                grid.addWidget(
+                self.grid.addWidget(
                     create_box(val),
                     row_index,
                     col + 1,
@@ -196,7 +209,7 @@ class VaultTab(QWidget):
                 "vaultRowLabel"
             )
 
-            grid.addWidget(
+            self.grid.addWidget(
                 label,
                 row_index,
                 0,
@@ -206,21 +219,21 @@ class VaultTab(QWidget):
                 row_index,
                 vault.get(
                     key,
-                    []
+                    [],
                 ),
             )
 
         # -------------------------------
         # GRID STRETCH
         # -------------------------------
-        grid.setColumnStretch(0, 1)
-        grid.setColumnStretch(1, 2)
-        grid.setColumnStretch(2, 2)
-        grid.setColumnStretch(3, 2)
+        self.grid.setColumnStretch(0, 1)
+        self.grid.setColumnStretch(1, 2)
+        self.grid.setColumnStretch(2, 2)
+        self.grid.setColumnStretch(3, 2)
 
-        grid.setRowStretch(0, 1)
-        grid.setRowStretch(1, 1)
-        grid.setRowStretch(2, 1)
+        self.grid.setRowStretch(0, 1)
+        self.grid.setRowStretch(1, 1)
+        self.grid.setRowStretch(2, 1)
 
         print(
             "[VaultTab] UI rebuild complete"
