@@ -38,6 +38,12 @@ class VaultTab(QWidget):
 
     def set_character(self, character):
 
+        
+        print(
+            "[VaultTab] ENTER set_character"
+        )
+
+
         print(
             "[VaultTab] Existing layout:",
             self.layout()
@@ -132,6 +138,13 @@ class VaultTab(QWidget):
             f"[VaultTab] Loaded vault data: "
             f"{vault}"
         )
+
+
+
+        print(
+            "[VaultTab] EXIT set_character"
+        )
+
 
         # -------------------------------
         # BOX CREATOR
