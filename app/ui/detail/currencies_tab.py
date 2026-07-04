@@ -186,7 +186,13 @@ class CurrenciesTab(QWidget):
         right_groups = ordered_groups[mid:]
 
 # CONTROL BUTTONS
-        btn_layout = QHBoxLayout()
+
+        btn_widget = QWidget()
+        btn_widget.setMaximumHeight(40)
+
+        btn_layout = QHBoxLayout(btn_widget)
+        btn_layout.setContentsMargins(0, 0, 0, 0)
+    
 
         expand_btn = QPushButton("Expand All")
         collapse_btn = QPushButton("Collapse All")
@@ -198,7 +204,7 @@ class CurrenciesTab(QWidget):
         btn_layout.addWidget(collapse_btn)
         btn_layout.addStretch()
 
-        layout.addLayout(btn_layout)
+        layout.addWidget(btn_widget)
 
 # SCROLL AREA
         scroll = QScrollArea()
