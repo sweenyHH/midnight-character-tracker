@@ -24,3 +24,6 @@ logs/
 build/
 dist/
 *.spec
+
+# Windows alternate data streams
+*Zone.Identifier
