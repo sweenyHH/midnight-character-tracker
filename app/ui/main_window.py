@@ -62,14 +62,22 @@ class MainWindow(QMainWindow):
 
         self.files_changed_signal.connect(self._update_ui)
 
-        default_folder = os.path.join(os.getcwd(), "import")
+        default_folder = os.path.join(
+            os.getcwd(),
+            "import"
+        )
 
-        if os.path.exists(default_folder):
-            self.data_service.set_folder(default_folder)
+        os.makedirs(
+            default_folder,
+            exist_ok=True
+        )
 
-            self.start_watcher(default_folder)
+        self.data_service.set_folder(default_folder)
 
-            self.reload_all()
+        self.start_watcher(default_folder)
+
+        self.reload_all()
+
 
 # --------------------------------------------------
 
