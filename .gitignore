@@ -19,3 +19,8 @@ data/warband_tasks.txt
 
 # Logs
 logs/
+
+# PyInstaller
+build/
+dist/
+*.spec
