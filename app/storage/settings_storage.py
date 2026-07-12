@@ -1,3 +1,4 @@
+from app.utils.logger import logger
 from app.utils.app_paths import get_data_dir
 
 SETTINGS_FILE = get_data_dir() / "settings.txt"
