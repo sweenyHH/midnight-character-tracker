@@ -27,3 +27,13 @@ dist/
 
 # Windows alternate data streams
 *Zone.Identifier
+
+# Installer build output
+installer/output/
+
+# Downloaded GitHub artifact
+installer/*.zip
+
+# Extracted Windows build
+installer/MidnightCharacterTracker.exe
+installer/_internal/
