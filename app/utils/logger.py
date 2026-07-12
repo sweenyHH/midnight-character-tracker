@@ -1,14 +1,14 @@
-from pathlib import Path
 import logging
 from logging.handlers import RotatingFileHandler
+
+from app.utils.app_paths import get_log_dir
 
 
 # --------------------------------------------------
 # LOG DIRECTORY
 # --------------------------------------------------
 
-LOG_DIR = Path("logs")
-LOG_DIR.mkdir(exist_ok=True)
+LOG_DIR = get_log_dir()
 
 LOG_FILE = LOG_DIR / "mct.log"
 
@@ -25,7 +25,7 @@ if not logger.handlers:
 
     handler = RotatingFileHandler(
         LOG_FILE,
-        maxBytes=5 * 1024 * 1024,  # 5 MB
+        maxBytes=5 * 1024 * 1024,
         backupCount=5,
         encoding="utf-8"
     )
