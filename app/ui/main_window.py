@@ -1,6 +1,5 @@
 from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QMessageBox
 from PySide6.QtCore import Signal
-
 from app.services.data_service import DataService
 from app.ui.detail_view import DetailView
 from app.ui.character_table import CharacterTable
@@ -8,15 +7,11 @@ from app.ui.top_panel import TopPanel
 from app.utils.watcher import FolderWatcher
 from app.ui.paste_dialog import PasteDialog
 from app.app_info import APP_NAME
-
-
 from app.storage.character_file_storage import (
     delete_character_file,
 )
-
 from app.utils.logger import logger
-
-import os
+from app.utils.app_paths import get_import_dir
 
 
 class MainWindow(QMainWindow):
@@ -62,15 +57,7 @@ class MainWindow(QMainWindow):
 
         self.files_changed_signal.connect(self._update_ui)
 
-        default_folder = os.path.join(
-            os.getcwd(),
-            "import"
-        )
-
-        os.makedirs(
-            default_folder,
-            exist_ok=True
-        )
+        default_folder = str(get_import_dir())
 
         self.data_service.set_folder(default_folder)
 

@@ -1,6 +1,7 @@
 from PySide6.QtWidgets import (
-    QDialog, QVBoxLayout, QTextEdit, QPushButton, QHBoxLayout, QLabel
+    QDialog, QVBoxLayout, QTextEdit, QPushButton, QHBoxLayout, QLabel   
 )
+from app.utils.app_paths import get_import_dir 
 import os
 import re
 
@@ -37,14 +38,8 @@ class PasteDialog(QDialog):
     def __init__(self):
         super().__init__()
 
-        self.target_folder = os.path.join(
-            os.getcwd(),
-            "import"
-        )
-
-        os.makedirs(
-            self.target_folder,
-            exist_ok=True
+        self.target_folder = str(
+            get_import_dir()
         )
 
         self.setWindowTitle("Paste Character Data")
