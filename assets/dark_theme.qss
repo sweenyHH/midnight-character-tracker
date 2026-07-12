@@ -364,3 +364,79 @@ QLabel#settingsTitle {
     font-size: 18px;
     font-weight: bold;
 }
+
+
+/* =====================
+   TABS
+===================== */
+
+QTabWidget::pane {
+    border: 1px solid #444;
+    background-color: #2b2b2b;
+}
+
+QTabBar::tab {
+    background-color: #3c3f41;
+    color: #eeeeee;
+    border: 1px solid #555;
+    padding: 8px 14px;
+    margin-right: 2px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #484a4c;
+}
+
+QTabBar::tab:!selected {
+    background-color: #3c3f41;
+    color: #dddddd;
+}^
+
+/* =====================
+   RADIO BUTTONS
+===================== */
+
+/* base */
+QRadioButton {
+    spacing: 6px;
+    color: #eeeeee;
+}
+
+/* indicator */
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+/* unchecked */
+QRadioButton::indicator:unchecked {
+    border: 1px solid #777;
+    border-radius: 9px;
+    background-color: #1e1e1e;
+}
+
+/* hover */
+QRadioButton::indicator:unchecked:hover {
+    border: 1px solid #aaa;
+    background-color: #2a2a2a;
+}
+
+/* checked */
+QRadioButton::indicator:checked {
+    border: 1px solid #6ea6e6;
+    border-radius: 9px;
+    background-color: #3a6ea5;
+}
+
+/* checked hover */
+QRadioButton::indicator:checked:hover {
+    background-color: #4a7ec5;
+}
