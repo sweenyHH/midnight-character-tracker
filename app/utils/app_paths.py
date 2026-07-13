@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import platform
 
 # moves folders with user input / char.txt files out of the application folders
 
@@ -8,9 +9,19 @@ APP_NAME = "Midnight Character Tracker"
 
 def get_app_data_dir():
 
-    base = Path(
-        os.environ["APPDATA"]
-    )
+    if platform.system() == "Windows":
+
+        base = Path(
+            os.environ["APPDATA"]
+        )
+
+    else:
+
+        base = (
+            Path.home()
+            / ".local"
+            / "share"
+        )
 
     path = base / APP_NAME
 

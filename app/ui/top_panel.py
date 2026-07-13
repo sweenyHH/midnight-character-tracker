@@ -8,10 +8,14 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt
 
+from PySide6.QtCore import Qt, Signal
+
 from app.ui.settings_dialog import SettingsDialog
 
 
 class TopPanel(QWidget):
+
+    settings_changed = Signal()
 
     def __init__(self, paste_cb, back_cb, warband_cb):
         super().__init__()
@@ -58,9 +62,15 @@ class TopPanel(QWidget):
 # --------------------------------------------------
 # SETTINGS
 # --------------------------------------------------
+
     def open_settings(self):
 
         dialog = SettingsDialog(self)
+
+        dialog.settings_saved.connect(
+            self.settings_changed.emit
+        )
+
         dialog.exec()
 
 # --------------------------------------------------
