@@ -42,6 +42,10 @@ class MainWindow(QMainWindow):
             self.open_warband_tasks
         )
 
+        self.top_panel.settings_changed.connect(
+            self.reload_all
+        )
+
         self.table.character_delete_requested.connect(
             self.delete_character
         )

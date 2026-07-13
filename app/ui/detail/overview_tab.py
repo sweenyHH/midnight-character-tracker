@@ -11,6 +11,7 @@ from app.ui.detail.vault_progress import VaultProgressWidget
 
 from app.ui.colors import CLASS_COLORS
 from app.ui.character_table_helpers import adjust_class_color
+from app.utils.logger import logger
 
 
 class OverviewTab(QWidget):
@@ -29,12 +30,31 @@ class OverviewTab(QWidget):
 # --------------------------------------------------
     def set_character(self, character):
 
+        logger.info(
+            f"OverviewTab set_character: {character.name}"
+        )
+
 # FULL LAYOUT CLEAR
+
         while self.layout.count():
             item = self.layout.takeAt(0)
+
             if item.widget():
+
+                logger.info(
+                    f"OverviewTab removing widget: "
+                    f"{type(item.widget()).__name__}"
+                )
+
                 item.widget().deleteLater()
+
             elif item.layout():
+
+                logger.info(
+                    f"OverviewTab removing layout: "
+                    f"{type(item.layout()).__name__}"
+                )
+
                 item.layout().deleteLater()
 
 # ==================================================
@@ -124,6 +144,12 @@ class OverviewTab(QWidget):
             if c.weekly_max is not None
         ]
 
+        logger.info(
+            f"OverviewTab created currency table with "
+            f"{len(currencies)} rows for {character.name}"
+        )
+
+
         table.setRowCount(len(currencies))
 
         for row, c in enumerate(currencies):
@@ -159,4 +185,6 @@ class OverviewTab(QWidget):
 
         self.layout.addLayout(bottom_row)
 
-        self.layout.addStretch()
+# commented out for debugging
+
+        # self.layout.addStretch()

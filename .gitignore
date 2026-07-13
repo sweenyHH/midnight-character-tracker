@@ -37,3 +37,6 @@ installer/*.zip
 # Extracted Windows build
 installer/MidnightCharacterTracker.exe
 installer/_internal/
+
+# Windows metadata
+*:SmartScreen

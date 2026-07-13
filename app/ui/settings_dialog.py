@@ -8,6 +8,8 @@ from PySide6.QtWidgets import (
     QApplication,
 )
 
+from PySide6.QtCore import Signal
+
 from app.storage.settings_storage import (
     load_setting,
     save_setting,
@@ -19,6 +21,8 @@ import platform
 import subprocess
 
 class SettingsDialog(QDialog):
+
+    settings_saved = Signal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -204,5 +208,7 @@ class SettingsDialog(QDialog):
             QApplication.instance(),
             theme
         )
+
+        self.settings_saved.emit()
 
         self.accept()
