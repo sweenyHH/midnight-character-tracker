@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
     QPushButton,
     QHBoxLayout,
     QApplication,
+    QButtonGroup,
 )
 
 from PySide6.QtCore import Signal
@@ -52,10 +53,64 @@ class SettingsDialog(QDialog):
         self.wow_radio = QRadioButton("WoW")
         self.modern_radio = QRadioButton("Modern")
 
+        self.theme_group = QButtonGroup(self)
+
+        self.theme_group.addButton(
+            self.dark_radio
+        )
+
+        self.theme_group.addButton(
+            self.light_radio
+        )
+
+        self.theme_group.addButton(
+            self.wow_radio
+        )
+
+        self.theme_group.addButton(
+            self.modern_radio
+        )
+
         layout.addWidget(self.dark_radio)
         layout.addWidget(self.light_radio)
         layout.addWidget(self.wow_radio)
         layout.addWidget(self.modern_radio)
+
+
+# --------------------------------------------------
+# Number Format
+# --------------------------------------------------
+
+        layout.addWidget(
+            QLabel("<b>Number Format</b>")
+        )
+
+        self.german_numbers = QRadioButton(
+            "German (1.234.567)"
+        )
+
+        self.english_numbers = QRadioButton(
+            "English (1,234,567)"
+        )
+
+        self.number_format_group = QButtonGroup(self)
+
+        self.number_format_group.addButton(
+            self.german_numbers
+        )
+
+        self.number_format_group.addButton(
+            self.english_numbers
+        )
+
+        layout.addWidget(
+            self.german_numbers
+        )
+
+        layout.addWidget(
+            self.english_numbers
+        )
+
 
 # --------------------------------------------------
 # LOGS
@@ -69,7 +124,7 @@ class SettingsDialog(QDialog):
         layout.addWidget(logs_button)
 
 # --------------------------------------------------
-# LOAD CURRENT SETTING
+# LOAD CURRENT THEME SETTING
 # --------------------------------------------------
 
         current_theme = load_setting(
@@ -88,6 +143,27 @@ class SettingsDialog(QDialog):
 
         elif current_theme == "modern":
             self.modern_radio.setChecked(True)
+
+# --------------------------------------------------
+# LOAD NUMBER FORMAT
+# --------------------------------------------------
+
+        current_number_format = load_setting(
+            "number_format",
+            "german"
+        )
+
+        if current_number_format == "english":
+
+            self.english_numbers.setChecked(
+                True
+            )
+
+        else:
+
+            self.german_numbers.setChecked(
+                True
+            )
 
 # --------------------------------------------------
 # BUTTONS
@@ -208,6 +284,21 @@ class SettingsDialog(QDialog):
             QApplication.instance(),
             theme
         )
+
+
+        if self.english_numbers.isChecked():
+
+            save_setting(
+                "number_format",
+                "english"
+            )
+
+        else:
+
+            save_setting(
+                "number_format",
+                "german"
+            )
 
         self.settings_saved.emit()
 

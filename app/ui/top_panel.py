@@ -5,12 +5,15 @@ from PySide6.QtWidgets import (
     QLabel,
     QHBoxLayout,
     QGridLayout,
+    QFrame,
 )
 from PySide6.QtCore import Qt
 
 from PySide6.QtCore import Qt, Signal
 
 from app.ui.settings_dialog import SettingsDialog
+from app.ui.detail.utils import format_gold
+from app.utils.number_formatter import format_number
 
 
 class TopPanel(QWidget):
@@ -76,14 +79,28 @@ class TopPanel(QWidget):
 # --------------------------------------------------
 # UPDATE METHOD
 # --------------------------------------------------
-    def update_reputation(self, reputation_list):
+    def update_reputation(self, reputation_list, currency_totals=None,):
+
+        if currency_totals is None:
+            currency_totals = {}
 
 # Clear previous content
         while self.rep_layout.count():
+
             item = self.rep_layout.takeAt(0)
 
             if item.widget():
+
                 item.widget().deleteLater()
+
+            elif item.layout():
+
+                while item.layout().count():
+
+                    child = item.layout().takeAt(0)
+
+                    if child.widget():
+                        child.widget().deleteLater()    
 
         if not reputation_list:
             self.rep_layout.addWidget(
@@ -97,13 +114,8 @@ class TopPanel(QWidget):
             if r.rep_type == "renown"
         ]
 
-        normal = [
-            r for r in reputation_list
-            if r.rep_type != "renown"
-        ]
-
         renown.sort(key=lambda r: r.name)
-        normal.sort(key=lambda r: r.name)
+
 
         def chunk(lst, size=3):
             return [
@@ -112,14 +124,21 @@ class TopPanel(QWidget):
             ]
 
         renown_chunks = chunk(renown)
-        normal_chunks = chunk(normal)
 
         main_row = QHBoxLayout()
+
 
 # -------------------------------
 # RENOWN BLOCK
 # -------------------------------
-        renown_widget = QWidget()
+        renown_widget = QFrame()
+        renown_widget.setObjectName(
+            "topPanelFrame"
+        )
+        renown_widget.setFrameShape(
+            QFrame.Box
+        )
+
         renown_layout = QVBoxLayout(renown_widget)
 
         renown_title = QLabel("<b>Renown</b>")
@@ -161,77 +180,93 @@ class TopPanel(QWidget):
         renown_layout.addLayout(
             renown_grid
         )
+        print("Built renown block")
 
 # -------------------------------
-# STANDARD BLOCK
+# WARBAND RESOURCES BLOCK
 # -------------------------------
-        normal_widget = QWidget()
-        normal_layout = QVBoxLayout(
-            normal_widget
+
+        currency_widget = QFrame()
+        currency_widget.setObjectName(
+            "topPanelFrame"
         )
 
-        normal_title = QLabel(
-            "<b>Standard</b>"
+        currency_widget.setFrameShape(
+            QFrame.Box
         )
 
-        normal_title.setAlignment(
+        currency_layout = QVBoxLayout(
+            currency_widget
+        )
+
+        currency_title = QLabel(
+            "<b>Warband Resources</b>"
+        )
+
+        currency_title.setAlignment(
             Qt.AlignCenter
         )
 
-        normal_layout.addWidget(
-            normal_title
+        currency_layout.addWidget(
+            currency_title
         )
 
-        normal_grid = QGridLayout()
+        currency_grid = QGridLayout()
 
-        def add_standard(
-            grid,
-            group,
-            col_offset
+        CURRENCY_COLUMNS = [
+            [
+                "Gold",
+                "Brimming Arcana",
+                "Remnant of Anguish",
+                "Voidlight Marl",
+            ],
+            [
+                "Angler Pearls",
+                "Undercoin",
+                "Timewarped Badge",
+                "Community Coupons",
+            ],
+            [
+                "Conquest",
+                "Honor",
+                "Bloody Token",
+            ],
+        ]
+
+        for group_index, group in enumerate(
+            CURRENCY_COLUMNS
         ):
 
-            for row, rep in enumerate(group):
+            col_offset = group_index * 2
 
-                name = QLabel(
-                    f"<b>{rep.name}</b>"
-                )
+            for row, name in enumerate(group):
 
-                if (
-                    rep.current
-                    and rep.maximum
-                ):
-                    value = QLabel(
-                        f"{rep.level} "
-                        f"({rep.current}/{rep.maximum})"
-                    )
-                else:
-                    value = QLabel(
-                        str(rep.level)
-                    )
-
-                grid.addWidget(
-                    name,
+                currency_grid.addWidget(
+                    QLabel(f"<b>{name}</b>"),
                     row,
                     col_offset
                 )
 
-                grid.addWidget(
-                    value,
-                    row,
-                    col_offset + 1
+                value = currency_totals.get(
+                    name,
+                    0
                 )
 
-        for i, group in enumerate(
-            normal_chunks[:2]
-        ):
-            add_standard(
-                normal_grid,
-                group,
-                i * 2
-            )
+                if name == "Gold":
+                    value_text = format_gold(value)
+                else:
+                    value_text = format_number(value)
 
-        normal_layout.addLayout(
-            normal_grid
+                currency_grid.addWidget(
+                    QLabel(value_text),
+                    row,
+                    col_offset + 1
+                )    
+
+
+
+        currency_layout.addLayout(
+            currency_grid
         )
 
 # -------------------------------
@@ -242,11 +277,11 @@ class TopPanel(QWidget):
         )
 
         main_row.addWidget(
-            normal_widget
+            currency_widget
         )
 
-        main_row.setStretch(0, 1)
-        main_row.setStretch(1, 1)
+        main_row.setStretch(0, 2)
+        main_row.setStretch(1, 3)
 
         self.rep_layout.addLayout(
             main_row

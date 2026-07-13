@@ -27,6 +27,54 @@ class OverviewTab(QWidget):
         self.duties_widget = WeeklyDutiesWidget()
         self.vault_widget = VaultProgressWidget()
 
+# PERSISTENT CURRENCY TABLE
+
+        self.currency_table = QTableWidget()
+
+        self.currency_table.setColumnCount(5)
+        self.currency_table.setHorizontalHeaderLabels([
+            "Currency",
+            "Total",
+            "Total Max",
+            "Weekly",
+            "Weekly Max"
+        ])
+
+        self.currency_table.setAlternatingRowColors(True)
+
+        header = self.currency_table.horizontalHeader()
+
+        header.setSectionResizeMode(
+            0,
+            QHeaderView.Stretch
+        )
+
+        header.setSectionResizeMode(
+            1,
+            QHeaderView.ResizeToContents
+        )
+
+        header.setSectionResizeMode(
+            2,
+            QHeaderView.ResizeToContents
+        )
+
+        header.setSectionResizeMode(
+            3,
+            QHeaderView.ResizeToContents
+        )
+
+        header.setSectionResizeMode(
+            4,
+            QHeaderView.ResizeToContents
+        )
+
+        self.currency_table.verticalHeader().setVisible(
+            False
+        )
+
+
+
 # --------------------------------------------------
     def set_character(self, character):
 
@@ -97,10 +145,24 @@ class OverviewTab(QWidget):
             and c.name != "Gold"
         ]
 
-        for currency in sorted(other_currencies, key=lambda x: x.name):
+        combined = {}
+
+        for currency in other_currencies:
+
+            combined.setdefault(
+                currency.name,
+                0
+            )
+
+            combined[currency.name] += (
+                currency.quantity or 0
+            )
+
+        for name in sorted(combined):
+
             general_layout.addWidget(
                 QLabel(
-                    f"<b>{currency.name}:</b> {currency.quantity}"
+                    f"<b>{name}:</b> {combined[name]}"
                 )
             )
 
@@ -127,18 +189,6 @@ class OverviewTab(QWidget):
         left_column = QWidget()
         left_layout = QVBoxLayout(left_column)
 
-        table = QTableWidget()
-        table.setColumnCount(5)
-        table.setHorizontalHeaderLabels([
-            "Currency",
-            "Total",
-            "Total Max",
-            "Weekly",
-            "Weekly Max"
-        ])
-
-        table.setAlternatingRowColors(True)
-
         currencies = [
             c for c in character.currencies
             if c.weekly_max is not None
@@ -149,26 +199,17 @@ class OverviewTab(QWidget):
             f"{len(currencies)} rows for {character.name}"
         )
 
-
-        table.setRowCount(len(currencies))
+        self.currency_table.clearContents()
+        self.currency_table.setRowCount(len(currencies))
 
         for row, c in enumerate(currencies):
-            table.setItem(row, 0, QTableWidgetItem(c.name))
-            table.setItem(row, 1, QTableWidgetItem(str(c.quantity) if c.quantity else "-"))
-            table.setItem(row, 2, QTableWidgetItem(str(c.max_total) if c.max_total else "-"))
-            table.setItem(row, 3, QTableWidgetItem(str(c.weekly_current) if c.weekly_current else "-"))
-            table.setItem(row, 4, QTableWidgetItem(str(c.weekly_max) if c.weekly_max else "-"))
+            self.currency_table.setItem(row, 0, QTableWidgetItem(c.name))
+            self.currency_table.setItem(row, 1, QTableWidgetItem(str(c.quantity) if c.quantity else "-"))
+            self.currency_table.setItem(row, 2, QTableWidgetItem(str(c.max_total) if c.max_total else "-"))
+            self.currency_table.setItem(row, 3, QTableWidgetItem(str(c.weekly_current) if c.weekly_current else "-"))
+            self.currency_table.setItem(row, 4, QTableWidgetItem(str(c.weekly_max) if c.weekly_max else "-"))
 
-        header = table.horizontalHeader()
-        header.setSectionResizeMode(0, QHeaderView.Stretch)
-        header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(2, QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
-
-        table.verticalHeader().setVisible(False)
-
-        left_layout.addWidget(table)
+        left_layout.addWidget(self.currency_table)
 
 # REUSE VAULT WIDGET
         self.vault_widget.set_character(character)

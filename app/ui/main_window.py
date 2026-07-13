@@ -12,6 +12,9 @@ from app.storage.character_file_storage import (
 )
 from app.utils.logger import logger
 from app.utils.app_paths import get_import_dir
+from app.services.warband_currency_service import (
+    get_warband_currency_totals
+)
 
 
 class MainWindow(QMainWindow):
@@ -80,13 +83,20 @@ class MainWindow(QMainWindow):
 
         characters = self.data_service.get_characters()
 
+        currency_totals = (
+            get_warband_currency_totals(
+                characters
+            )
+        )
+
         logger.info(
         f"Loaded {len(characters)} characters"
         )
         
         self.table.load_characters(characters)
         self.top_panel.update_reputation(
-            self.data_service.get_top_reputations()
+            self.data_service.get_top_reputations(),
+            currency_totals
         )
 
 # Refresh currently open detail view

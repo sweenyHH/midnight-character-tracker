@@ -1,4 +1,5 @@
 from PySide6.QtWidgets import QVBoxLayout
+from app.utils.number_formatter import format_number
 
 def clear_layout(widget):
     layout = widget.layout()
@@ -30,7 +31,10 @@ def format_gold(copper):
 
     parts = []
     if gold > 0:
-        parts.append(f"{gold}g")
+        parts.append(
+            f"{format_number(gold)}g"
+        )
+        
     if silver > 0:
         parts.append(f"{silver}s")
     if copper_remainder > 0:

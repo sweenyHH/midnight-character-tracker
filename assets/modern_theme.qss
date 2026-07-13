@@ -96,6 +96,20 @@ QTableCornerButton::section {
     padding: 12px;
 }
 
+/* =====================
+   TOP PANEL
+===================== */
+
+QFrame#topPanelFrame {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+QFrame#topPanelFrame QLabel {
+    background-color: transparent;
+}
 
 /* =====================
    TEXT BLOCKS
