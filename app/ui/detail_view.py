@@ -27,6 +27,10 @@ class DetailView(QWidget):
         self.reputation_tab = ReputationTab()
         self.debug_tab = DebugTab()
 
+        self.overview_tab.vault_widget.on_save_callback = (self.refresh_vault_tab)
+
+        self.current_character = None
+
         self.tabs.addTab(self.overview_tab, "Overview")
         self.tabs.addTab(self.currencies_tab, "Currencies")
         self.tabs.addTab(self.vault_tab, "Vault")
@@ -35,6 +39,8 @@ class DetailView(QWidget):
         self.tabs.addTab(self.debug_tab, "Debug")
 
     def set_character(self, character):
+
+        self.current_character = character
 
         logger.info(
             f"DetailView loading character: "
@@ -62,4 +68,13 @@ class DetailView(QWidget):
         logger.info(
             f"DetailView finished loading: "
             f"{character.name}"
+        )
+
+    def refresh_vault_tab(self):
+
+        if self.current_character is None:
+            return
+
+        self.vault_tab.set_character(
+            self.current_character
         )

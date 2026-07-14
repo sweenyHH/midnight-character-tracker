@@ -152,6 +152,19 @@ class MainWindow(QMainWindow):
         self.table.show()
         self.top_panel.back_btn.hide()
 
+    def show_list(self):
+
+        logger.info(
+            "Returned to character list"
+        )
+
+        self.detail_view.hide()
+        self.table.show()
+        self.top_panel.back_btn.hide()
+
+        # Refresh data after leaving the character detail view 
+        self.reload_all()
+
 # --------------------------------------------------
  
     def open_paste_dialog(self):

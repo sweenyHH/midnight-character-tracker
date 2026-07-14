@@ -54,6 +54,7 @@ class VaultProgressWidget(QWidget):
         self.layout.addWidget(self.clear_btn)
 
         self.current_file = None
+        self.on_save_callback = None
 
 # --------------------------------------------------
     def set_character(self, character):
@@ -155,6 +156,9 @@ class VaultProgressWidget(QWidget):
                 f"Vault progress saved: "
                 f"{os.path.basename(self.current_file)}"
             )
+
+            if self.on_save_callback:
+                self.on_save_callback()
 
         except Exception:
 
