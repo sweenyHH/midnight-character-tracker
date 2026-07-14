@@ -190,7 +190,7 @@ class WeeklyDutiesWidget(QWidget):
                     if saved_state.get(key):
                         cb.setChecked(True)
 
-                    cb.stateChanged.connect(self._schedule_save)
+                    cb.stateChanged.connect(self._save)
                     cb.stateChanged.connect(self._update_row_visuals)
 
                     self.grid.addWidget(cb, current_row, col + 1)

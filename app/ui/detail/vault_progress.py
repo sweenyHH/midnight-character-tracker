@@ -41,7 +41,7 @@ class VaultProgressWidget(QWidget):
                 field.setAlignment(Qt.AlignCenter)
                 field.setMaxLength(3)
 
-                field.textChanged.connect(self._schedule_save)
+                field.textChanged.connect(self._save)
 
                 self.grid.addWidget(field, row, col + 1)
                 self.fields[(row, col)] = field
