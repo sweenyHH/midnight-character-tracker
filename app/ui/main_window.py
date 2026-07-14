@@ -83,7 +83,10 @@ class MainWindow(QMainWindow):
 
         logger.info("Reloading all data")
 
-        result = (self.refresh_service.refresh_data(self.current_character))
+        result = (self.refresh_service.execute_refresh(self.current_character))
+
+        if result is None:
+            return
 
         logger.info(
         f"Loaded {len(result.characters)} characters"
@@ -235,18 +238,7 @@ class MainWindow(QMainWindow):
             "Watcher triggered UI update START"
         )
 
-        if self.refresh_service.is_reload_running():
-            logger.warning(
-                "Reload skipped - already running"
-            )
-            return
-
-        self.refresh_service.start_reload()
-
-        try:
-            self.reload_all()
-        finally:
-            self.refresh_service.finish_reload()
+        self.reload_all()
 
         logger.info(
             "Watcher triggered UI update END"

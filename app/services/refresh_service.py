@@ -135,3 +135,26 @@ class RefreshService:
             currency_totals=currency_totals,
             selected_character=refreshed_character,
         )
+
+    def execute_refresh(self, selected_character=None,):
+        """
+        Executes a protected refresh operation.
+
+        Prevents overlapping refresh execution and
+        returns a RefreshResult when successful.
+        """
+
+        if self._reload_running:
+            logger.warning(
+                "Refresh skipped - already running"
+            )
+            return None
+
+        self._reload_running = True
+
+        try:
+            return self.refresh_data(
+                selected_character
+            )
+        finally:
+            self._reload_running = False
