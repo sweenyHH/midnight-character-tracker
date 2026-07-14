@@ -1,6 +1,6 @@
 # Centralizes application refresh and reload logic.
 #
-# This service will gradually become responsible for:
+# Responsibilities:
 # - Reload coordination
 # - Reload protection
 # - Watcher integration
@@ -9,11 +9,14 @@
 #
 # The service remains UI-agnostic.
 
+from PySide6.QtCore import QObject, Signal
 
 from app.utils.logger import logger
+from app.utils.watcher import FolderWatcher
 from app.services.warband_currency_service import (
     get_warband_currency_totals
 )
+
 
 class RefreshResult:
     """
@@ -38,16 +41,16 @@ class RefreshResult:
         )
 
 
-class RefreshService:
+class RefreshService(QObject):
     """
     Coordinates application refresh operations.
-
-    This is currently a skeleton implementation and
-    will be expanded incrementally during the reload
-    architecture refactor.
     """
 
+    refresh_requested = Signal()
+
     def __init__(self, data_service):
+        super().__init__()
+
         # Service responsible for loading character data.
         self.data_service = data_service
 
@@ -57,17 +60,6 @@ class RefreshService:
         logger.info(
             "RefreshService initialized"
         )
-
-    def is_reload_running(self):
-        return self._reload_running
-
-    def start_reload(self):
-
-        self._reload_running = True
-
-    def finish_reload(self):
-
-        self._reload_running = False
 
     def _find_refreshed_character(
         self,
@@ -95,8 +87,10 @@ class RefreshService:
 
         return None
 
-
-    def refresh_data(self, selected_character=None,):
+    def refresh_data(
+        self,
+        selected_character=None,
+    ):
         """
         Reloads character data and returns
         all information required by the UI.
@@ -136,7 +130,10 @@ class RefreshService:
             selected_character=refreshed_character,
         )
 
-    def execute_refresh(self, selected_character=None,):
+    def execute_refresh(
+        self,
+        selected_character=None,
+    ):
         """
         Executes a protected refresh operation.
 
@@ -158,3 +155,34 @@ class RefreshService:
             )
         finally:
             self._reload_running = False
+
+    def start_watcher(self, folder):
+        """
+        Starts filesystem monitoring.
+        """
+
+        self.watcher = FolderWatcher(
+            folder,
+            self._handle_file_change,
+        )
+
+        self.watcher.start()
+
+    def stop_watcher(self):
+        """
+        Stops filesystem monitoring.
+        """
+
+        if hasattr(self, "watcher"):
+            self.watcher.stop()
+
+    def _handle_file_change(self):
+        """
+        Called when the import folder changes.
+        """
+
+        logger.info(
+            "RefreshService detected file change"
+        )
+
+        self.refresh_requested.emit()

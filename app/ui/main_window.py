@@ -1,10 +1,9 @@
 from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QMessageBox
-from PySide6.QtCore import Signal
 from app.services.data_service import DataService
 from app.ui.detail_view import DetailView
 from app.ui.character_table import CharacterTable
 from app.ui.top_panel import TopPanel
-from app.utils.watcher import FolderWatcher
+
 from app.ui.paste_dialog import PasteDialog
 from app.app_info import APP_NAME
 from app.storage.character_file_storage import (
@@ -19,8 +18,6 @@ from app.services.refresh_service import RefreshService
 
 class MainWindow(QMainWindow):
 
-    files_changed_signal = Signal()
-
     def __init__(self):
         super().__init__()
 
@@ -34,6 +31,8 @@ class MainWindow(QMainWindow):
         self.refresh_service = RefreshService(
             self.data_service
         )
+
+        self.refresh_service.refresh_requested.connect(self._update_ui)
 
         self.table = CharacterTable()
         self.table.cellClicked.connect(self.open_character)
@@ -66,13 +65,11 @@ class MainWindow(QMainWindow):
         container.setLayout(layout)
         self.setCentralWidget(container)
 
-        self.files_changed_signal.connect(self._update_ui)
-
         default_folder = str(get_import_dir())
 
         self.data_service.set_folder(default_folder)
 
-        self.start_watcher(default_folder)
+        self.refresh_service.start_watcher(default_folder)
 
         self.reload_all()
 
@@ -225,13 +222,6 @@ class MainWindow(QMainWindow):
 
 # --------------------------------------------------
         
-    def start_watcher(self, folder):
-        self.watcher = FolderWatcher(
-            folder,
-            self.files_changed_signal.emit
-        )
-        self.watcher.start()
-
     def _update_ui(self):
 
         logger.info(
@@ -250,8 +240,7 @@ class MainWindow(QMainWindow):
             "Application closing"
         )
 
-        if hasattr(self, "watcher"):
-            self.watcher.stop()
+        self.refresh_service.stop_watcher()
 
         event.accept()
 
