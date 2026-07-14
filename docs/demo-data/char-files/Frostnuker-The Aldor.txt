@@ -1,0 +1,610 @@
+== Location ==
+Zone: Silvermoon City
+Subzone: The Bazaar
+Map: Silvermoon City
+Map ID: 2393
+Parent Map: Eversong Woods
+Parent Map ID: 2395
+Coordinates: 50.8, 65.9
+Hearthstone Location: Wayfarer's Rest
+
+Character Stats:
+Character: Frostnuker-The Aldor
+Faction: Alliance
+Level: 90
+Race: Gnome
+Class: Mage
+Specialization: Frost (DAMAGER)
+Primary Stat: Intellect
+Average Item Level: 249.69
+Equipped Item Level: 246.62
+PvP Item Level: 249.69
+Health: n/a/298720
+XP: 0/100000000
+XP To Level: 100000000
+XP Progress: 0%
+Armor: 410
+== Primary Attributes ==
+Strength: 270
+Agility: 423
+Stamina: 14936
+Intellect: 1964
+Attack Power: 0
+== Combat Ratings ==
+Critical Strike: 431 rating / 16.37%
+Haste: 477 rating / 17.61%
+Mastery: 315 rating / 28.56%
+Versatility: 485 rating / 8.98%
+Leech: 64 rating / 0.93%
+Speed: 42 rating / 3.65%
+Avoidance: 0 rating / 0%
+
+Currencies:
+Gold: 3408g 54s 17c
+Currency Count: 19
+
+== Midnight ==
+Artisan Enchanter's Moxie (ID: 3258) - Quantity: 1270
+Artisan Tailor's Moxie (ID: 3266) - Quantity: 2130
+Brimming Arcana (ID: 3379) - Quantity: 202
+Remnant of Anguish (ID: 3392) - Quantity: 21
+Shard of Dundun (ID: 3376) - Quantity: 8/8 - Weekly: 0/8
+Unalloyed Abundance (ID: 3377) - Quantity: 2700
+Uncontaminated Void Sample (ID: 3400) - Quantity: 0 - Total Earned: 1
+Voidlight Marl (ID: 3316) - Quantity: 688
+
+== Season 1 ==
+Coffer Key Shards (ID: 3310) - Quantity: 854 - Weekly: 0/600
+Dawnlight Manaflux (ID: 3378) - Quantity: 8/8
+Restored Coffer Key (ID: 3028) - Quantity: 5
+Undercoin (ID: 2803) - Quantity: 260
+Adventurer Dawncrest (ID: 3383) - Quantity: 134 - Total Earned: 144
+Veteran Dawncrest (ID: 3341) - Quantity: 110
+Champion Dawncrest (ID: 3343) - Quantity: 26 - Total Earned: 26
+Radiant Spark Dust (ID: 3212) - Quantity: 4/19 - Total Earned: 4
+
+== Miscellaneous ==
+Community Coupons (ID: 3363) - Quantity: 105/2000
+Darkmoon Prize Ticket (ID: 515) - Quantity: 0
+Trader's Tender (ID: 2032) - Quantity: 4030
+
+Bags:
+== Backpack (0/20) ==
+[Empty]
+
+== Bag 1 (0/36) ==
+[Empty]
+
+== Bag 2 (0/36) ==
+[Empty]
+
+== Bag 3 (4/36) ==
+[Pattern: Living Earth Bindings] x1 [ID: 32750, iLvl: 13, Q: 4]
+[Pet Cage] x1 [ID: 82800, iLvl: 12, Q: 3]
+[Archivum Data Disc] x1 [ID: 45506, iLvl: 1, Q: 4]
+[Archivum Data Disc] x1 [ID: 45857, iLvl: 1, Q: 4]
+
+== Bag 4 (21/34) ==
+[Latent Arcana] x13 [ID: 242241, iLvl: 1, Q: 2]
+[Stormarion Core] x32 [ID: 246951, iLvl: 1, Q: 3]
+[Nether Siphoner] x1 [ID: 266076, iLvl: 1, Q: 2]
+[Anomaly Inverter] x1 [ID: 251284, iLvl: 1, Q: 1]
+[Cavedweller's Delight] x6 [ID: 212242, iLvl: 23, Q: 1]
+[Algari Mana Potion] x4 [ID: 212239, iLvl: 21, Q: 1]
+[Algari Healing Potion] x10 [ID: 211878, iLvl: 56, Q: 1]
+[Darkmoon Ride Ticket] x4 [ID: 81055, iLvl: 1, Q: 1]
+[Darkmoon Game Token] x6 [ID: 71083, iLvl: 1, Q: 2]
+[Darkmoon Adventurer's Guide] x1 [ID: 71634, iLvl: 1, Q: 1]
+[Thalassian Phoenix Oil] x5 [ID: 243733, iLvl: 278, Q: 2]
+[Refreshing Serum] x1 [ID: 241307, iLvl: 278, Q: 1]
+[Potent Healing Potion] x92 [ID: 258138, iLvl: 1, Q: 1]
+[Lightfused Mana Potion] x1 [ID: 241301, iLvl: 278, Q: 1]
+[Bright Linen Bandage] x1 [ID: 239711, iLvl: 278, Q: 1]
+[Kreynna's Khadgar's Imitation] x1 [ID: 254673, iLvl: 1, Q: 1]
+[Void-Touched Augment Rune] x3 [ID: 259085, iLvl: 24, Q: 3]
+[L00T RAID-R Mini] x3 [ID: 244193, iLvl: 1, Q: 3]
+[Sargle's Fortune #10] x1 [ID: 236373, iLvl: 1, Q: 1]
+[G.E.A.R. Tracking Beacon] x1 [ID: 168862, iLvl: 1, Q: 3]
+[Hearthstone] x1 [ID: 6948, iLvl: 1, Q: 1]
+
+== Reagent Bag (2/36) ==
+[Spark of Radiance] x4 [ID: 232875, iLvl: 24, Q: 4]
+[Fused Vitality] x17 [ID: 245345, iLvl: 23, Q: 3]
+
+Bank:
+[Using cached bank data - last updated: 2026-07-08 09:20:30.]
+
+== Main Bank (0/0) ==
+[Empty]
+
+== Reagent Bank (0/0) ==
+[Empty]
+
+== Bank Bag 1 (47/98) ==
+[Deployable Recovery Keg] x2 [ID: 226132, iLvl: 86, Q: 3]
+[Deployable Wind-Wrangling Spire] x1 [ID: 226131, iLvl: 86, Q: 3]
+[Deployable Battle Supplies] x1 [ID: 226120, iLvl: 86, Q: 3]
+[Candle Light] x2 [ID: 218121, iLvl: 86, Q: 3]
+[Elemental Fusion Bomb] x3 [ID: 226110, iLvl: 86, Q: 2]
+[Squirming Swarm Sac] x1 [ID: 226109, iLvl: 86, Q: 2]
+[Homebrewed Blink Vial] x1 [ID: 226107, iLvl: 86, Q: 2]
+[Whirling Runekey] x1 [ID: 232571, iLvl: 1, Q: 3]
+[Strong Sniffin' Soup for Niffen] x3 [ID: 204790, iLvl: 21, Q: 1]
+[Grub Grub] x2 [ID: 204730, iLvl: 21, Q: 1]
+[Twilight-Spiced Grouper] x2 [ID: 212492, iLvl: 1, Q: 1]
+[Flickering Torch] x16 [ID: 220756, iLvl: 1, Q: 1]
+[Scepter of Radiant Magics] x1 [ID: 224405, iLvl: 112, Q: 4]
+[Brilliant Beacon] x1 [ID: 211041, iLvl: 108, Q: 2]
+[Cave Topographer's Cowl] x1 [ID: 211011, iLvl: 108, Q: 2]
+[Consecrated Mantle] x1 [ID: 222821, iLvl: 112, Q: 4]
+[Void-Scarred Seer's Vestments] x1 [ID: 237965, iLvl: 108, Q: 4]
+[Cave Topographer's Cuffs] x1 [ID: 211014, iLvl: 108, Q: 2]
+[Void-Scarred Seer's Gloves] x1 [ID: 237967, iLvl: 111, Q: 4]
+[Void-Scarred Seer's Cord] x1 [ID: 237971, iLvl: 111, Q: 4]
+[Consecrated Leggings] x1 [ID: 222820, iLvl: 112, Q: 4]
+[Cave Topographer's Leggings] x1 [ID: 211012, iLvl: 108, Q: 2]
+[Laced Lair-Steppers] x1 [ID: 237524, iLvl: 124, Q: 4]
+[Noxious Injector Sheen] x1 [ID: 235421, iLvl: 99, Q: 4]
+[Amulet of Earthen Craftsmanship] x1 [ID: 215136, iLvl: 117, Q: 4]
+[Olden Signet] x1 [ID: 211052, iLvl: 111, Q: 2]
+[Cyrce's Circlet] x1 [ID: 228411, iLvl: 103, Q: 4]
+[Incorporeal Essence-Gorger] x1 [ID: 246945, iLvl: 111, Q: 2]
+[Quickwick Candlestick] x1 [ID: 225649, iLvl: 99, Q: 2]
+[Radiant Recruit's Tabard] x1 [ID: 233288, iLvl: 1, Q: 2]
+[Pattern: Belt of Blasting] x1 [ID: 30280, iLvl: 1, Q: 4]
+[Weavercloth Bag] x1 [ID: 222853, iLvl: 19, Q: 2]
+[Shrouded Cloth Bag] x1 [ID: 184479, iLvl: 17, Q: 3]
+[Shrouded Cloth Bag] x1 [ID: 184479, iLvl: 17, Q: 3]
+[Shrouded Cloth Bag] x1 [ID: 184479, iLvl: 17, Q: 3]
+[Shrouded Cloth Bag] x1 [ID: 184479, iLvl: 17, Q: 3]
+[Arathor Courier's Satchel] x1 [ID: 224578, iLvl: 1, Q: 3]
+[Bright Linen Spellthread] x1 [ID: 240156, iLvl: 278, Q: 3]
+[Magnificent Jeweler's Setting] x1 [ID: 213777, iLvl: 23, Q: 4]
+[Radiant Emblem of Service] x1 [ID: 238920, iLvl: 1, Q: 4]
+[Back-Strapped Missile] x8 [ID: 231099, iLvl: 1, Q: 3]
+[Infused Fire-Honey Milk] x1 [ID: 224263, iLvl: 1, Q: 3]
+[Radiant Remnant] x13 [ID: 206350, iLvl: 1, Q: 3]
+[Odd Glob of Wax] x4 [ID: 212493, iLvl: 1, Q: 1]
+[Weavercloth Tailor's Coat] x1 [ID: 222844, iLvl: 79, Q: 2]
+[Weavercloth Enchanter's Hat] x1 [ID: 222843, iLvl: 79, Q: 2]
+[Atomized Salien Slime] x2 [ID: 223287, iLvl: 86, Q: 2]
+
+== Bank Bag 2 (0/98) ==
+[Empty]
+
+== Bank Bag 3 (0/98) ==
+[Empty]
+
+== Bank Bag 4 (39/98) ==
+[Resourceful Rebar] x28 [ID: 247725, iLvl: 23, Q: 2]
+[Multicraft Matrix] x22 [ID: 247719, iLvl: 23, Q: 2]
+[Ingenious Identifier] x16 [ID: 260630, iLvl: 23, Q: 1]
+[Mentor's Helpful Handiwork] x4 [ID: 246449, iLvl: 23, Q: 3]
+[Apprentice's Scribbles] x20 [ID: 246447, iLvl: 23, Q: 1]
+[Enchanted Runed Harbinger Crest] x4 [ID: 224072, iLvl: 21, Q: 4]
+[Artisan's Acuity] x585 [ID: 210814, iLvl: 21, Q: 3]
+[Refulgent Copper Ore] x10 [ID: 237361, iLvl: 23, Q: 1]
+[Dawn Crystal] x11 [ID: 243605, iLvl: 23, Q: 4]
+[Void-Tempered Scales] x12 [ID: 238513, iLvl: 23, Q: 1]
+[Peerless Plumage] x2 [ID: 238522, iLvl: 23, Q: 2]
+[Carving Canine] x2 [ID: 238523, iLvl: 23, Q: 2]
+[Embroidery Floss] x7 [ID: 251691, iLvl: 23, Q: 2]
+[Silverleaf Thread] x8 [ID: 251665, iLvl: 23, Q: 1]
+[Bright Linen] x99 [ID: 236963, iLvl: 23, Q: 2]
+[Bright Linen Bolt] x77 [ID: 239700, iLvl: 23, Q: 2]
+[Tranquility Bloom] x6 [ID: 236767, iLvl: 23, Q: 1]
+[Dawn Crystal] x8 [ID: 243606, iLvl: 23, Q: 4]
+[Imbued Bright Linen Bolt] x80 [ID: 239702, iLvl: 23, Q: 3]
+[Fantastic Fur] x2 [ID: 238525, iLvl: 23, Q: 2]
+[Tranquility Bloom] x5 [ID: 236761, iLvl: 23, Q: 1]
+[Void-Tempered Leather] x3 [ID: 238511, iLvl: 23, Q: 1]
+[Imbued Bright Linen Bolt] x1 [ID: 239703, iLvl: 23, Q: 3]
+[Dazzling Thorium] x1 [ID: 237366, iLvl: 23, Q: 3]
+[Sunfire Silk] x35 [ID: 237015, iLvl: 23, Q: 3]
+[Radiant Shard] x12 [ID: 243603, iLvl: 23, Q: 3]
+[Sunfire Silk Bolt] x22 [ID: 239201, iLvl: 23, Q: 4]
+[Mote of Pure Void] x22 [ID: 236952, iLvl: 23, Q: 3]
+[Artisan's Ledger] x5 [ID: 246448, iLvl: 23, Q: 2]
+[Mote of Wild Magic] x16 [ID: 236951, iLvl: 23, Q: 3]
+[Mote of Light] x25 [ID: 236949, iLvl: 23, Q: 3]
+[Petrified Root] x9 [ID: 251285, iLvl: 23, Q: 3]
+[Mote of Primal Energy] x23 [ID: 236950, iLvl: 23, Q: 3]
+[Eversinging Dust] x33 [ID: 243600, iLvl: 23, Q: 1]
+[Refulgent Copper Ore] x14 [ID: 237359, iLvl: 23, Q: 1]
+[Eversinging Dust] x11 [ID: 243599, iLvl: 23, Q: 1]
+[Argentleaf] x2 [ID: 236776, iLvl: 23, Q: 2]
+[Mana Lily] x2 [ID: 236779, iLvl: 23, Q: 2]
+[Brilliant Silver Ore] x2 [ID: 237364, iLvl: 23, Q: 2]
+
+== Bank Bag 5 (0/98) ==
+[Empty]
+
+== Bank Bag 6 (0/98) ==
+[Empty]
+
+== Bank Bag 7 (58/98) ==
+[Skulking Nettledirk] x1 [ID: 250449, iLvl: 253, Q: 4]
+[Elderbloom Lantern] x1 [ID: 249672, iLvl: 246, Q: 4]
+[Visage of Unseen Truths] x1 [ID: 260370, iLvl: 256, Q: 4]
+[Underbrush Render] x1 [ID: 260187, iLvl: 246, Q: 4]
+[Leggings of Tainted Stuffing] x1 [ID: 275140, iLvl: 256, Q: 2]
+[Sunstrike Rifle] x1 [ID: 249279, iLvl: 246, Q: 4]
+[Organ Piercer's Briarspear] x1 [ID: 249669, iLvl: 246, Q: 4]
+[Sprawling Wristroots] x1 [ID: 249636, iLvl: 246, Q: 4]
+[Ascension Arrestor's Wraps] x1 [ID: 246636, iLvl: 121, Q: 4]
+[Rootkeeper's Dancing Needle] x1 [ID: 260189, iLvl: 246, Q: 4]
+[Barbed Rootwand] x1 [ID: 249667, iLvl: 246, Q: 4]
+[Beastly Blossombarb] x1 [ID: 250455, iLvl: 253, Q: 4]
+[Rootkeeper's Dancing Needle] x1 [ID: 260189, iLvl: 246, Q: 4]
+[Twinthorn Wildglaive] x1 [ID: 249677, iLvl: 246, Q: 4]
+[Bramblestalker's Feathered Cowl] x1 [ID: 250459, iLvl: 253, Q: 4]
+[Organ Piercer's Briarspear] x1 [ID: 249669, iLvl: 246, Q: 4]
+[Phasebolt Thrower] x1 [ID: 275223, iLvl: 269, Q: 4]
+[Mertei's Adjutant Leggings] x1 [ID: 275224, iLvl: 259, Q: 4]
+[Lost Idol of the Hash'ey] x1 [ID: 251783, iLvl: 246, Q: 4]
+[Withered Saptor's Paw] x1 [ID: 251782, iLvl: 246, Q: 4]
+[Slippers of the Midnight Flame] x1 [ID: 249305, iLvl: 240, Q: 4]
+[Desecrated Chalice] x1 [ID: 251790, iLvl: 246, Q: 4]
+[Lost Idol of the Hash'ey] x1 [ID: 251783, iLvl: 246, Q: 4]
+[Desecrated Chalice] x1 [ID: 251790, iLvl: 246, Q: 4]
+[Breastplate of the Final Defense] x1 [ID: 260376, iLvl: 256, Q: 4]
+[Indomitable Mechanized Legplates] x1 [ID: 275164, iLvl: 259, Q: 2]
+[Rampant Briarcuffs] x1 [ID: 249660, iLvl: 246, Q: 4]
+[Chitonous Broodmother's Spaulders] x1 [ID: 274857, iLvl: 256, Q: 2]
+[Elder Mosshorns] x1 [ID: 249648, iLvl: 246, Q: 4]
+[Leggings of Tainted Stuffing] x1 [ID: 275140, iLvl: 256, Q: 2]
+[Osseoclad Bonecrushers] x1 [ID: 249638, iLvl: 246, Q: 4]
+[Elder Mossvein Greatleaves] x1 [ID: 249650, iLvl: 246, Q: 4]
+[Elder Mossvein Breeches] x1 [ID: 249649, iLvl: 246, Q: 4]
+[Devouring Outrider's Chausses] x1 [ID: 250457, iLvl: 253, Q: 4]
+[Phaseblade's Edges] x1 [ID: 275216, iLvl: 253, Q: 4]
+[Darkness' Horrific Barb] x1 [ID: 274872, iLvl: 256, Q: 2]
+[Pertinax's Beast Prod] x1 [ID: 275219, iLvl: 266, Q: 4]
+[Pertinax's Beast Prod] x1 [ID: 275219, iLvl: 253, Q: 4]
+[Root Sculptor's Verdaxe] x1 [ID: 249661, iLvl: 246, Q: 4]
+[Elder Mossbands] x1 [ID: 249652, iLvl: 246, Q: 4]
+[Dawncrazed Beast Cleaver] x1 [ID: 250451, iLvl: 253, Q: 4]
+[Gnarlroot Spinecleaver] x1 [ID: 249671, iLvl: 246, Q: 4]
+[Osseoclad Marrowvest] x1 [ID: 249637, iLvl: 246, Q: 4]
+[Voidwoven Corrupted Nullcore] x1 [ID: 249359, iLvl: 253, Q: 4]
+[Desecrated Chalice] x1 [ID: 251790, iLvl: 246, Q: 4]
+[Elder Mosscinch] x1 [ID: 249651, iLvl: 246, Q: 4]
+[Desecrated Chalice] x1 [ID: 251790, iLvl: 246, Q: 4]
+[Osseoclad Marrowvest] x1 [ID: 249637, iLvl: 246, Q: 4]
+[Tarnished Dawnlit Greatsword] x1 [ID: 258958, iLvl: 192, Q: 2]
+[Ethereum Prison Key] x1 [ID: 29460, iLvl: 1, Q: 2]
+[Magical Mini-Treat] x2 [ID: 89906, iLvl: 1, Q: 2]
+[Disarmed Trap] x1 [ID: 255825, iLvl: 1, Q: 2]
+[Lucky Loa Lure] x1 [ID: 241145, iLvl: 1, Q: 2]
+[Tempered Amani Spearhead] x1 [ID: 265543, iLvl: 90, Q: 3]
+[Darkmoon Ride Ticket] x4 [ID: 81055, iLvl: 1, Q: 1]
+[Simple Flour] x15 [ID: 30817, iLvl: 10, Q: 1]
+[Grounded Death Cap] x1 [ID: 264544, iLvl: 220, Q: 2]
+[Thalassian Treatise on Skinning] x6 [ID: 245828, iLvl: 1, Q: 3]
+
+Equipment:
+== Head ==
+[Silvermoon Sunspire] x1 [ID: 266429, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Durability: 100/100
+- Type: Armor / Cloth
+- Equip Slot: Head
+- Item String: item:266429:7958:::::::90:64::42:3:13577:12785:12667:1:28:4240:::::
+- Enchant ID: 7958
+- Bonus IDs: 13577, 12785, 12667
+- Binding: Bind on Pickup
+- STA: 1031
+- INT: 83
+- ARMOR: 50
+- HASTE: 62
+- MAST: 68
+
+== Neck ==
+[Amani Heartstring Pendant] x1 [ID: 265739, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Type: Neck
+- Equip Slot: Neck
+- Item String: item:265739::::::::90:64::42:3:12785:6652:13668:1:28:4240:::::
+- Bonus IDs: 12785, 6652, 13668
+- STA: 580
+- CRIT: 97
+- HASTE: 108
+- Prismatic Socket: 1
+
+== Shoulder ==
+[Sprawling Fibershells] x1 [ID: 249634, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Durability: 100/100
+- Type: Armor / Cloth
+- Equip Slot: Shoulder
+- Item String: item:249634::::::::90:64::177:4:12785:6652:11215:13577:1:28:6015:::::
+- Bonus IDs: 12785, 6652, 11215, 13577
+- Binding: Bind on Pickup
+- STA: 773
+- INT: 62
+- ARMOR: 46
+- CRIT: 57
+- MAST: 40
+
+== Back ==
+[Rampant Bramblecloak] x1 [ID: 249628, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Type: Back
+- Equip Slot: Back
+- Item String: item:249628::::::::90:64::177:4:12785:6652:11215:13577:1:28:6015:::::
+- Bonus IDs: 12785, 6652, 11215, 13577
+- Binding: Bind on Pickup
+- STA: 580
+- INT: 47
+- ARMOR: 46
+- CRIT: 27
+- HASTE: 46
+
+== Chest ==
+[Courtly Robes] x1 [ID: 239672, iLvl: 201, Q: 3]
+- Rarity: Rare
+- Item Level: 201
+- Durability: 140/140
+- Type: Armor / Cloth
+- Equip Slot: Chest
+- Item String: item:239672::::::::90:64::13:3:12247:12246:12493:5:28:3615:29:40:30:36:38:4:40:2569::::Player-1096-0AAB76DF:
+- Bonus IDs: 12247, 12246, 12493
+- Binding: Bind on Pickup
+- STA: 649
+- INT: 55
+- ARMOR: 48
+- HASTE: 46
+- VERS: 46
+
+== Shirt ==
+[Empty]
+
+== Tabard ==
+[Renowned Guild Tabard] x1 [ID: 69210, iLvl: 1, Q: 4]
+- Rarity: Epic
+- Item Level: 1
+- Type: Tabard
+- Equip Slot: Tabard
+- Item String: item:69210::::::::90:64::14::1:28:864:::::
+
+== Wrist ==
+[Sprawling Wristroots] x1 [ID: 249636, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Durability: 55/55
+- Type: Armor / Cloth
+- Equip Slot: Wrist
+- Item String: item:249636::::::::90:64::177:5:12785:6652:12667:11215:13577:1:28:6015:::::
+- Bonus IDs: 12785, 6652, 12667, 11215, 13577
+- Binding: Bind on Pickup
+- STA: 580
+- INT: 47
+- ARMOR: 34
+- CRIT: 46
+- VERS: 27
+
+== Hands ==
+[Sprawling Tendrils] x1 [ID: 249631, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Durability: 55/55
+- Type: Armor / Cloth
+- Equip Slot: Hands
+- Item String: item:249631::::::::90:64::177:4:12785:41:11215:13577:1:28:6015:::::
+- Bonus IDs: 12785, 41, 11215, 13577
+- Binding: Bind on Pickup
+- STA: 773
+- INT: 62
+- ARMOR: 38
+- HASTE: 59
+- MAST: 38
+- Leech: 42
+
+== Waist ==
+[Voidwarped Sash] x1 [ID: 275142, iLvl: 256, Q: 4]
+- Rarity: Epic
+- Item Level: 256
+- Durability: 55/55
+- Type: Armor / Cloth
+- Equip Slot: Waist
+- Item String: item:275142::::::::90:64::176:5:12788:6652:12667:13577:11311:1:28:7331:::::
+- Bonus IDs: 12788, 6652, 12667, 13577, 11311
+- Binding: Bind on Pickup
+- STA: 880
+- INT: 68
+- ARMOR: 40
+- CRIT: 61
+- MAST: 43
+
+== Legs ==
+[Mertei's Adjutant Leggings] x1 [ID: 275224, iLvl: 266, Q: 4]
+- Rarity: Epic
+- Item Level: 266
+- Durability: 120/120
+- Type: Armor / Cloth
+- Equip Slot: Legs
+- Item String: item:275224::::::::90:64::5:4:6652:13577:13334:12795:1:28:7331:::::
+- Bonus IDs: 6652, 13577, 13334, 12795
+- Binding: Bind on Pickup
+- STA: 1331
+- INT: 100
+- ARMOR: 65
+- MAST: 57
+- VERS: 89
+
+== Feet ==
+[Dream-Scorched Striders] x1 [ID: 249373, iLvl: 250, Q: 4]
+- Rarity: Epic
+- Item Level: 250
+- Durability: 80/80
+- Type: Armor / Cloth
+- Equip Slot: Feet
+- Item String: item:249373::::::::90:64::151:5:6652:13577:13333:12786:11215:1:28:3606:::::
+- Bonus IDs: 6652, 13577, 13333, 12786, 11215
+- Binding: Bind on Pickup
+- STA: 814
+- INT: 65
+- ARMOR: 43
+- CRIT: 31
+- MAST: 69
+
+== Finger 1 ==
+[Eredath Seal of Nobility] x1 [ID: 151308, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:151308::::::::90:64::146:5:12785:13439:6652:13668:12699::::::
+- Bonus IDs: 12785, 13439, 6652, 13668, 12699
+- STA: 580
+- CRIT: 80
+- VERS: 125
+- Prismatic Socket: 1
+
+== Finger 2 ==
+[Worldeater's Bone Ring] x1 [ID: 274824, iLvl: 256, Q: 4]
+- Rarity: Epic
+- Item Level: 256
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:274824::::::::90:64::176:4:12788:6652:13668:11311:1:28:7331:::::
+- Bonus IDs: 12788, 6652, 13668, 11311
+- STA: 660
+- HASTE: 94
+- VERS: 134
+- Prismatic Socket: 1
+
+== Trinket 1 ==
+[Crucible of Erratic Energies] x1 [ID: 264507, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:264507::::::::90:64::42:1:12785:1:28:4240:::::
+- Bonus IDs: 12785
+- INT: 79
+
+== Trinket 2 ==
+[Glorious Crusader's Keepsake] x1 [ID: 251792, iLvl: 246, Q: 4]
+- Rarity: Epic
+- Item Level: 246
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:251792::::::::90:64::177:3:12785:42:11215:1:28:6015:::::
+- Bonus IDs: 12785, 42, 11215
+- INT: 79
+- Speed: 42
+
+== Main Hand ==
+[Resinous Blossomblade] x1 [ID: 249610, iLvl: 250, Q: 4]
+- Rarity: Epic
+- Item Level: 250
+- Durability: 80/80
+- Type: Weapon / Daggers
+- Equip Slot: One-Hand Weapon
+- Item String: item:249610::::::::90:64::109:2:12786:43:1:28:6011:::::
+- Bonus IDs: 12786, 43
+- Binding: Bind Type: 15
+- STA: 542
+- INT: 251
+- CRIT: 32
+- VERS: 35
+- DPS: 24.44
+- Indestructible: 28
+
+== Off Hand ==
+[Radiant Eversong Scepter] x1 [ID: 250447, iLvl: 253, Q: 4]
+- Rarity: Epic
+- Item Level: 253
+- Type: Armor / Miscellaneous
+- Equip Slot: Off Hand
+- Item String: item:250447::::::::90:64::81:3:6652:13333:12787:1:28:4907:::::
+- Bonus IDs: 6652, 13333, 12787
+- STA: 564
+- INT: 136
+- HASTE: 39
+- VERS: 29
+
+Reputations:
+Amani Tribe (Renown 20) - Progress: 0/2500
+Council of Dornogal (Renown 25) - Progress: 0/2500
+Delves: Season 1 (Renown 10) - Progress: 0/4200
+Delves: Season 2 (Renown 10) - Progress: 0/4200
+Delves: Season 3 (Renown 10) - Progress: 0/4200
+Dragonscale Expedition (Renown 25) - Progress: 0/2500
+Dream Wardens (Renown 12) - Progress: 148/2500
+Flame's Radiance (Renown 10) - Progress: 0/2500
+Gallagio Loyalty Rewards Club (Renown 20) - Progress: 0/2500
+Hallowfall Arathi (Renown 25) - Progress: 0/2500
+Hara'ti (Renown 20) - Progress: 0/2500
+Iskaara Tuskarr (Renown 30) - Progress: 0/2500
+Keg Leg's Crew (Renown 1) - Progress: 0/2500
+Loamm Niffen (Renown 13) - Progress: 2085/2500
+Manaforge Vandals (Renown 15) - Progress: 0/2500
+Maruuk Centaur (Renown 25) - Progress: 0/2500
+Prey: Season 1 (Renown 10) - Progress: 0/4000
+Ritual Sites (Renown 7) - Progress: 181/2500
+Silvermoon Court (Renown 20) - Progress: 0/2500
+The Assembly of the Deeps (Renown 25) - Progress: 0/2500
+The Cartels of Undermine (Renown 20) - Progress: 0/2500
+The K'aresh Trust (Renown 20) - Progress: 0/2500
+The Severed Threads (Renown 25) - Progress: 0/2500
+The Singularity (Renown 20) - Progress: 0/2500
+Valdrakken Accord (Renown 30) - Progress: 0/2500
+Artisan's Consortium - Dragon Isles Branch (Friendly) - Value: 12500 (12500-12500) - Progress: 0/0
+Ashtongue Deathsworn (Neutral) - Value: 1368 (0-3000) - Progress: 1368/3000
+Azerothian Archives (Friendly) - Value: 42000 (42000-42000) - Progress: 0/0
+Bilgewater Cartel (Friendly) - Value: 3600 (3000-9000) - Progress: 600/6000
+Blackwater Cartel (Friendly) - Value: 3400 (3000-9000) - Progress: 400/6000
+Blood Knights (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Brann Bronzebeard (Exalted) - Value: 31600 (24500-31600) - Progress: 7100/7100
+Brood of Nozdormu (Hated) - Value: -41400 (-42000--6000) - Progress: 600/36000
+Cenarion Circle (Neutral) - Value: 200 (0-3000) - Progress: 200/3000
+Cobalt Assembly (Neutral) - Value: 3600 (3600-10000) - Progress: 0/6400
+Court of Harvesters (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Court of Night (Neutral) - Value: 21000 (21000-42000) - Progress: 0/21000
+Darkfuse Solutions (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Darkmoon Faire (Neutral) - Value: 1650 (0-3000) - Progress: 1650/3000
+Darnassus (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Death's Advance (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Exodar (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Farstriders (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Gilneas (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Gnomeregan (Friendly) - Value: 4000 (3000-9000) - Progress: 1000/6000
+Ironforge (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Magisters (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Mythes et Légendes (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Proudmoore Admiralty (Neutral) - Value: 1050 (0-3000) - Progress: 1050/3000
+Sabellian (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Shades of the Row (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Shado-Pan (Friendly) - Value: 6000 (3000-9000) - Progress: 3000/6000
+Shado-Pan Assault (Honored) - Value: 18710 (9000-21000) - Progress: 9710/12000
+Slayer's Duellum (Friendly) - Value: 3680 (3000-9000) - Progress: 680/6000
+Soridormi (Neutral) - Value: 24000 (24000-42000) - Progress: 0/18000
+Steamwheedle Cartel (Revered) - Value: 30800 (21000-42000) - Progress: 9800/21000
+Stormwind (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+The Archivists' Codex (Revered) - Value: 41000 (41000-41000) - Progress: 0/0
+The Ascended (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Ashen Verdict (Friendly) - Value: 6753 (3000-9000) - Progress: 3753/6000
+The Avowed (Friendly) - Value: 3737 (3000-9000) - Progress: 737/6000
+The Black Prince (Neutral) - Value: 2800 (0-3000) - Progress: 2800/3000
+The Enlightened (Revered) - Value: 26977 (21000-42000) - Progress: 5977/21000
+The General (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Undying Army (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Vizier (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Weaver (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Wild Hunt (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Tushui Pandaren (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Valeera Sanguinar (Exalted) - Value: 41248 (32290-41248) - Progress: 8958/8958
+Ve'nari (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Venture Company (Honored) - Value: 14100 (9000-21000) - Progress: 5100/12000
+Waveblade Ankoan (Neutral) - Value: 275 (0-3000) - Progress: 275/3000
+Wrathion (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+[Debug] Retail reputation API entries: 65
+[Debug] Major faction entries: 26
+[Debug] Total reputation entries: 74
+

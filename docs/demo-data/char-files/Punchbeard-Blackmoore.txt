@@ -1,0 +1,408 @@
+== Location ==
+Zone: Silvermoon City
+Subzone: The Bazaar
+Map: Silvermoon City
+Map ID: 2393
+Parent Map: Eversong Woods
+Parent Map ID: 2395
+Coordinates: 50.7, 65.7
+Hearthstone Location: Trade District
+
+Character Stats:
+Character: Punchbeard-Blackmoore
+Faction: Alliance
+Level: 80
+Race: Human
+Class: Monk
+Specialization: Brewmaster (TANK)
+Primary Stat: Agility
+Average Item Level: 69.81
+Equipped Item Level: 67.25
+PvP Item Level: 69.81
+Health: n/a/77660
+Energy: n/a/100
+XP: 8275/403725
+XP To Level: 395450
+XP Progress: 2.05%
+Rested XP: 605588
+Armor: 237
+== Primary Attributes ==
+Strength: 68
+Agility: 327
+Stamina: 3883
+Intellect: 159
+Attack Power: 394
+== Combat Ratings ==
+Critical Strike: 141 rating / 21.6%
+Haste: 109 rating / 14.84%
+Mastery: 91 rating / 18.93%
+Versatility: 102 rating / 7.15%
+Leech: 0 rating / 0%
+Speed: 0 rating / 0%
+Avoidance: 0 rating / 0%
+
+Currencies:
+Gold: 1006g 85s 42c
+Currency Count: 11
+
+== Season 1 ==
+Dawnlight Manaflux (ID: 3378) - Quantity: 8/8
+Undercoin (ID: 2803) - Quantity: 0
+
+== Miscellaneous ==
+Community Coupons (ID: 3363) - Quantity: 0/2000
+Trader's Tender (ID: 2032) - Quantity: 4030
+
+== War Within ==
+Kej (ID: 3056) - Quantity: 450
+Resonance Crystals (ID: 2815) - Quantity: 1845
+
+== Legion ==
+Ancient Mana (ID: 1155) - Quantity: 6/300
+Legionfall War Supplies (ID: 1342) - Quantity: 25/1000
+Order Resources (ID: 1220) - Quantity: 0
+Veiled Argunite (ID: 1508) - Quantity: 60/2000
+Wakening Essence (ID: 1533) - Quantity: 112
+
+Bags:
+== Backpack (0/20) ==
+[Empty]
+
+== Bag 1 (0/34) ==
+[Empty]
+
+== Bag 2 (0/34) ==
+[Empty]
+
+== Bag 3 (0/30) ==
+[Empty]
+
+== Bag 4 (5/30) ==
+[Urgent Stormwind Summons] x1 [ID: 203475, iLvl: 1, Q: 1]
+[Talisman of True Treasure Tracking] x1 [ID: 27944, iLvl: 13, Q: 1]
+[Field Pack] x36 [ID: 136654, iLvl: 16, Q: 1]
+[Element-Infused Blood] x1 [ID: 199219, iLvl: 21, Q: 1]
+[Hearthstone] x1 [ID: 6948, iLvl: 1, Q: 1]
+
+== Reagent Bag (0/26) ==
+[Empty]
+
+Bank:
+[Bank data unavailable - open your personal bank at least once to build cache.]
+
+Equipment:
+== Head ==
+[Mistdancer Helm] x1 [ID: 153840, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 68/70
+- Type: Armor / Leather
+- Equip Slot: Head
+- Item String: item:153840::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 17
+- STA: 25
+- ARMOR: 19
+- HASTE: 17
+- MAST: 16
+
+== Neck ==
+[Mistdancer Amulet] x1 [ID: 153831, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Neck
+- Equip Slot: Neck
+- Item String: item:153831::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- STA: 14
+- CRIT: 23
+- VERS: 24
+
+== Shoulder ==
+[Mistdancer Pauldrons] x1 [ID: 153842, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 69/70
+- Type: Armor / Leather
+- Equip Slot: Shoulder
+- Item String: item:153842::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 13
+- STA: 19
+- ARMOR: 18
+- CRIT: 12
+- HASTE: 13
+
+== Back ==
+[Mistdancer Cloak of Rage] x1 [ID: 153865, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Back
+- Equip Slot: Back
+- Item String: item:153865::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Pickup
+- AGI: 9
+- STA: 14
+- ARMOR: 10
+- CRIT: 10
+- HASTE: 9
+
+== Chest ==
+[Mistdancer Vest] x1 [ID: 153837, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 113/115
+- Type: Armor / Leather
+- Equip Slot: Chest
+- Item String: item:153837::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 17
+- STA: 25
+- ARMOR: 26
+- CRIT: 17
+- MAST: 16
+
+== Shirt ==
+[Empty]
+
+== Tabard ==
+[Illustrious Guild Tabard] x1 [ID: 69209, iLvl: 1, Q: 3]
+- Rarity: Rare
+- Item Level: 1
+- Type: Tabard
+- Equip Slot: Tabard
+- Item String: item:69209::::::::80:268::14::1:28:864:::::
+
+== Wrist ==
+[Ascension Agitator's Bindings] x1 [ID: 251589, iLvl: 80, Q: 3]
+- Rarity: Rare
+- Item Level: 80
+- Durability: 49/50
+- Type: Armor / Leather
+- Equip Slot: Wrist
+- Item String: item:251589::::::::80:268::17:4:12244:8902:6682:6652:2:9:77:28:3098:::::
+- Bonus IDs: 12244, 8902, 6682, 6652
+- Binding: Bind on Equip
+- AGI: 10
+- STA: 15
+- ARMOR: 13
+- CRIT: 11
+- HASTE: 9
+
+== Hands ==
+[Mistdancer Handguards] x1 [ID: 153839, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 40/40
+- Type: Armor / Leather
+- Equip Slot: Hands
+- Item String: item:153839::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 13
+- STA: 19
+- ARMOR: 14
+- CRIT: 13
+- HASTE: 12
+
+== Waist ==
+[Mysterious Sash] x1 [ID: 235951, iLvl: 76, Q: 4]
+- Rarity: Epic
+- Item Level: 76
+- Durability: 55/55
+- Type: Armor / Leather
+- Equip Slot: Waist
+- Item String: item:235951::::::::80:268::19:1:12070:2:9:72:28:181:::::
+- Bonus IDs: 12070
+- Binding: Bind on Equip
+- AGI: 13
+- STA: 19
+- ARMOR: 15
+- HASTE: 16
+- MAST: 9
+
+== Legs ==
+[Mistdancer Legguards] x1 [ID: 153841, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 84/85
+- Type: Armor / Leather
+- Equip Slot: Legs
+- Item String: item:153841::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 17
+- STA: 25
+- ARMOR: 22
+- CRIT: 18
+- HASTE: 16
+
+== Feet ==
+[Mistdancer Footpads] x1 [ID: 153838, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Durability: 55/55
+- Type: Armor / Leather
+- Equip Slot: Feet
+- Item String: item:153838::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- Binding: Bind on Equip
+- AGI: 13
+- STA: 19
+- ARMOR: 16
+- CRIT: 12
+- HASTE: 13
+
+== Finger 1 ==
+[Mistdancer Ring of Stoicism] x1 [ID: 153833, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:153833::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- STA: 14
+- MAST: 22
+- VERS: 26
+
+== Finger 2 ==
+[Mistdancer Band of Stoicism] x1 [ID: 153832, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:153832::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- STA: 14
+- CRIT: 22
+- VERS: 26
+
+== Trinket 1 ==
+[Mistdancer Defender Idol] x1 [ID: 153836, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:153836::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- AGI: 16
+- MAST: 24
+
+== Trinket 2 ==
+[Mistdancer Defender Stone] x1 [ID: 153834, iLvl: 75, Q: 2]
+- Rarity: Uncommon
+- Item Level: 75
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:153834::::::::80:268::105:1:11073:2:9:70:28:2484:::::
+- Bonus IDs: 11073
+- AGI: 16
+- VERS: 24
+
+== Main Hand ==
+[Fu Zan, the Wanderer's Companion] x1 [ID: 128938, iLvl: 10, Q: 6]
+- Rarity: Artifact
+- Item Level: 10
+- Type: Weapon / Staves
+- Equip Slot: Two-Hand Weapon
+- Item String: item:128938::::::::80:268::9:1:732:1:28:642:::::
+- Bonus IDs: 732
+- Binding: Bind Type: 10
+- AGI: 2
+- STA: 4
+- HASTE: 2
+- MAST: 2
+- DPS: 1.67
+- EMPTY_SOCKET_IRON: 1
+- EMPTY_SOCKET_LIFE: 1
+- EMPTY_SOCKET_WIND: 1
+
+== Off Hand ==
+[Empty]
+
+Reputations:
+Amani Tribe (Renown 20) - Progress: 0/2500
+Council of Dornogal (Renown 25) - Progress: 0/2500
+Delves: Season 1 (Renown 10) - Progress: 0/4200
+Delves: Season 2 (Renown 10) - Progress: 0/4200
+Delves: Season 3 (Renown 10) - Progress: 0/4200
+Dragonscale Expedition (Renown 25) - Progress: 0/2500
+Dream Wardens (Renown 12) - Progress: 148/2500
+Flame's Radiance (Renown 10) - Progress: 0/2500
+Gallagio Loyalty Rewards Club (Renown 20) - Progress: 0/2500
+Hallowfall Arathi (Renown 25) - Progress: 0/2500
+Hara'ti (Renown 20) - Progress: 0/2500
+Iskaara Tuskarr (Renown 30) - Progress: 0/2500
+Keg Leg's Crew (Renown 1) - Progress: 0/2500
+Loamm Niffen (Renown 13) - Progress: 2085/2500
+Manaforge Vandals (Renown 15) - Progress: 0/2500
+Maruuk Centaur (Renown 25) - Progress: 0/2500
+Prey: Season 1 (Renown 10) - Progress: 0/4000
+Ritual Sites (Renown 7) - Progress: 181/2500
+Silvermoon Court (Renown 20) - Progress: 0/2500
+The Assembly of the Deeps (Renown 25) - Progress: 0/2500
+The Cartels of Undermine (Renown 20) - Progress: 0/2500
+The K'aresh Trust (Renown 20) - Progress: 0/2500
+The Severed Threads (Renown 25) - Progress: 0/2500
+The Singularity (Renown 20) - Progress: 0/2500
+Valdrakken Accord (Renown 30) - Progress: 0/2500
+Argussian Reach (Neutral) - Value: 2100 (0-3000) - Progress: 2100/3000
+Armies of Legionfall (Friendly) - Value: 5640 (3000-9000) - Progress: 2640/6000
+Army of the Light (Friendly) - Value: 5100 (3000-9000) - Progress: 2100/6000
+Artisan's Consortium - Dragon Isles Branch (Friendly) - Value: 12500 (12500-12500) - Progress: 0/0
+Azerothian Archives (Friendly) - Value: 42000 (42000-42000) - Progress: 0/0
+Bilgewater Cartel (Friendly) - Value: 3600 (3000-9000) - Progress: 600/6000
+Blackwater Cartel (Friendly) - Value: 3400 (3000-9000) - Progress: 400/6000
+Blood Knights (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Brann Bronzebeard (Exalted) - Value: 31600 (24500-31600) - Progress: 7100/7100
+Cobalt Assembly (Neutral) - Value: 3600 (3600-10000) - Progress: 0/6400
+Court of Harvesters (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Court of Night (Neutral) - Value: 21000 (21000-42000) - Progress: 0/21000
+Darkfuse Solutions (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Darnassus (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Death's Advance (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Dreamweavers (Neutral) - Value: 1500 (0-3000) - Progress: 1500/3000
+Eganwo Foz Drol (Honored) - Value: 13312 (9000-21000) - Progress: 4312/12000
+Exodar (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Farstriders (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Gilneas (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Gnomeregan (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Highmountain Tribe (Neutral) - Value: 375 (0-3000) - Progress: 375/3000
+Ironforge (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Kirin Tor (Neutral) - Value: 146 (0-3000) - Progress: 146/3000
+Magisters (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Proudmoore Admiralty (Neutral) - Value: 300 (0-3000) - Progress: 300/3000
+Sabellian (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Shades of the Row (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Shado-Pan (Friendly) - Value: 6000 (3000-9000) - Progress: 3000/6000
+Slayer's Duellum (Friendly) - Value: 3680 (3000-9000) - Progress: 680/6000
+Soridormi (Neutral) - Value: 24000 (24000-42000) - Progress: 0/18000
+Steamwheedle Cartel (Revered) - Value: 30800 (21000-42000) - Progress: 9800/21000
+Storm's Wake (Neutral) - Value: 25 (0-3000) - Progress: 25/3000
+Stormwind (Friendly) - Value: 4000 (3000-9000) - Progress: 1000/6000
+The Archivists' Codex (Revered) - Value: 41000 (41000-41000) - Progress: 0/0
+The Ascended (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Avowed (Friendly) - Value: 3737 (3000-9000) - Progress: 737/6000
+The Enlightened (Revered) - Value: 26977 (21000-42000) - Progress: 5977/21000
+The General (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Nightfallen (Neutral) - Value: 750 (0-3000) - Progress: 750/3000
+The Undying Army (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Vizier (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Wardens (Friendly) - Value: 3225 (3000-9000) - Progress: 225/6000
+The Weaver (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Wild Hunt (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Tushui Pandaren (Friendly) - Value: 3100 (3000-9000) - Progress: 100/6000
+Valarjar (Friendly) - Value: 3600 (3000-9000) - Progress: 600/6000
+Valeera Sanguinar (Exalted) - Value: 41248 (32290-41248) - Progress: 8958/8958
+Ve'nari (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Venture Company (Honored) - Value: 14100 (9000-21000) - Progress: 5100/12000
+Waveblade Ankoan (Neutral) - Value: 275 (0-3000) - Progress: 275/3000
+Wrathion (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+[Debug] Retail reputation API entries: 68
+[Debug] Major faction entries: 26
+[Debug] Total reputation entries: 77
+

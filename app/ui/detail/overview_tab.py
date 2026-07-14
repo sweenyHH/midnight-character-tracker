@@ -2,8 +2,6 @@ from PySide6.QtWidgets import (
     QWidget, QLabel, QTableWidget, QTableWidgetItem,
     QHBoxLayout, QVBoxLayout, QHeaderView
 )
-from PySide6.QtCore import Qt
-
 from .utils import format_gold
 from app.ui.detail.notes_widget import NotesWidget
 from app.weekly_duties.widget import WeeklyDutiesWidget
@@ -26,6 +24,13 @@ class OverviewTab(QWidget):
         self.notes_widget = NotesWidget()
         self.duties_widget = WeeklyDutiesWidget()
         self.vault_widget = VaultProgressWidget()
+
+# GENERAL INFO LABELS
+        self.name_label = QLabel()
+        self.info_label = QLabel()
+        self.gold_label = QLabel()
+        self.other_currencies_label = QLabel()
+        self.other_currencies_label.setWordWrap(True)
 
 # PERSISTENT CURRENCY TABLE
 
@@ -73,6 +78,36 @@ class OverviewTab(QWidget):
             False
         )
 
+# --------------------------------------------------
+# PERMANENT LAYOUTS
+# --------------------------------------------------
+
+        self.top_row = QHBoxLayout()
+        self.bottom_row = QHBoxLayout()
+
+        self.general_widget = QWidget()
+        self.general_layout = QVBoxLayout(self.general_widget)
+
+        self.general_layout.addWidget(self.name_label)
+        self.general_layout.addWidget(self.info_label)
+        self.general_layout.addWidget(self.gold_label)
+        self.general_layout.addWidget(
+            self.other_currencies_label
+        )
+
+        self.left_column = QVBoxLayout()
+        self.left_column.addWidget(self.currency_table)
+        self.left_column.addWidget(self.vault_widget)
+
+        self.top_row.addWidget(self.general_widget, 2)
+        self.top_row.addWidget(self.notes_widget, 3)
+
+        self.bottom_row.addLayout(self.left_column, 2)
+        self.bottom_row.addWidget(self.duties_widget, 3)
+
+        self.layout.addLayout(self.top_row)
+        self.layout.addLayout(self.bottom_row)
+
 
 
 # --------------------------------------------------
@@ -82,43 +117,21 @@ class OverviewTab(QWidget):
             f"OverviewTab set_character: {character.name}"
         )
 
-# FULL LAYOUT CLEAR
-
-        while self.layout.count():
-            item = self.layout.takeAt(0)
-
-            if item.widget():
-
-                logger.info(
-                    f"OverviewTab removing widget: "
-                    f"{type(item.widget()).__name__}"
-                )
-
-                item.widget().deleteLater()
-
-            elif item.layout():
-
-                logger.info(
-                    f"OverviewTab removing layout: "
-                    f"{type(item.layout()).__name__}"
-                )
-
-                item.layout().deleteLater()
-
 # ==================================================
 # TOP ROW (GENERAL + NOTES)
 # ==================================================
-        top_row = QHBoxLayout()
 
-# LEFT — GENERAL
-        general_widget = QWidget()
-        general_layout = QVBoxLayout(general_widget)
+        class_name = getattr(
+            character,
+            "character_class",
+            "-"
+        )
 
-        general_layout.addWidget(QLabel(f"<h2>{character.name}</h2>"))
+        self.name_label.setText(
+            f"<h2>{character.name}</h2>"
+        )
 
-        class_name = getattr(character, "character_class", "-")
-
-        info_label = QLabel(
+        self.info_label.setText(
             f"<b>Level {getattr(character, 'level', '-')}, </b>"
             f"<b>{getattr(character, 'race', '-')}, </b>"
             f"<b>{class_name} </b>"
@@ -126,18 +139,32 @@ class OverviewTab(QWidget):
         )
 
         if class_name in CLASS_COLORS:
-            adjusted = adjust_class_color(CLASS_COLORS[class_name])
-            info_label.setStyleSheet(f"color: {adjusted};")
+            adjusted = adjust_class_color(
+                CLASS_COLORS[class_name]
+            )
 
+            self.info_label.setStyleSheet(
+                f"color: {adjusted};"
+            )
+        else:
+            self.info_label.setStyleSheet("")
 
-        general_layout.addWidget(info_label)
+        gold = next(
+            (
+                x for x in character.currencies
+                if x.name == "Gold"
+            ),
+            None
+        )
 
-        gold = next((x for x in character.currencies if x.name == "Gold"), None)
         if gold:
-            general_layout.addWidget(QLabel(f"<b>Gold:</b> {format_gold(gold.quantity)}"))
+            self.gold_label.setText(
+                f"<b>Gold:</b> "
+                f"{format_gold(gold.quantity)}"
+            )
+        else:
+            self.gold_label.setText("")
 
-
-# OTHER CURRENCIES
         other_currencies = [
             c for c in character.currencies
             if getattr(c, "groups", None)
@@ -148,7 +175,6 @@ class OverviewTab(QWidget):
         combined = {}
 
         for currency in other_currencies:
-
             combined.setdefault(
                 currency.name,
                 0
@@ -158,36 +184,34 @@ class OverviewTab(QWidget):
                 currency.quantity or 0
             )
 
-        for name in sorted(combined):
+        if combined:
 
-            general_layout.addWidget(
-                QLabel(
-                    f"<b>{name}:</b> {combined[name]}"
+            lines = []
+
+            for name in sorted(combined):
+                lines.append(
+                    f"<b>{name}:</b> "
+                    f"{combined[name]}"
                 )
+
+            self.other_currencies_label.setText(
+                "<br>".join(lines)
             )
 
-        general_layout.addStretch()
+        else:
+            self.other_currencies_label.setText("")
+
 
 # REUSE WIDGET
         self.notes_widget.set_character(character)
 
-        top_row.addWidget(general_widget)
-        top_row.addWidget(self.notes_widget)
-        top_row.setStretch(0, 1)
-        top_row.setStretch(1, 1)
-
-        self.layout.addLayout(top_row)
-
 # ==================================================
 # BOTTOM ROW (CURRENCIES + DUTIES)
 # ==================================================
-        bottom_row = QHBoxLayout()
 
 # -------------------------------
 # LEFT COLUMN (CURRENCIES + VAULT)
 # -------------------------------
-        left_column = QWidget()
-        left_layout = QVBoxLayout(left_column)
 
         currencies = [
             c for c in character.currencies
@@ -209,23 +233,10 @@ class OverviewTab(QWidget):
             self.currency_table.setItem(row, 3, QTableWidgetItem(str(c.weekly_current) if c.weekly_current else "-"))
             self.currency_table.setItem(row, 4, QTableWidgetItem(str(c.weekly_max) if c.weekly_max else "-"))
 
-        left_layout.addWidget(self.currency_table)
 
 # REUSE VAULT WIDGET
         self.vault_widget.set_character(character)
-        left_layout.addWidget(self.vault_widget)
 
 # REUSE DUTIES WIDGET
         self.duties_widget.set_character(character)
 
-        bottom_row.addWidget(left_column)
-        bottom_row.addWidget(self.duties_widget)
-
-        bottom_row.setStretch(0, 1)
-        bottom_row.setStretch(1, 1)
-
-        self.layout.addLayout(bottom_row)
-
-# commented out for debugging
-
-        # self.layout.addStretch()

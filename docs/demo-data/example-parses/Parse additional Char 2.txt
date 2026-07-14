@@ -1,0 +1,395 @@
+== Location ==
+Zone: Council's Treasury
+Subzone: Dornogal
+Map: Dornogal
+Map ID: 2339
+Parent Map: Isle of Dorn
+Parent Map ID: 2248
+Coordinates: 53.6, 44.8
+Hearthstone Location: Dornogal
+
+Character Stats:
+Character: Recklessrage-Trollbane
+Faction: Alliance
+Level: 80
+Race: Lightforged Draenei
+Class: Warrior
+Specialization: Fury (DAMAGER)
+Primary Stat: Strength
+Average Item Level: 97.56
+Equipped Item Level: 95.75
+PvP Item Level: 97.56
+Health: n/a/61100
+Rage: n/a/130
+XP: 0/403725
+XP To Level: 403725
+XP Progress: 0%
+Rested XP: 605588
+Armor: 364
+== Primary Attributes ==
+Strength: 403
+Agility: 109
+Stamina: 3055
+Intellect: 108
+Attack Power: 403
+== Combat Ratings ==
+Critical Strike: 107 rating / 13.8%
+Haste: 146 rating / 12.55%
+Mastery: 197 rating / 33.88%
+Versatility: 79 rating / 5.54%
+Leech: 0 rating / 0%
+Speed: 0 rating / 0%
+Avoidance: 0 rating / 0%
+
+Currencies:
+Gold: 1007g 11s 67c
+Currency Count: 2
+
+== Season 1 ==
+Dawnlight Manaflux (ID: 3378) - Quantity: 8/8
+Restored Coffer Key (ID: 3028) - Quantity: 0
+
+Bags:
+== Backpack (0/20) ==
+[Empty]
+
+== Bag 1 (0/34) ==
+[Empty]
+
+== Bag 2 (0/34) ==
+[Empty]
+
+== Bag 3 (0/30) ==
+[Empty]
+
+== Bag 4 (1/30) ==
+[Hearthstone] x1 [ID: 6948, iLvl: 1, Q: 1]
+
+== Reagent Bag (0/26) ==
+[Empty]
+
+Bank:
+[Bank data unavailable - open your personal bank at least once to build cache.]
+
+Equipment:
+== Head ==
+[Secret-Dredger's Helm] x1 [ID: 211029, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 100/100
+- Type: Armor / Plate
+- Equip Slot: Head
+- Item String: item:211029::::::::80:72::67:7:11969:6652:12176:11215:11964:3202:10255:1:28:2462:::::
+- Bonus IDs: 11969, 6652, 12176, 11215, 11964, 3202, 10255
+- Binding: Quest Item
+- STR: 20
+- STA: 55
+- ARMOR: 47
+- CRIT: 19
+- VERS: 21
+
+== Neck ==
+[Gem-Studded Pendant] x1 [ID: 224665, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Type: Neck
+- Equip Slot: Neck
+- Item String: item:224665::::::::80:72::43:7:11970:6652:10395:10392:1760:3155:10255:1:28:2462:::::
+- Bonus IDs: 11970, 6652, 10395, 10392, 1760, 3155, 10255
+- STA: 31
+- CRIT: 25
+- HASTE: 38
+
+== Shoulder ==
+[Secret-Dredger's Mantle] x1 [ID: 211034, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 100/100
+- Type: Armor / Plate
+- Equip Slot: Shoulder
+- Item String: item:211034::::::::80:72::71:6:11970:6652:11215:11964:3205:10255:1:28:2462:::::
+- Bonus IDs: 11970, 6652, 11215, 11964, 3205, 10255
+- Binding: Quest Item
+- STR: 15
+- STA: 42
+- ARMOR: 43
+- CRIT: 16
+- MAST: 14
+
+== Back ==
+[Torchbearer's Greatcloak] x1 [ID: 211007, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Type: Back
+- Equip Slot: Back
+- Item String: item:211007::::::::80:72::67:6:11969:6652:11215:11964:1528:10255:1:28:2462:::::
+- Bonus IDs: 11969, 6652, 11215, 11964, 1528, 10255
+- Binding: Bind on Pickup
+- STR: 11
+- STA: 31
+- ARMOR: 11
+- MAST: 12
+- VERS: 11
+
+== Chest ==
+[Steadfast Contender's Breastplate] x1 [ID: 232731, iLvl: 98, Q: 4]
+- Rarity: Epic
+- Item Level: 98
+- Durability: 165/165
+- Type: Armor / Plate
+- Equip Slot: Chest
+- Item String: item:232731::::::::80:72::81:6:6652:11966:10354:11979:1491:10255:1:28:2462:::::
+- Bonus IDs: 6652, 11966, 10354, 11979, 1491, 10255
+- Binding: Quest Item
+- STR: 21
+- STA: 78
+- ARMOR: 65
+- CRIT: 27
+- HASTE: 15
+
+== Shirt ==
+[Empty]
+
+== Tabard ==
+[Renowned Guild Tabard] x1 [ID: 69210, iLvl: 1, Q: 4]
+- Rarity: Epic
+- Item Level: 1
+- Type: Tabard
+- Equip Slot: Tabard
+- Item String: item:69210::::::::80:72::14::1:28:864:::::
+
+== Wrist ==
+[Mechforged Armplates] x1 [ID: 233448, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 55/55
+- Type: Armor / Plate
+- Equip Slot: Wrist
+- Item String: item:233448::::::::80:72::43:6:11970:6652:12176:11964:1498:10255:1:28:2462:::::
+- Bonus IDs: 11970, 6652, 12176, 11964, 1498, 10255
+- Binding: Quest Item
+- STR: 11
+- STA: 31
+- ARMOR: 32
+- MAST: 11
+- VERS: 12
+
+== Hands ==
+[Retired Bouncer's Gauntlets] x1 [ID: 232413, iLvl: 95, Q: 4]
+- Rarity: Epic
+- Item Level: 95
+- Durability: 55/55
+- Type: Armor / Plate
+- Equip Slot: Hands
+- Item String: item:232413::::::::80:72::14:4:11977:11964:3285:10255:1:28:2462:::::
+- Bonus IDs: 11977, 11964, 3285, 10255
+- Binding: Quest Item
+- STR: 15
+- STA: 50
+- ARMOR: 36
+- HASTE: 9
+- VERS: 22
+
+== Waist ==
+[Secret-Dredger's Girdle] x1 [ID: 211035, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 55/55
+- Type: Armor / Plate
+- Equip Slot: Waist
+- Item String: item:211035::::::::80:72::67:7:11969:6652:12176:11215:11964:3202:10255:1:28:2462:::::
+- Bonus IDs: 11969, 6652, 12176, 11215, 11964, 3202, 10255
+- Binding: Quest Item
+- STR: 15
+- STA: 42
+- ARMOR: 36
+- MAST: 17
+- VERS: 13
+
+== Legs ==
+[Secret-Dredger's Legguards] x1 [ID: 211033, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 120/120
+- Type: Armor / Plate
+- Equip Slot: Legs
+- Item String: item:211033::::::::80:72::67:6:11969:6652:11215:11964:3202:10255:1:28:2462:::::
+- Bonus IDs: 11969, 6652, 11215, 11964, 3202, 10255
+- Binding: Quest Item
+- STR: 20
+- STA: 55
+- ARMOR: 55
+- HASTE: 19
+- MAST: 21
+
+== Feet ==
+[Aqirite-Toe Boots] x1 [ID: 232384, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 80/80
+- Type: Armor / Plate
+- Equip Slot: Feet
+- Item String: item:232384::::::::80:72::14:4:11969:11964:3272:10255:1:28:2462:::::
+- Bonus IDs: 11969, 11964, 3272, 10255
+- Binding: Quest Item
+- STR: 15
+- STA: 42
+- ARMOR: 39
+- CRIT: 20
+- MAST: 10
+
+== Finger 1 ==
+[Cyrce's Circlet] x1 [ID: 228411, iLvl: 103, Q: 4]
+- Rarity: Epic
+- Item Level: 103
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:228411::228634:228644:228640::::80:72::25:2:12028:1511::::::
+- Gems:
+  - Socket 1: [ID: 228634]
+  - Socket 2: [ID: 228644]
+  - Socket 3: [ID: 228640]
+- Bonus IDs: 12028, 1511
+- STA: 53
+- Singing Sea Socket: 1
+- Singing Thunder Socket: 1
+- Singing Wind Socket: 1
+
+== Finger 2 ==
+[Loop of Vestigial Power] x1 [ID: 211051, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Type: Finger
+- Equip Slot: Finger
+- Item String: item:211051::::::::80:72::67:7:6652:10394:10392:11215:11970:1531:10255:1:28:2462:::::
+- Bonus IDs: 6652, 10394, 10392, 11215, 11970, 1531, 10255
+- STA: 31
+- HASTE: 27
+- MAST: 36
+
+== Trinket 1 ==
+[Garbagemancer's Last Resort] x1 [ID: 235984, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:235984::::::::80:72::71:5:11970:6652:11215:3305:10255:1:28:2462:::::
+- Bonus IDs: 11970, 6652, 11215, 3305, 10255
+- STR: 19
+
+== Trinket 2 ==
+[Papa's Prized Putter] x1 [ID: 234821, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Type: Trinket
+- Equip Slot: Trinket
+- Item String: item:234821::::::::80:72::71:5:6652:11970:11215:1498:10255:1:28:2462:::::
+- Bonus IDs: 6652, 11970, 11215, 1498, 10255
+- STR: 19
+
+== Main Hand ==
+[Charged Claymore] x1 [ID: 222447, iLvl: 112, Q: 4]
+- Rarity: Epic
+- Item Level: 112
+- Durability: 120/120
+- Type: Weapon / Two-Handed Swords
+- Equip Slot: Two-Hand Weapon
+- Item String: item:222447::::::::80:72::13:9:10421:9633:8902:9627:8793:12040:12042:11300:8960:9:28:2734:29:36:30:32:38:8:40:2158:45:222584:46:230906:47:230936:48:226024::::Player-1096-0A437550:
+- Bonus IDs: 10421, 9633, 8902, 9627, 8793, 12040, 12042, 11300, 8960
+- Binding: Bind Type: 8
+- STR: 24
+- STA: 133
+- HASTE: 24
+- MAST: 24
+- DPS: 17.92
+
+== Off Hand ==
+[Arathi Crusader's Greatsword] x1 [ID: 237794, iLvl: 92, Q: 4]
+- Rarity: Epic
+- Item Level: 92
+- Durability: 120/120
+- Type: Weapon / Two-Handed Swords
+- Equip Slot: Two-Hand Weapon
+- Item String: item:237794::::::::80:72::54:5:11972:11215:6652:1494:10255:1:28:2462:::::
+- Bonus IDs: 11972, 11215, 6652, 1494, 10255
+- Binding: Bind Type: 8
+- STR: 20
+- STA: 55
+- HASTE: 14
+- MAST: 26
+- DPS: 14.86
+
+Reputations:
+Amani Tribe (Renown 20) - Progress: 0/2500
+Council of Dornogal (Renown 25) - Progress: 0/2500
+Delves: Season 1 (Renown 10) - Progress: 0/4200
+Delves: Season 2 (Renown 10) - Progress: 0/4200
+Delves: Season 3 (Renown 10) - Progress: 0/4200
+Dragonscale Expedition (Renown 25) - Progress: 0/2500
+Dream Wardens (Renown 12) - Progress: 148/2500
+Flame's Radiance (Renown 10) - Progress: 0/2500
+Gallagio Loyalty Rewards Club (Renown 20) - Progress: 0/2500
+Hallowfall Arathi (Renown 25) - Progress: 0/2500
+Hara'ti (Renown 20) - Progress: 0/2500
+Iskaara Tuskarr (Renown 30) - Progress: 0/2500
+Keg Leg's Crew (Renown 1) - Progress: 0/2500
+Loamm Niffen (Renown 13) - Progress: 2085/2500
+Manaforge Vandals (Renown 15) - Progress: 0/2500
+Maruuk Centaur (Renown 25) - Progress: 0/2500
+Prey: Season 1 (Renown 10) - Progress: 0/4000
+Ritual Sites (Renown 7) - Progress: 181/2500
+Silvermoon Court (Renown 20) - Progress: 0/2500
+The Assembly of the Deeps (Renown 25) - Progress: 0/2500
+The Cartels of Undermine (Renown 20) - Progress: 0/2500
+The K'aresh Trust (Renown 20) - Progress: 0/2500
+The Severed Threads (Renown 25) - Progress: 0/2500
+The Singularity (Renown 20) - Progress: 0/2500
+Valdrakken Accord (Renown 30) - Progress: 0/2500
+Army of the Light (Friendly) - Value: 6000 (3000-9000) - Progress: 3000/6000
+Artisan's Consortium - Dragon Isles Branch (Friendly) - Value: 12500 (12500-12500) - Progress: 0/0
+Azerothian Archives (Friendly) - Value: 42000 (42000-42000) - Progress: 0/0
+Bilgewater Cartel (Friendly) - Value: 3600 (3000-9000) - Progress: 600/6000
+Blackwater Cartel (Friendly) - Value: 3400 (3000-9000) - Progress: 400/6000
+Blood Knights (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Brann Bronzebeard (Exalted) - Value: 31600 (24500-31600) - Progress: 7100/7100
+Cobalt Assembly (Neutral) - Value: 3600 (3600-10000) - Progress: 0/6400
+Court of Harvesters (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Court of Night (Neutral) - Value: 21000 (21000-42000) - Progress: 0/21000
+Darkfuse Solutions (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Darnassus (Friendly) - Value: 3750 (3000-9000) - Progress: 750/6000
+Death's Advance (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Eganwo Foz Drol (Honored) - Value: 13000 (9000-21000) - Progress: 4000/12000
+Exodar (Friendly) - Value: 4650 (3000-9000) - Progress: 1650/6000
+Farstriders (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Gilneas (Neutral) - Value: 650 (0-3000) - Progress: 650/3000
+Gnomeregan (Friendly) - Value: 3750 (3000-9000) - Progress: 750/6000
+Ironforge (Friendly) - Value: 3750 (3000-9000) - Progress: 750/6000
+Magisters (Neutral) - Value: 1500 (1500-2000) - Progress: 0/500
+Operation: Shieldwall (Neutral) - Value: 1050 (0-3000) - Progress: 1050/3000
+Proudmoore Admiralty (Neutral) - Value: 300 (0-3000) - Progress: 300/3000
+Sabellian (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Shades of the Row (Neutral) - Value: 2000 (1500-2000) - Progress: 500/500
+Shado-Pan (Neutral) - Value: 0 (0-3000) - Progress: 0/3000
+Slayer's Duellum (Friendly) - Value: 3680 (3000-9000) - Progress: 680/6000
+Soridormi (Neutral) - Value: 24000 (24000-42000) - Progress: 0/18000
+Steamwheedle Cartel (Revered) - Value: 30800 (21000-42000) - Progress: 9800/21000
+Storm's Wake (Neutral) - Value: 25 (0-3000) - Progress: 25/3000
+Stormwind (Friendly) - Value: 3750 (3000-9000) - Progress: 750/6000
+The Archivists' Codex (Revered) - Value: 41000 (41000-41000) - Progress: 0/0
+The Ascended (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Avowed (Friendly) - Value: 3737 (3000-9000) - Progress: 737/6000
+The Enlightened (Revered) - Value: 26977 (21000-42000) - Progress: 5977/21000
+The General (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Undying Army (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+The Vizier (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Weaver (Honored) - Value: 15000 (12500-15000) - Progress: 2500/2500
+The Wild Hunt (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Tushui Pandaren (Friendly) - Value: 3750 (3000-9000) - Progress: 750/6000
+Valeera Sanguinar (Exalted) - Value: 41248 (32290-41248) - Progress: 8958/8958
+Ve'nari (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+Venture Company (Honored) - Value: 14100 (9000-21000) - Progress: 5100/12000
+Waveblade Ankoan (Neutral) - Value: 275 (0-3000) - Progress: 275/3000
+Wrathion (Exalted) - Value: 42000 (42000-42000) - Progress: 0/0
+[Debug] Retail reputation API entries: 61
+[Debug] Major faction entries: 26
+[Debug] Total reputation entries: 70

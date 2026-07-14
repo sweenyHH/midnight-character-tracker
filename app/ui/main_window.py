@@ -24,6 +24,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self._reload_running = False
+
         self.setWindowTitle(APP_NAME)
         self.setFixedSize(1800, 900)
 
@@ -228,9 +230,18 @@ class MainWindow(QMainWindow):
             "Watcher triggered UI update START"
         )
 
-        import time
-        time.sleep(1.0)
-        self.reload_all()
+        if getattr(self, "_reload_running", False):
+            logger.warning(
+                "Reload skipped - already running"
+            )
+            return
+
+        self._reload_running = True
+
+        try:
+            self.reload_all()
+        finally:
+            self._reload_running = False
 
         logger.info(
             "Watcher triggered UI update END"

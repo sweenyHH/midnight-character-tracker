@@ -2,7 +2,7 @@ TRACKED_WARBAND_CURRENCIES = [
     "Gold",
     "Brimming Arcana",
     "Remnant of Anguish",
-    "Void Marl",
+    "Voidlight Marl",
 
     "Angler Pearls",
     "Undercoin",

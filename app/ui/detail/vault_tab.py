@@ -1,4 +1,3 @@
-
 from PySide6.QtWidgets import (
     QWidget,
     QLabel,
@@ -13,6 +12,30 @@ from app.storage.user_data_storage import load_section
 
 class VaultTab(QWidget):
 
+    def _create_box(self):
+
+        lbl = QLabel("-")
+
+        lbl.setAlignment(
+            Qt.AlignCenter
+        )
+
+        lbl.setMinimumSize(
+            140,
+            100
+        )
+
+        lbl.setSizePolicy(
+            QSizePolicy.Expanding,
+            QSizePolicy.Expanding
+        )
+
+        lbl.setObjectName(
+            "vaultBox"
+        )
+
+        return lbl
+
     def __init__(self):
         super().__init__()
 
@@ -25,7 +48,7 @@ class VaultTab(QWidget):
             20,
             20,
             20,
-            20
+            20,
         )
 
         self.grid = QGridLayout()
@@ -33,20 +56,77 @@ class VaultTab(QWidget):
 
         self.root.addLayout(
             self.grid,
-            1
+            1,
         )
+
+        # -------------------------------
+        # PERSISTENT BOX STORAGE
+        # -------------------------------
+        self.boxes = {
+            "row1": [],
+            "row2": [],
+            "row3": [],
+        }
+
+        # -------------------------------
+        # CREATE GRID ONCE
+        # -------------------------------
+        labels = [
+            ("Raid Slots", "row1"),
+            ("M+ Slots", "row2"),
+            ("Delve Slots", "row3"),
+        ]
+
+        for row_index, (
+            label_text,
+            key,
+        ) in enumerate(labels):
+
+            label = QLabel(label_text)
+
+            label.setAlignment(
+                Qt.AlignRight
+                | Qt.AlignVCenter
+            )
+
+            label.setObjectName(
+                "vaultRowLabel"
+            )
+
+            self.grid.addWidget(
+                label,
+                row_index,
+                0,
+            )
+
+            for col in range(3):
+
+                box = self._create_box()
+
+                self.boxes[key].append(box)
+
+                self.grid.addWidget(
+                    box,
+                    row_index,
+                    col + 1,
+                )
+
+        # -------------------------------
+        # GRID STRETCH
+        # -------------------------------
+        self.grid.setColumnStretch(0, 1)
+        self.grid.setColumnStretch(1, 2)
+        self.grid.setColumnStretch(2, 2)
+        self.grid.setColumnStretch(3, 2)
+
+        self.grid.setRowStretch(0, 1)
+        self.grid.setRowStretch(1, 1)
+        self.grid.setRowStretch(2, 1)
 
     def set_character(self, character):
 
-        
         print(
             "[VaultTab] ENTER set_character"
-        )
-
-
-        print(
-            "[VaultTab] Existing layout:",
-            self.layout()
         )
 
         print(
@@ -60,19 +140,6 @@ class VaultTab(QWidget):
         )
 
         # -------------------------------
-        # CLEAR GRID CONTENTS
-        # -------------------------------
-
-        while self.grid.count():
-
-            item = self.grid.takeAt(0)
-
-            widget = item.widget()
-
-            if widget is not None:
-                widget.deleteLater()
-
-        # -------------------------------
         # LOAD VAULT DATA FROM STORAGE
         # -------------------------------
         vault = {
@@ -84,14 +151,14 @@ class VaultTab(QWidget):
         file_path = getattr(
             character,
             "source_file",
-            None
+            None,
         )
 
         if file_path:
 
             for line in load_section(
                 file_path,
-                "Vault"
+                "Vault",
             ):
 
                 if "=" not in line:
@@ -101,7 +168,7 @@ class VaultTab(QWidget):
 
                     key, value = line.split(
                         "=",
-                        1
+                        1,
                     )
 
                     row, col = key.split("_")
@@ -139,53 +206,19 @@ class VaultTab(QWidget):
             f"{vault}"
         )
 
-
-
-        print(
-            "[VaultTab] EXIT set_character"
-        )
-
-
         # -------------------------------
-        # BOX CREATOR
+        # UPDATE EXISTING BOXES
         # -------------------------------
-        def create_box(value):
+        for row_key, boxes in self.boxes.items():
 
-            lbl = QLabel(str(value))
-
-            lbl.setAlignment(
-                Qt.AlignCenter
+            values = vault.get(
+                row_key,
+                [],
             )
-
-            lbl.setMinimumSize(
-                140,
-                100
-            )
-
-            lbl.setSizePolicy(
-                QSizePolicy.Expanding,
-                QSizePolicy.Expanding
-            )
-
-            lbl.setObjectName(
-                "vaultBox"
-            )
-
-            return lbl
-
-        # -------------------------------
-        # FILL ROW
-        # -------------------------------
-        def fill_row(
-            row_index,
-            values,
-        ):
-
-            values = values[:3]
 
             for col in range(3):
 
-                val = (
+                value = (
                     values[col]
                     if (
                         col < len(values)
@@ -194,63 +227,11 @@ class VaultTab(QWidget):
                     else "-"
                 )
 
-                self.grid.addWidget(
-                    create_box(val),
-                    row_index,
-                    col + 1,
+                boxes[col].setText(
+                    str(value)
                 )
 
-        # -------------------------------
-        # LABELS
-        # -------------------------------
-        labels = [
-            ("Raid Slots", "row1"),
-            ("M+ Slots", "row2"),
-            ("Delve Slots", "row3"),
-        ]
-
-        for row_index, (
-            label_text,
-            key,
-        ) in enumerate(labels):
-
-            label = QLabel(label_text)
-
-            label.setAlignment(
-                Qt.AlignRight
-                | Qt.AlignVCenter
-            )
-
-            label.setObjectName(
-                "vaultRowLabel"
-            )
-
-            self.grid.addWidget(
-                label,
-                row_index,
-                0,
-            )
-
-            fill_row(
-                row_index,
-                vault.get(
-                    key,
-                    [],
-                ),
-            )
-
-        # -------------------------------
-        # GRID STRETCH
-        # -------------------------------
-        self.grid.setColumnStretch(0, 1)
-        self.grid.setColumnStretch(1, 2)
-        self.grid.setColumnStretch(2, 2)
-        self.grid.setColumnStretch(3, 2)
-
-        self.grid.setRowStretch(0, 1)
-        self.grid.setRowStretch(1, 1)
-        self.grid.setRowStretch(2, 1)
-
         print(
-            "[VaultTab] UI rebuild complete"
+            "[VaultTab] EXIT set_character"
         )
+
