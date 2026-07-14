@@ -7,6 +7,8 @@ from app.utils.logger import logger
 # polling observer (required for WSL)
 from watchdog.observers.polling import PollingObserver as Observer
 from watchdog.events import FileSystemEventHandler
+from app.services.internal_write_guard import write_guard
+
 
 
 class FileChangeHandler(FileSystemEventHandler):
@@ -40,6 +42,17 @@ class FileChangeHandler(FileSystemEventHandler):
           f"Watcher detected change: "
            f"{event.src_path}"
         )
+
+# Ignore application-owned writes
+
+        if write_guard.is_internal_write(
+            event.src_path
+        ):
+            logger.info(
+                f"Ignoring internal write: "
+                f"{event.src_path}"
+            )
+            return
 
 # Cancel previous timer if still running
 

@@ -1,5 +1,7 @@
 import os
 
+from app.services.internal_write_guard import write_guard
+
 
 USER_START = "### USER_DATA_START ###"
 USER_END = "### USER_DATA_END ###"
@@ -137,6 +139,8 @@ def save_section(file_path, section_name, section_lines):
                     f.write(line.rstrip("\n") + "\n")
 
             f.write(USER_END + "\n")
+
+    write_guard.register_write(file_path)
 
 
 # ==================================================
