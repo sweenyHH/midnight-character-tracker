@@ -15,7 +15,7 @@ from app.utils.app_paths import get_import_dir
 from app.services.warband_currency_service import (
     get_warband_currency_totals
 )
-
+from app.services.refresh_service import RefreshService
 
 class MainWindow(QMainWindow):
 
@@ -24,14 +24,13 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self._reload_running = False
-
         self.setWindowTitle(APP_NAME)
         self.setFixedSize(1800, 900)
 
         logger.info("MainWindow initialized")
 
         self.data_service = DataService()
+        self.refresh_service = RefreshService()
 
         self.table = CharacterTable()
         self.table.cellClicked.connect(self.open_character)
@@ -230,18 +229,18 @@ class MainWindow(QMainWindow):
             "Watcher triggered UI update START"
         )
 
-        if getattr(self, "_reload_running", False):
+        if self.refresh_service.is_reload_running():
             logger.warning(
                 "Reload skipped - already running"
             )
             return
 
-        self._reload_running = True
+        self.refresh_service.start_reload()
 
         try:
             self.reload_all()
         finally:
-            self._reload_running = False
+            self.refresh_service.finish_reload()
 
         logger.info(
             "Watcher triggered UI update END"

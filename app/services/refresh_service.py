@@ -12,7 +12,6 @@
 
 from app.utils.logger import logger
 
-
 class RefreshService:
     """
     Coordinates application refresh operations.
@@ -23,6 +22,20 @@ class RefreshService:
     """
 
     def __init__(self):
+        # Prevent concurrent refresh operations.
+        self._reload_running = False
+
         logger.info(
             "RefreshService initialized"
         )
+
+    def is_reload_running(self):
+        return self._reload_running
+
+    def start_reload(self):
+
+        self._reload_running = True
+
+    def finish_reload(self):
+
+        self._reload_running = False
