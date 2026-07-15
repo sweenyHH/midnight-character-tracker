@@ -91,27 +91,51 @@ Includes multiple visual themes that can be switched at runtime.
 
 ### Main Window with Character List (Dark Theme)
 
-docs/screenshots/Mainwindow_darkmode.png
+<p align="left">
+  <img src="docs/screenshots/Mainwindow_darkmode.png"
+       alt="Character List - Dark Theme"
+       width="450">
+</p>
 
 ### Character Overview (Dark Theme)
 
-docs/screenshots/OverviewTab_darkmode.png
+<p align="left">
+  <img src="docs/screenshots/OverviewTab_darkmode.png"
+       alt="Overview Tab - Dark Theme"
+       width="450">
+</p>
 
 ### Vault Tracking (WoW Theme)
 
-docs/screenshots/VaultTab_wowmode.png
+<p align="left">
+  <img src="docs/screenshots/VaultTab_wowmode.png"
+       alt="Vault Tab - WoW Theme"
+       width="450">
+</p>
 
 ### Warband Tasks (WoW Theme)
 
-docs/screenshots/WarbandTasks_wowmode.png
+<p align="left">
+  <img src="docs/screenshots/WarbandTasks_wowmode.png"
+       alt="Warband Task Creation - WoW Theme"
+       width="450">
+</p>
 
 ### Reputations Tab (Modern Theme)
 
-docs/screenshots/ReputationsTab_modernmode.png
+<p align="left">
+  <img src="docs/screenshots/ReputationsTab_modernmode.png"
+       alt="Reputation Tab - Modern Theme"
+       width="450">
+</p>
 
 ### Stats and Equipment (Light Theme)
 
-docs/screenshots/ReputationsTab_modernmode.png
+<p align="left">
+  <img src="docs/screenshots/StatsTab_lightmode.png"
+       alt="Stats and Equipment Tab - Light Theme"
+       width="450">
+</p>
 
 
 ---
@@ -138,7 +162,7 @@ There is currently no packaged Linux release.
 Example:
 
 bash:
-git clone [https://github.com/sweenyHH/midnightchartacker](https://github.com/sweenyHH/midnightchartacker)
+git clone [https://github.com/sweenyHH/midnight-character-tracker](https://github.com/sweenyHH/midnight-character-tracker)
 cd midnightchartracker
 
 python3 -m venv venv

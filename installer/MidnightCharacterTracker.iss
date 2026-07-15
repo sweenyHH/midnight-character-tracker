@@ -7,9 +7,9 @@ SetupIconFile=icon.ico
 
 UninstallDisplayIcon={app}\MidnightCharacterTracker.exe
 
-AppPublisherURL=https://github.com/sweenyHH/midnightchartacker
-AppSupportURL=https://github.com/sweenyHH/midnightchartacker
-AppUpdatesURL=https://github.com/sweenyHH/midnightchartacker
+AppPublisherURL=https://github.com/sweenyHH/midnight-character-tracker
+AppSupportURL=https://github.com/sweenyHH/midnight-character-tracker
+AppUpdatesURL=https://github.com/sweenyHH/midnight-character-tracker
 
 DefaultDirName={autopf}\Midnight Character Tracker
 DefaultGroupName=Midnight Character Tracker
