@@ -1,9 +1,9 @@
 [Setup]
 AppName=Midnight Character Tracker
-AppVersion=0.1.0
+AppVersion=1.0.1
 AppPublisher=Malte Maehlmann
 
-SetupIconFile=icon.ico
+SetupIconFile=mct_icon.ico
 
 UninstallDisplayIcon={app}\MidnightCharacterTracker.exe
 

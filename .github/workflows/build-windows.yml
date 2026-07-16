@@ -33,7 +33,7 @@ jobs:
         pyinstaller `
           --windowed `
           --name MidnightCharacterTracker `
-          --icon assets/icon.ico `
+          --icon assets/mct_icon.ico `
           --add-data "assets;assets" `
           main.py
 
