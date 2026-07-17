@@ -1,5 +1,5 @@
 import re
-from app.model.character import Equipment
+from app.model.equipment import Equipment
 
 
 def parse_equipment(lines):

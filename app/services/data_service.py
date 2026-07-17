@@ -2,7 +2,7 @@
 
 import os
 from app.parser.base_parser import parse_txt
-from app.parser.reputation_parser import REPUTATION_PREFIXES
+from app.game_data.reputations import FEATURED_REPUTATIONS
 
 from app.utils.logger import logger
 
@@ -157,6 +157,6 @@ class DataService:
 
         return [
             rep for rep in self.reputation_data
-            if any(rep.name.startswith(prefix) for prefix in REPUTATION_PREFIXES)
+            if any(rep.name.startswith(prefix) for prefix in FEATURED_REPUTATIONS)
         ]
 

@@ -1,8 +1,6 @@
-from app.model.character import (
-    Character,
-    Currency,
-    Equipment,
-)
+from app.model.character import Character
+from app.model.currency import Currency
+from app.model.equipment import Equipment
 
 
 # ==================================================

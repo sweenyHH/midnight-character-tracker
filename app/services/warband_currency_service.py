@@ -1,35 +1,34 @@
-TRACKED_WARBAND_CURRENCIES = [
-    "Gold",
-    "Brimming Arcana",
-    "Remnant of Anguish",
-    "Voidlight Marl",
-
-    "Angler Pearls",
-    "Undercoin",
-    "Timewarped Badge",
-    "Community Coupons",
-
-    "Conquest",
-    "Honor",
-    "Bloody Token",
-]
+from app.game_data.currencies import (
+    TRACKED_WARBAND_CURRENCIES,
+)
 
 
 def get_warband_currency_totals(characters):
 
     totals = {
-        name: 0
-        for name in TRACKED_WARBAND_CURRENCIES
+        definition.display_name: 0
+        for definition in TRACKED_WARBAND_CURRENCIES
+    }
+
+    tracked_by_id = {
+        definition.currency_id: definition
+        for definition in TRACKED_WARBAND_CURRENCIES
     }
 
     for character in characters:
 
         for currency in character.currencies:
 
-            if currency.name not in totals:
+            definition = tracked_by_id.get(
+                currency.currency_id
+            )
+
+            if definition is None:
                 continue
 
-            totals[currency.name] += (
+            totals[
+                definition.display_name
+            ] += (
                 currency.quantity or 0
             )
 

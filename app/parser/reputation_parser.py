@@ -1,22 +1,5 @@
 import re
-from app.model.character import Reputation
-
-# Prefixes of the Midnight reputations (warband wide) to be used in the upper panel
-
-REPUTATION_PREFIXES = [
-    "Amani Tribe",
-    "Hara'ti",
-    "Prey: Season 1",
-    "Ritual Sites",
-    "Silvermoon Court",
-    "The Singularity",
-    "Blood Knights",
-    "Farstriders",
-    "Magisters",
-    "Shades of the Row",
-    "Slayer's Duellum",
-    "Valeera Sanguinar",
-]
+from app.model.reputation import Reputation
 
 
 # Parsing of reputation lines and split depending on renown faction or other faction

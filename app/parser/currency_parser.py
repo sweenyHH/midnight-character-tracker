@@ -1,5 +1,5 @@
 import re
-from app.model.character import Currency
+from app.model.currency import Currency
 from app.parser.utils import extract_name, extract_quantity, extract_weekly, extract_gold
 
 
@@ -52,12 +52,19 @@ def parse_gold(line):
 
     total = g * 10000 + s * 100 + c
 
-    return Currency(name="Gold", quantity=total)
+    return Currency(
+        name="Gold",
+        quantity=total,
+        currency_id=0,
+        currency_type="currency",
+    )
 
 # Currency parsing and treatment depending on normal currency or currency with total or weekly cap
 
 def parse_currency(line, group):
     name_match = re.match(r"^(.+?) \(ID:", line)
+    id_match = re.search(r"ID:\s*(\d+)", line)
+    currency_id = int(id_match.group(1)) if id_match else None
     name = name_match.group(1).strip() if name_match else line
 
     quantity_match = re.search(r"Quantity:\s*(\d+)(?:/(\d+))?", line)
@@ -74,7 +81,9 @@ def parse_currency(line, group):
         quantity=quantity,
         max_total=max_total,
         weekly_current=weekly_current,
-        weekly_max=weekly_max
+        weekly_max=weekly_max,
+        currency_id=currency_id,
+        currency_type="currency",
     )
 
     c.groups = [group] if group else ["Other"]  
@@ -90,17 +99,23 @@ def parse_item(line, group):
     if not id_match:
         return None
 
-    item_id = id_match.group(1)
-    if item_id not in ALLOWED_ITEM_IDS:
+    item_id = int(id_match.group(1))
+    if str(item_id) not in ALLOWED_ITEM_IDS:
         return None
 
     name_match = re.search(r"\[(.*?)\]", line)
     name = name_match.group(1) if name_match else "Unknown Item"
-    name = SPECIAL_ITEM_NAMES.get(item_id, name)
+    name = SPECIAL_ITEM_NAMES.get(str(item_id), name)
 
     qty_match = re.search(r"x(\d+)", line)
     quantity = int(qty_match.group(1)) if qty_match else 0
 
-    c = Currency(name=name, quantity=quantity)
+    c = Currency(
+        name=name,
+        quantity=quantity,
+        currency_id=item_id,
+        currency_type="item",
+    )
+
     c.groups = [group or "Other"]
     return c
