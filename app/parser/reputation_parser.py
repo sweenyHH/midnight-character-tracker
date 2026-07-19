@@ -1,5 +1,8 @@
 import re
+
 from app.model.reputation import Reputation
+
+from app.game_data.reputation_catalog import get_reputation_by_name
 
 
 # Parsing of reputation lines and split depending on renown faction or other faction
@@ -20,4 +23,28 @@ def parse_reputation(line: str):
     cur = int(progress.group(1)) if progress else None
     maxv = int(progress.group(2)) if progress else None
 
-    return Reputation(name, typ, lvl, cur, maxv)
+    definition = get_reputation_by_name(name)
+
+    reputation_id = (
+        definition.faction_id
+        if definition
+        else None
+    )
+
+    reputation_key = (
+        definition.key
+        if definition
+        else None
+    )
+
+    return Reputation(
+        name=name,
+        rep_type=typ,
+
+        level=lvl,
+        current=cur,
+        maximum=maxv,
+
+        reputation_id=reputation_id,
+        reputation_key=reputation_key,
+    )

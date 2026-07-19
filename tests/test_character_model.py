@@ -162,3 +162,24 @@ def test_equipment_fields():
     assert item.item_type == "Epic"
     assert item.enchanted is True
     assert item.quality == "Epic"
+
+# ==================================================
+# Reputation identifiers
+# ==================================================
+
+def test_reputation_identifiers():
+
+    from app.model.reputation import Reputation
+
+    rep = Reputation(
+        name="Council of Dornogal",
+        rep_type="renown",
+
+        reputation_id=2590,
+        reputation_key="council_of_dornogal",
+    )
+
+    assert rep.reputation_id == 2590
+    assert rep.reputation_key == (
+        "council_of_dornogal"
+    )

@@ -1,18 +1,17 @@
-from app.game_data.currencies import (
-    TRACKED_WARBAND_CURRENCIES,
-)
-
+from app.game_data.currency_catalog import get_featured_currencies
 
 def get_warband_currency_totals(characters):
 
+    featured_currencies = (get_featured_currencies())
+
     totals = {
-        definition.display_name: 0
-        for definition in TRACKED_WARBAND_CURRENCIES
+        definition.key: 0
+        for definition in featured_currencies
     }
 
     tracked_by_id = {
         definition.currency_id: definition
-        for definition in TRACKED_WARBAND_CURRENCIES
+        for definition in featured_currencies
     }
 
     for character in characters:
@@ -27,7 +26,7 @@ def get_warband_currency_totals(characters):
                 continue
 
             totals[
-                definition.display_name
+                definition.key
             ] += (
                 currency.quantity or 0
             )

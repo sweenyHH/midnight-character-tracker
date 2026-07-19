@@ -1,23 +1,9 @@
 import re
+
 from app.model.currency import Currency
-from app.parser.utils import extract_name, extract_quantity, extract_weekly, extract_gold
+from app.game_data.currency_catalog import get_currency_by_id
+from app.game_data.item_currency_catalog import get_item_currency_by_id
 
-
-# Some currencies are items, stored in bags. (Blizz is annoying players with this since 2004...)
-
-ALLOWED_ITEM_IDS = {
-    "232875",
-    "245345",
-    "268650",
-    "268552",
-}
-
-SPECIAL_ITEM_NAMES = {
-    "232875": "Spark of Radiance",
-    "268650": "Ascendant Voidshard",
-    "268552": "Ascendant Voidcore",
-    "245345": "Fused Vitality",
-}
 
 
 # Currency Groups for non physical currencies
@@ -52,11 +38,14 @@ def parse_gold(line):
 
     total = g * 10000 + s * 100 + c
 
+    definition = get_currency_by_id(0)
+
     return Currency(
         name="Gold",
         quantity=total,
         currency_id=0,
         currency_type="currency",
+        currency_key=definition.key if definition else None,
     )
 
 # Currency parsing and treatment depending on normal currency or currency with total or weekly cap
@@ -76,6 +65,8 @@ def parse_currency(line, group):
     weekly_current = int(weekly_match.group(1)) if weekly_match else None
     weekly_max = int(weekly_match.group(2)) if weekly_match else None
 
+    definition = get_currency_by_id(currency_id)
+
     c = Currency(
         name=name,
         quantity=quantity,
@@ -84,6 +75,7 @@ def parse_currency(line, group):
         weekly_max=weekly_max,
         currency_id=currency_id,
         currency_type="currency",
+        currency_key=definition.key if definition else None,
     )
 
     c.groups = [group] if group else ["Other"]  
@@ -93,29 +85,37 @@ def parse_currency(line, group):
 # Currency like item parsing
 
 def parse_item(line, group):
-    import re
 
-    id_match = re.search(r"ID:\s*(\d+)", line)
+    id_match = re.search(r"ID:\s*(\d+)", line,)
+
     if not id_match:
         return None
 
     item_id = int(id_match.group(1))
-    if str(item_id) not in ALLOWED_ITEM_IDS:
+
+    definition = get_item_currency_by_id(item_id)
+
+    if definition is None:
         return None
 
-    name_match = re.search(r"\[(.*?)\]", line)
-    name = name_match.group(1) if name_match else "Unknown Item"
-    name = SPECIAL_ITEM_NAMES.get(str(item_id), name)
+    qty_match = re.search(r"x(\d+)", line,)
 
-    qty_match = re.search(r"x(\d+)", line)
-    quantity = int(qty_match.group(1)) if qty_match else 0
+    quantity = (
+        int(qty_match.group(1))
+        if qty_match
+        else 0
+    )
 
     c = Currency(
-        name=name,
+        name=definition.english_name,
         quantity=quantity,
+
         currency_id=item_id,
         currency_type="item",
+
+        currency_key=definition.key,
     )
 
     c.groups = [group or "Other"]
+
     return c

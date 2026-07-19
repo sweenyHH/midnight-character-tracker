@@ -12,7 +12,10 @@ class Currency:
         weekly_max=None,
         currency_id=None,
         currency_type=None,
+        currency_key=None,
     ):
+
+
         self.name = name
         self.quantity = quantity
 
@@ -22,6 +25,7 @@ class Currency:
 
         self.currency_id = currency_id
         self.currency_type = currency_type
+        self.currency_key = currency_key
 
         self.groups = []
         self.category = None

@@ -1,4 +1,7 @@
 from app.parser.base_parser import parse_txt
+from app.parser.reputation_parser import (
+    parse_reputation,
+)
 
 
 def create_test_file(tmp_path):
@@ -208,6 +211,42 @@ Faction: Alliance
     character = parse_txt(str(file_path))
 
     assert character.faction == "Alliance"
+
+# -------------------------------
+# Reputation catalog test
+# -------------------------------    
+
+def test_reputation_catalog_resolution():
+
+    rep = parse_reputation(
+        "Council of Dornogal (Renown 20) - Progress: 0/2500"
+    )
+
+    assert rep.reputation_id == 2590
+    assert (
+        rep.reputation_key
+        == "council_of_dornogal"
+    )
+
+
+# -------------------------------
+# GERMAN Lookup Test
+# -------------------------------   
+
+def test_german_reputation_resolution():
+
+    rep = parse_reputation(
+        "Rat von Dornogal (Renown 20) - Progress: 0/2500"
+    )
+
+    assert rep.reputation_id == 2590
+    assert (
+        rep.reputation_key
+        == "council_of_dornogal"
+    )
+
+
+
 
 
 

@@ -188,3 +188,70 @@ def test_debug_lines_not_imported_as_reputations():
     names = [rep.name for rep in character.reputations]
 
     assert "[Debug] Retail reputation API entries: 168" not in names
+
+
+def test_reputation_identifiers_are_populated():
+
+    character = parse_txt(
+        str(DATA_DIR / "full_character.txt")
+    )
+
+    amani = next(
+        (
+            rep
+            for rep in character.reputations
+            if rep.name == "Amani Tribe"
+        ),
+        None,
+    )
+
+    assert amani is not None
+
+    assert amani.reputation_id == 2696
+    assert (
+        amani.reputation_key
+        == "amani_tribe"
+    )
+
+
+def test_reputation_catalog_metadata():
+
+    from app.game_data.reputation_catalog import (
+        get_reputation_by_key,
+    )
+
+    rep = get_reputation_by_key(
+        "amani_tribe"
+    )
+
+    assert rep is not None
+    assert rep.warband_wide is True
+
+def test_item_currency_identifiers_are_populated():
+
+    character = parse_txt(
+        str(DATA_DIR / "full_character.txt")
+    )
+
+    currency = next(
+        (
+            c
+            for c in character.currencies
+            if c.name == "Spark of Radiance"
+        ),
+        None,
+    )
+
+    assert currency is not None
+
+    assert (
+        currency.currency_key
+        == "spark_of_radiance"
+    )
+
+    assert (
+        currency.currency_type
+        == "item"
+    )
+
+

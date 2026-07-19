@@ -15,6 +15,11 @@ from app.ui.detail.utils import format_gold
 from app.utils.number_formatter import format_number
 
 
+from app.game_data.currency_catalog import (
+    get_currency_by_key,
+)
+
+
 class TopPanel(QWidget):
 
     settings_changed = Signal()
@@ -217,23 +222,29 @@ class TopPanel(QWidget):
 
         CURRENCY_COLUMNS = [
             [
-                "Gold",
-                "Brimming Arcana",
-                "Remnant of Anguish",
-                "Voidlight Marl",
+                "gold",
+                "brimming_arcana",
+                "remnant_of_anguish",
+                "voidlight_marl",
             ],
             [
-                "Angler Pearls",
-                "Undercoin",
-                "Timewarped Badge",
-                "Community Coupons",
+                "angler_pearls",
+                "undercoin",
+                "timewarped_badge",
+                "community_coupons",
             ],
             [
-                "Conquest",
-                "Honor",
-                "Bloody Token",
+                "conquest",
+                "honor",
+                "bloody_token",
             ],
         ]
+
+        currency_definitions = {
+            key: get_currency_by_key(key)
+            for group in CURRENCY_COLUMNS
+            for key in group
+        }
 
         for group_index, group in enumerate(
             CURRENCY_COLUMNS
@@ -241,20 +252,22 @@ class TopPanel(QWidget):
 
             col_offset = group_index * 2
 
-            for row, name in enumerate(group):
+            for row, key in enumerate(group):
+
+                definition = currency_definitions[key]
 
                 currency_grid.addWidget(
-                    QLabel(f"<b>{name}</b>"),
+                    QLabel(f"<b>{definition.english_name}</b>"),
                     row,
                     col_offset
                 )
 
                 value = currency_totals.get(
-                    name,
+                    key,
                     0
                 )
 
-                if name == "Gold":
+                if key == "gold"
                     value_text = format_gold(value)
                 else:
                     value_text = format_number(value)

@@ -2,7 +2,8 @@
 
 import os
 from app.parser.base_parser import parse_txt
-from app.game_data.reputations import FEATURED_REPUTATIONS
+from app.game_data.reputation_catalog import is_featured_reputation
+
 
 from app.utils.logger import logger
 
@@ -155,8 +156,4 @@ class DataService:
         if not self.reputation_data:
             return []
 
-        return [
-            rep for rep in self.reputation_data
-            if any(rep.name.startswith(prefix) for prefix in FEATURED_REPUTATIONS)
-        ]
-
+        return [rep for rep in self.reputation_data if is_featured_reputation(rep.reputation_key)]

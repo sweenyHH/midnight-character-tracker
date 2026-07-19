@@ -1,0 +1,320 @@
+﻿id;key;english_name;german_name;french_name;warband_wide;deprecated;featured
+2792;ritual_sites;Ritual Sites;Ritualstätten;Sites rituels;TRUE;FALSE;TRUE
+2770;slayers_duellum;Slayer's Duellum;Schlächterduellum;Duellum meurtrier;TRUE;FALSE;TRUE
+2767;bizmos_brawlpub;Bizmo's Brawlpub;Bizmos Boxbar;Bar-Tabasse de Bizmo;TRUE;FALSE;FALSE
+2766;brawlgar_arena;Brawl'gar Arena;Shlae'gararena;Arène de Castagn’ar;TRUE;FALSE;FALSE
+2764;prey_season_1;Prey: Season 1;Beutejagd: Saison 1;Traque saison 1;TRUE;FALSE;TRUE
+2744;valeera_sanguinar;Valeera Sanguinar;Valeera Sanguinar;Valeera Sanguinar;TRUE;FALSE;FALSE
+2742;delves_season_1_MN;Delves: Season 1 - MN;Tiefen: Saison 1;Gouffres saison 1;TRUE;FALSE;TRUE
+2739;delves_coffer_key_shards_conversion;Delves: Coffer Key Shards Conversion;Tiefen: Umwandlung von Kastenschlüsselsplittern;Gouffres : conversion de fragments de clé de coffre;TRUE;FALSE;FALSE
+2736;manaforge_vandals;Manaforge Vandals;Vandalen der Manaschmiede;Vandales de la manaforge;TRUE;FALSE;FALSE
+2722;delves_season_3_TWW;Delves: Season 3 - TWW;Tiefen: Saison 3;Gouffres saison 3;TRUE;FALSE;FALSE
+2714;shades_of_the_row;Shades of the Row;Schemen der Gasse;Ombres de l’Allée;TRUE;FALSE;FALSE
+2713;farstriders;Farstriders;Weltenwanderer;Pérégrins;TRUE;FALSE;FALSE
+2712;blood_knights;Blood Knights;Blutritter;Chevaliers de sang;TRUE;FALSE;FALSE
+2711;magisters;Magisters;Magister;Magistères;TRUE;FALSE;FALSE
+2710;silvermoon_court;Silvermoon Court;Hof in Silbermond;Cour de Lune-d’Argent;TRUE;FALSE;TRUE
+2704;harati;Hara'ti;Hara'ti;Hara’ti;TRUE;FALSE;TRUE
+2700;deprecated_fungarian_fighting_ring;DEPRECATED Fungarian Fighting Ring;DEPRECATED Fungarian Fighting Ring;DEPRECATED Fungarian Fighting Ring;FALSE;TRUE;FALSE
+2699;the_singularity;The Singularity;Die Singularität;La Singularité;TRUE;FALSE;TRUE
+2698;midnight;Midnight;Midnight;Midnight;TRUE;FALSE;FALSE
+2696;amani_tribe;Amani Tribe;Amanistamm;Tribu des Amani;TRUE;FALSE;TRUE
+2693;delvers_journey_season_1;Delver's Journey (Season 1);Reise des Tiefenforschers (Saison 1);Périple du Gouffre (saison 1);TRUE;FALSE;FALSE
+2688;flames_radiance;Flame's Radiance;Die Strahlen der Flamme;Radiance de la Flamme;TRUE;FALSE;FALSE
+2685;gallagio_loyalty_rewards_club;Gallagio Loyalty Rewards Club;Garbagio Treueclub;Programme de fidélité du Gallagio;TRUE;FALSE;FALSE
+2683;delves_season_2_TWW;Delves: Season 2 - TWW;Tiefen: Saison 2;Gouffres saison 2;TRUE;FALSE;FALSE
+2677;steamwheedle_cartel2;Steamwheedle Cartel;Dampfdruckkartell;Cartel Gentepression;TRUE;FALSE;FALSE
+2675;blackwater_cartel;Blackwater Cartel;Schwarzmeer AG;Cartel des Flots noirs;TRUE;FALSE;FALSE
+2673;bilgewater_cartel_new;Bilgewater Cartel;Bilgewasserkartell;Cartel Baille-Fonds;TRUE;FALSE;FALSE
+2671;venture_company;Venture Company;Venture Company;KapitalRisk;TRUE;FALSE;FALSE
+2669;darkfuse_solutions;Darkfuse Solutions;Düsternisverschmolzene Lösungen;Solutions ténébreuses;TRUE;FALSE;FALSE
+2666;roasts_and_boasts;Roasts and Boasts;Ruhmreiche Röstungen;Cafetard vantard;TRUE;FALSE;FALSE
+2665;lillistrasza;Lillistrasza;Lillistrasza;Lillistrasza;TRUE;FALSE;FALSE
+2664;flynn_fairwind;Flynn Fairwind;Finn Schönwind;Flynn Bellebrise;TRUE;FALSE;FALSE
+2663;meerah;Meerah;Meerah;Meera;TRUE;FALSE;FALSE
+2658;the_karesh_trust;The K'aresh Trust;Der Bund von K'aresh;L’Entente de K’aresh;TRUE;FALSE;FALSE
+2653;the_cartels_of_undermine;The Cartels of Undermine;Die Kartelle von Lorenhall;Cartels de Terremine;TRUE;FALSE;FALSE
+2645;earthen;Earthen;Die Irdenen;Terrestres;FALSE;FALSE;FALSE
+2644;delves_season_1_TWW;Delves: Season 1 - TWW;Tiefen: Saison 1;Gouffre saison 1;TRUE;FALSE;FALSE
+2640;brann_bronzebeard;Brann Bronzebeard;Brann Bronzebart;Brann Barbe-de-Bronze;TRUE;FALSE;FALSE
+2615;azerothian_archives;Azerothian Archives;Archive von Azeroth;Archives d’Azeroth;TRUE;FALSE;FALSE
+2607;the_vizier;The Vizier;Der Wesir;Le vizir;TRUE;FALSE;FALSE
+2605;the_general;The General;Der General;Le général;TRUE;FALSE;FALSE
+2601;the_weaver;The Weaver;Die Weberin;La Tisserande;TRUE;FALSE;FALSE
+2600;the_severed_threads;The Severed Threads;Die Durchtrennten Fäden;Les Fils tranchés;TRUE;FALSE;FALSE
+2594;the_assembly_of_the_deeps;The Assembly of the Deeps;Der Konvent der Tiefen;Assemblée des profondeurs;TRUE;FALSE;FALSE
+2593;keg_legs_crew;Keg Leg's Crew;Fasshaxes Besatzung;Équipage de Labarrique;TRUE;FALSE;FALSE
+2590;council_of_dornogal;Council of Dornogal;Rat von Dornogal;Conseil de Dornogal;TRUE;FALSE;FALSE
+2574;dream_wardens;Dream Wardens;Traumwächter;Gardiens du Rêve;TRUE;FALSE;FALSE
+2570;hallowfall_arathi;Hallowfall Arathi;Arathi von Heilsturz;Arathis de Sainte-Chute;TRUE;FALSE;FALSE
+2568;glimmerogg_racer;Glimmerogg Racer;Glimmeroggrenner;Pilote phosphorogg;TRUE;FALSE;FALSE
+2564;loamm_niffen;Loamm Niffen;Niffen von Loamm;Flairans de Terreau;TRUE;FALSE;FALSE
+2555;clan_kaighan;Clan Kaighan;Klan Kaighan;Clan des Kaïghans;TRUE;FALSE;FALSE
+2554;clan_toghus;Clan Toghus;Klan Toghus;Clan des Toghus;TRUE;FALSE;FALSE
+2553;soridormi;Soridormi;Soridormi;Soridormi;TRUE;FALSE;FALSE
+2550;cobalt_assembly;Cobalt Assembly;Kobaltkonvent;Assemblée de Cobalt;TRUE;FALSE;FALSE
+2544;artisans_consortium___dragon_isles_branch;Artisan's Consortium - Dragon Isles Branch;Handwerkerkonsortium - Zweig der Dracheninseln;Consortium d’artisanat – filiale des îles aux Dragons;FALSE;FALSE;FALSE
+2542;clan_ukhel;Clan Ukhel;Klan Ukhel;Clan des Ukhels;TRUE;FALSE;FALSE
+2526;winterpelt_furbolg;Winterpelt Furbolg;Winterpelzfurbolgs;Furbolg crin-d’hiver;FALSE;FALSE;FALSE
+2524;obsidian_warders;Obsidian Warders;Obsidianwächter;Gardes d’obsidienne;TRUE;FALSE;FALSE
+2523;dark_talons;Dark Talons;Dunkelkrallen;Serres-Noires;TRUE;FALSE;FALSE
+2522;clan_teerai;Clan Teerai;Klan Teerai;Clan des Teeraïs;TRUE;FALSE;FALSE
+2520;clan_nokhud;Clan Nokhud;Klan Nokhud;Clan des Nokhuds;TRUE;FALSE;FALSE
+2518;sabellian;Sabellian;Sabellian;Sabellian;TRUE;FALSE;FALSE
+2517;wrathion;Wrathion;Furorion;Irion;TRUE;FALSE;FALSE
+2513;clan_ohnir;Clan Ohn'ir;Klan Ohn'ir;Clan des Ohn’irs;TRUE;FALSE;FALSE
+2512;clan_aylaag;Clan Aylaag;Klan Aylaag;Clan des Aylaags;TRUE;FALSE;FALSE
+2511;iskaara_tuskarr;Iskaara Tuskarr;Tuskarr von Iskaara;Rohart iskaarien;TRUE;FALSE;FALSE
+2510;valdrakken_accord;Valdrakken Accord;Valdrakkenabkommen;Concordat de Valdrakken;TRUE;FALSE;FALSE
+2509;clan_shikaar;Clan Shikaar;Klan Shikaar;Clan des Shikaars;TRUE;FALSE;FALSE
+2507;dragonscale_expedition;Dragonscale Expedition;Drachenschuppenexpedition;Expédition du Dracaret;TRUE;FALSE;FALSE
+2503;maruuk_centaur;Maruuk Centaur;Zentauren der Maruuk;Centaure maruuk;TRUE;FALSE;FALSE
+2478;the_enlightened;The Enlightened;Die Erleuchteten;Les Éclairés;TRUE;FALSE;FALSE
+2472;the_archivists_codex;The Archivists' Codex;Der Archivarskodex;Le Codex des archivistes;TRUE;FALSE;FALSE
+2470;deaths_advance;Death's Advance;Vorstoß des Todes;Avancée de la mort;TRUE;FALSE;FALSE
+2469;fractal_lore;Fractal Lore;Fraktalkunde;Savoir fractal;TRUE;FALSE;FALSE
+2465;the_wild_hunt;The Wild Hunt;Die Wilde Jagd;L’Hallali;TRUE;FALSE;FALSE
+2464;court_of_night;Court of Night;Hof der Nacht;Cour de la Nuit;TRUE;FALSE;FALSE
+2463;marasmius;Marasmius;Marasmius;Marasmius;TRUE;FALSE;FALSE
+2462;stitchmasters;Stitchmasters;Flickmeister;Maîtres des sutures;TRUE;FALSE;FALSE
+2461;plague_deviser_marileth;Plague Deviser Marileth;Seuchenerfinder Marileth;Marileth catalyseur de peste;TRUE;FALSE;FALSE
+2460;stonehead;Stonehead;Steinkopf;Tête-de-Caillasse;TRUE;FALSE;FALSE
+2459;sika;Sika;Sika;Sika;TRUE;FALSE;FALSE
+2458;kleia_and_pelagos;Kleia and Pelagos;Kleia und Pelagos;Kléia et Pélagos;TRUE;FALSE;FALSE
+2457;grandmaster_vole;Grandmaster Vole;Großmeister Vole;Grand maître Vole;TRUE;FALSE;FALSE
+2456;droman_aliothe;Droman Aliothe;Dromanin Aliothe;Dromane Aliothe;TRUE;FALSE;FALSE
+2455;cryptkeeper_kassir;Cryptkeeper Kassir;Grufthüter Kassir;Gardien de la crypte Kassir;TRUE;FALSE;FALSE
+2454;choofa;Choofa;Choofa;Choufa;TRUE;FALSE;FALSE
+2453;rendle_and_cudgelface;Rendle and Cudgelface;Rendel und Knüppelfratze;Rondel et Férul;TRUE;FALSE;FALSE
+2452;polemarch_adrestes;Polemarch Adrestes;Polemarch Adrestes;Marchedroit Adrestès;TRUE;FALSE;FALSE
+2451;hunt_captain_korayn;Hunt-Captain Korayn;Jagdhauptmann Korayn;Capitaine de l’Hallali Korayn;TRUE;FALSE;FALSE
+2450;alexandros_mograine;Alexandros Mograine;Alexandros Mograine;Alexandros Mograine;TRUE;FALSE;FALSE
+2449;the_countess;The Countess;Die Gräfin;La comtesse;TRUE;FALSE;FALSE
+2448;mikanikos;Mikanikos;Mikanikos;Mikanikos;TRUE;FALSE;FALSE
+2447;lady_moonberry;Lady Moonberry;Lady Mondbeere;Dame Baie-de-Lune;TRUE;FALSE;FALSE
+2446;baroness_vashj;Baroness Vashj;Baronin Vashj;Baronne Vashj;TRUE;FALSE;FALSE
+2445;the_ember_court;The Ember Court;Der Gluthof;Cour des Braises;TRUE;FALSE;FALSE
+2439;the_avowed;The Avowed;Die Eingeschworenen;Les Confirmés;TRUE;FALSE;FALSE
+2432;venari;Ve'nari;Ve'nari;Ve’nari;TRUE;FALSE;FALSE
+2427;aqir_hatchling;Aqir Hatchling;Aqirjungtier;Jeune aqir;FALSE;FALSE;FALSE
+2422;night_fae;Night Fae;Nachtfae;Faë nocturnes;TRUE;FALSE;FALSE
+2417;uldum_accord;Uldum Accord;Abkommen von Uldum;Accord d’Uldum;FALSE;FALSE;FALSE
+2415;rajani;Rajani;Rajani;Rajani;FALSE;FALSE;FALSE
+2413;court_of_harvesters;Court of Harvesters;Hof der Ernter;Cour des Moissonneurs;TRUE;FALSE;FALSE
+2410;the_undying_army;The Undying Army;Die Unvergängliche Armee;Armée immortelle;TRUE;FALSE;FALSE
+2407;the_ascended;The Ascended;Die Aufgestiegenen;Transcendés;TRUE;FALSE;FALSE
+2400;waveblade_ankoan;Waveblade Ankoan;Ankoaner der Meeresklinge;Ankoïens du Brisant;FALSE;FALSE;FALSE
+2398;honeyback_harvester;Honeyback Harvester;Honigrückenernterin;Butineuse dos-de-miel;FALSE;FALSE;FALSE
+2397;honeyback_hivemother;Honeyback Hivemother;Honigrückenschwarmmutter;Reine de l'essaim dos-de-miel;FALSE;FALSE;FALSE
+2396;honeyback_drone;Honeyback Drone;Honigrückendrohne;Faux bourdon dos-de-miel;FALSE;FALSE;FALSE
+2395;honeyback_hive;Honeyback Hive;Honigrückenschwarm;Essaim Dos-de-Miel;FALSE;FALSE;FALSE
+2391;rustbolt_resistance;Rustbolt Resistance;Rostbolzenwiderstand;Résistance de Mécarouille;FALSE;FALSE;FALSE
+2390;vim_brineheart;Vim Brineheart;Vim Salzherz;Vim Saumecœur;FALSE;FALSE;FALSE
+2389;neri_sharpfin;Neri Sharpfin;Neri Scharffinne;Néri Tranchécaille;FALSE;FALSE;FALSE
+2388;poen_gillbrack;Poen Gillbrack;Poen Kiembrack;Poën Seldemer;FALSE;FALSE;FALSE
+2377;bladesman_inowari;Bladesman Inowari;Klingenkämpfer Inowari;Maître-lame Inowari;FALSE;FALSE;FALSE
+2376;farseer_ori;Farseer Ori;Scharfseher Ori;Long-voyant Ori;FALSE;FALSE;FALSE
+2375;hunter_akana;Hunter Akana;Jäger Akana;Chasseur Akana;FALSE;FALSE;FALSE
+2373;the_unshackled;The Unshackled;Die Entfesselten;Affranchis;FALSE;FALSE;FALSE
+2372;brawlgar_arena_season_4;Brawl'gar Arena (Season 4);Shlae'gararena (Saison 4);Arène de Castagn’ar (saison 4);FALSE;FALSE;FALSE
+2371;bizmos_brawlpub_season_4;Bizmo's Brawlpub (Season 4);Bizmos Boxbar (Saison 4);Bar-Tabasse de Bizmo (saison 4);FALSE;FALSE;FALSE
+2370;dino_training___direhorn;Dino Training - Direhorn;Dinoausbildung - Terrorhorn;Entraînement de dinosaure - Navrecorne;FALSE;FALSE;FALSE
+2265;kul_tiras___stormsong;Kul Tiras - Stormsong;Kul Tiras - Sturmsang;Kul Tiras - Chantorage;FALSE;FALSE;FALSE
+2264;kul_tiras___drustvar;Kul Tiras - Drustvar;Kul Tiras - Drustvar;Kul Tiras - Drustvar;FALSE;FALSE;FALSE
+2233;dino_training___pterrodax;Dino Training - Pterrodax;Dinoausbildung - Pterrordax;Entraînement de dinosaure - Pterreurdactyle;FALSE;FALSE;FALSE
+2170;argussian_reach;Argussian Reach;Der Argusvorstoß;Front argusséen;FALSE;FALSE;FALSE
+2165;army_of_the_light;Army of the Light;Armee des Lichts;Armée de la Lumière;FALSE;FALSE;FALSE
+2164;champions_of_azeroth;Champions of Azeroth;Champions von Azeroth;Champions d’Azeroth;FALSE;FALSE;FALSE
+2163;tortollan_seekers;Tortollan Seekers;Tortollanische Sucher;Chercheurs tortollans;FALSE;FALSE;FALSE
+2162;storms_wake;Storm's Wake;Die Sturmwacht;Sillage des tempêtes;FALSE;FALSE;FALSE
+2161;order_of_embers;Order of Embers;Glutorden;Ordre des Braises;FALSE;FALSE;FALSE
+2160;proudmoore_admiralty;Proudmoore Admiralty;Prachtmeeradmiralität;Amirauté des Portvaillant;FALSE;FALSE;FALSE
+2159;7th_legion;7th Legion;7. Legion;7e Légion;FALSE;FALSE;FALSE
+2158;voldunai;Voldunai;Voldunai;Volduni;FALSE;FALSE;FALSE
+2157;the_honorbound;The Honorbound;Die Eidgebundenen;Brigade de l’Honneur;FALSE;FALSE;FALSE
+2156;talanjis_expedition;Talanji's Expedition;Talanjis Expedition;Expédition de Talanji;FALSE;FALSE;FALSE
+2135;chromie;Chromie;Chromie;Chromie;FALSE;FALSE;FALSE
+2120;kul_tiras___tiragarde;Kul Tiras - Tiragarde;Kul Tiras - Tiragarde;Kul Tiras - Tiragarde;FALSE;FALSE;FALSE
+2111;zandalari_dinosaurs;Zandalari Dinosaurs;Zandalaridinosaurier;Dinosaures zandalari;FALSE;FALSE;FALSE
+2103;zandalari_empire;Zandalari Empire;Zandalariimperium;Empire zandalari;FALSE;FALSE;FALSE
+2102;impus;Impus;Wichtlus;Diablotus;FALSE;FALSE;FALSE
+2101;shaleth;Sha'leth;Sha'leth;Sha’leth;FALSE;FALSE;FALSE
+2100;corbyn;Corbyn;Corbyn;Corbyn;FALSE;FALSE;FALSE
+2099;akule_riverhorn;Akule Riverhorn;Akule Flusshorn;Akule Ruissecorne;FALSE;FALSE;FALSE
+2098;keeper_raynae;Keeper Raynae;Hüterin Raynae;Gardienne Raynae;FALSE;FALSE;FALSE
+2097;ilyssia_of_the_waters;Ilyssia of the Waters;Ilyssia von den Wassern;Ilyssia des Eaux;FALSE;FALSE;FALSE
+2045;armies_of_legionfall;Armies of Legionfall;Die Legionsrichter;Armées du Déclin de la Légion;FALSE;FALSE;FALSE
+2018;talons_vengeance;Talon's Vengeance;Rache der Kralle;Serre vengeresse;FALSE;FALSE;FALSE
+2011;bizmos_brawlpub_season_3;Bizmo's Brawlpub (Season 3);Bizmos Boxbar (Saison 3);Bar-Tabasse de Bizmo (saison 3);FALSE;FALSE;FALSE
+2010;brawlgar_arena_season_3;Brawl'gar Arena (Season 3);Shlae'gararena (Saison 3);Arène de Castagn’ar (saison 3);FALSE;FALSE;FALSE
+1989;moon_guard;Moon Guard;Mondwache;Garde de la Lune;FALSE;FALSE;FALSE
+1984;the_first_responders;The First Responders;Die Ersthelfer;Guérisseuses;FALSE;FALSE;FALSE
+1975;conjurer_margoss;Conjurer Margoss;Beschwörer Margoss;Adjurateur Margoss;FALSE;FALSE;FALSE
+1948;valarjar;Valarjar;Valarjar;Valarjar;FALSE;FALSE;FALSE
+1947;illidari;Illidari;Illidari;Illidari;FALSE;FALSE;FALSE
+1919;arcane_thirst_valtrois;Arcane Thirst (Valtrois);Arkaner Durst (Valtrois);Soif des Arcanes (Valtrois);FALSE;FALSE;FALSE
+1900;court_of_farondis;Court of Farondis;Farondis' Hofstaat;Cour de Farondis;FALSE;FALSE;FALSE
+1899;moonguard;Moonguard;Mondwache;Garde de la Lune;FALSE;FALSE;FALSE
+1894;the_wardens;The Wardens;Die Wächterinnen;Gardiennes;FALSE;FALSE;FALSE
+1888;jandvik_vrykul;Jandvik Vrykul;Vrykul von Jandvik;Vrykuls de Jandvik;FALSE;FALSE;FALSE
+1883;dreamweavers;Dreamweavers;Die Traumweber;Tisse-Rêves;FALSE;FALSE;FALSE
+1862;arcane_thirst_oculeth;Arcane Thirst (Oculeth);Arkaner Durst (Oculeth);Soif des Arcanes (Oculeth);FALSE;FALSE;FALSE
+1861;arcane_thirst_silgryn_deprecated;Arcane Thirst (Silgryn) DEPRECATED;Arcane Thirst (Silgryn) DEPRECATED;Soif des Arcanes (Silgryn) [PÉRIMÉ];FALSE;TRUE;FALSE
+1860;arcane_thirst_thalyssra;Arcane Thirst (Thalyssra);Arkaner Durst (Thalyssra);Soif des Arcanes (Thalyssra);FALSE;FALSE;FALSE
+1859;the_nightfallen;The Nightfallen;Die Nachtsüchtigen;Souffrenuit;FALSE;FALSE;FALSE
+1850;the_saberstalkers;The Saberstalkers;Die Säbelzahnpirscher;Traquesabres;FALSE;FALSE;FALSE
+1849;order_of_the_awakened;Order of the Awakened;Orden der Erwachten;Ordre des Éveillés;FALSE;FALSE;FALSE
+1848;voljins_headhunters;Vol'jin's Headhunters;Vol'jins Kopfjäger;Chasseurs de têtes de Vol’jin;FALSE;FALSE;FALSE
+1847;hand_of_the_prophet;Hand of the Prophet;Hand des Propheten;Main du prophète;FALSE;FALSE;FALSE
+1828;highmountain_tribe;Highmountain Tribe;Der Hochbergstamm;Tribu de Haut-Roc;FALSE;FALSE;FALSE
+1815;gilnean_survivors;Gilnean Survivors;Gilnearischer Überlebender;Survivants gilnéens;FALSE;FALSE;FALSE
+1741;leorajh;Leorajh;Leorajh;Leorajh;FALSE;FALSE;FALSE
+1740;aeda_brightdawn;Aeda Brightdawn;Aeda Morgenglanz;Aeda Brillaube;FALSE;FALSE;FALSE
+1739;vivianne;Vivianne;Vivianne;Vivianne;FALSE;FALSE;FALSE
+1738;defender_illona;Defender Illona;Beschützerin Illona;Défenseur Illona;FALSE;FALSE;FALSE
+1737;talonpriest_ishaal;Talonpriest Ishaal;Krallenpriester Ishaal;Prêtre de la serre Ishaal;FALSE;FALSE;FALSE
+1736;tormmok;Tormmok;Tormmok;Tormmok;FALSE;FALSE;FALSE
+1735;barracks_bodyguards;Barracks Bodyguards;Kasernenleibwächter;Gardes du corps de caserne;FALSE;FALSE;FALSE
+1733;delvar_ironfist;Delvar Ironfist;Delvar Eisenfaust;Delvar Poing-de-Fer;FALSE;FALSE;FALSE
+1732;steamwheedle_draenor_expedition;Steamwheedle Draenor Expedition;Draenorexpedition des Dampfdruckkartells;Expédition de Gentepression en Draenor;FALSE;FALSE;FALSE
+1731;council_of_exarchs;Council of Exarchs;Exarchenrat;Conseil des exarques;FALSE;FALSE;FALSE
+1711;steamwheedle_preservation_society;Steamwheedle Preservation Society;Werterhaltungsgesellschaft des Dampfdruckkartells;Société de Conservation de Gentepression;FALSE;FALSE;FALSE
+1710;shatari_defense;Sha'tari Defense;Sha'tarverteidigung;Défense sha’tari;FALSE;FALSE;FALSE
+1708;laughing_skull_orcs;Laughing Skull Orcs;Orcs des Lachenden Schädels;Orcs du Crâne-Ricanant;FALSE;FALSE;FALSE
+1691;bizmos_brawlpub_season_2;Bizmo's Brawlpub (Season 2);Bizmos Boxbar (Saison 2);Bar-Tabasse de Bizmo (saison 2);FALSE;FALSE;FALSE
+1690;brawlgar_arena_season_2;Brawl'gar Arena (Season 2);Shlae'gararena (Saison 2);Arène de Castagn’ar (saison 2);FALSE;FALSE;FALSE
+1682;wrynns_vanguard;Wrynn's Vanguard;Wrynns Vorhut;Avant-garde de Wrynn;FALSE;FALSE;FALSE
+1681;voljins_spear;Vol'jin's Spear;Vol'jins Speer;Lance de Vol’jin;FALSE;FALSE;FALSE
+1520;shadowmoon_exiles;Shadowmoon Exiles;Exilanten des Schattenmondklans;Exilés ombrelunes;FALSE;FALSE;FALSE
+1515;arakkoa_outcasts;Arakkoa Outcasts;Ausgestoßene Arakkoa;Parias arakkoa;FALSE;FALSE;FALSE
+1492;emperor_shaohao;Emperor Shaohao;Kaiser Shaohao;Empereur Shaohao;FALSE;FALSE;FALSE
+1445;frostwolf_orcs;Frostwolf Orcs;Frostwolforcs;Orcs loups-de-givre;FALSE;FALSE;FALSE
+1440;darkspear_rebellion;Darkspear Rebellion;Rebellion der Dunkelspeere;Rébellion sombrelance;FALSE;FALSE;FALSE
+1435;shado_pan_assault;Shado-Pan Assault;Shado-Pan-Vorstoß;Assaut des Pandashan;FALSE;FALSE;FALSE
+1419;bizmos_brawlpub_season_1;Bizmo's Brawlpub (Season 1);Bizmos Boxbar (Saison 1);Bar-Tabasse de Bizmo (saison 1);FALSE;FALSE;FALSE
+1388;sunreaver_onslaught;Sunreaver Onslaught;Sonnenhäscheransturm;Assaut des Saccage-Soleil;FALSE;FALSE;FALSE
+1387;kirin_tor_offensive;Kirin Tor Offensive;Offensive der Kirin Tor;Offensive du Kirin Tor;FALSE;FALSE;FALSE
+1376;operation_shieldwall;Operation: Shieldwall;Operation Schildwall;Opération Bouclier;FALSE;FALSE;FALSE
+1375;dominance_offensive;Dominance Offensive;Herrschaftsoffensive;Offensive Domination;FALSE;FALSE;FALSE
+1374;brawlgar_arena_season_1;Brawl'gar Arena (Season 1);Shlae'gararena (Saison 1);Arène de Castagn’ar (saison 1);FALSE;FALSE;FALSE
+1359;the_black_prince;The Black Prince;Der Schwarze Prinz;Prince noir;FALSE;FALSE;FALSE
+1358;nat_pagle;Nat Pagle;Nat Pagle;Nat Pagle;FALSE;FALSE;FALSE
+1357;nomi;Nomi;Nomi;Nomi;FALSE;FALSE;FALSE
+1353;tushui_pandaren;Tushui Pandaren;Die Tushui;Pandarens tushui;FALSE;FALSE;FALSE
+1352;huojin_pandaren;Huojin Pandaren;Die Huojin;Pandarens huojin;FALSE;FALSE;FALSE
+1351;the_brewmasters;The Brewmasters;Die Braumeister;Maîtres brasseurs;FALSE;FALSE;FALSE
+1345;the_lorewalkers;The Lorewalkers;Die Lehrensucher;Chroniqueurs;FALSE;FALSE;FALSE
+1341;the_august_celestials;The August Celestials;Die Himmlischen Erhabenen;Astres vénérables;FALSE;FALSE;FALSE
+1337;the_klaxxi;The Klaxxi;Die Klaxxi;Klaxxi;FALSE;FALSE;FALSE
+1302;the_anglers;The Anglers;Die Angler;Hameçonneurs;FALSE;FALSE;FALSE
+1283;farmer_fung;Farmer Fung;Bauer Fung;Fermier Fung;FALSE;FALSE;FALSE
+1282;fish_fellreed;Fish Fellreed;Fischi Rohrroder;Marée Pelage de Roseau;FALSE;FALSE;FALSE
+1281;gina_mudclaw;Gina Mudclaw;Gina Lehmkrall;Gina Griffe de Tourbe;FALSE;FALSE;FALSE
+1280;tina_mudclaw;Tina Mudclaw;Tina Lehmkrall;Tina Griffe de Tourbe;FALSE;FALSE;FALSE
+1279;haohan_mudclaw;Haohan Mudclaw;Haohan Lehmkrall;Haohan Griffe de Tourbe;FALSE;FALSE;FALSE
+1278;sho;Sho;Sho;Sho;FALSE;FALSE;FALSE
+1277;chee_chee;Chee Chee;Chi-Chi;Chii Chii;FALSE;FALSE;FALSE
+1276;old_hillpaw;Old Hillpaw;Der alte Hügelpranke;Vieux Patte des Hauts;FALSE;FALSE;FALSE
+1275;ella;Ella;Ella;Ella;FALSE;FALSE;FALSE
+1273;jogu_the_drunk;Jogu the Drunk;Jogu der Betrunkene;Jogu l’Ivrogne;FALSE;FALSE;FALSE
+1272;the_tillers;The Tillers;Die Ackerbauern;Laboureurs;FALSE;FALSE;FALSE
+1271;order_of_the_cloud_serpent;Order of the Cloud Serpent;Orden der Wolkenschlange;L’ordre du Serpent-nuage;FALSE;FALSE;FALSE
+1270;shado_pan;Shado-Pan;Shado-Pan;Pandashan;FALSE;FALSE;FALSE
+1269;golden_lotus;Golden Lotus;Goldener Lotus;Lotus doré;FALSE;FALSE;FALSE
+1242;pearlfin_jinyu;Pearlfin Jinyu;Jinyu der Perlflossen;Jinyu de Nageperle;FALSE;FALSE;FALSE
+1228;forest_hozen;Forest Hozen;Wald-Ho-zen;Hozen des forêts;FALSE;FALSE;FALSE
+1216;shang_xis_academy;Shang Xi's Academy;Akademie des Shang Xi;Académie de Shang Xi;FALSE;FALSE;FALSE
+1204;avengers_of_hyjal;Avengers of Hyjal;Rächer des Hyjal;Vengeurs d’Hyjal;FALSE;FALSE;FALSE
+1178;hellscreams_reach;Hellscream's Reach;Höllschreis Hand;Poing de Hurlenfer;FALSE;FALSE;FALSE
+1177;baradins_wardens;Baradin's Wardens;Wächter von Baradin;Gardiens de Baradin;FALSE;FALSE;FALSE
+1174;wildhammer_clan;Wildhammer Clan;Wildhammerklan;Clan Marteau-Hardi;FALSE;FALSE;FALSE
+1173;ramkahen;Ramkahen;Ramkahen;Ramkahen;FALSE;FALSE;FALSE
+1172;dragonmaw_clan;Dragonmaw Clan;Drachenmalklan;Clan Gueule-de-dragon;FALSE;FALSE;FALSE
+1171;therazane;Therazane;Therazane;Therazane;FALSE;FALSE;FALSE
+1169;guild2;Guild;Gilde;Guilde;FALSE;FALSE;FALSE
+1168;guild1;Guild;Gilde;Guilde;FALSE;FALSE;FALSE
+1158;guardians_of_hyjal;Guardians of Hyjal;Wächter des Hyjal;Gardiens d'Hyjal;FALSE;FALSE;FALSE
+1156;the_ashen_verdict;The Ashen Verdict;Das Äscherne Verdikt;Verdict des cendres;FALSE;FALSE;FALSE
+1135;the_earthen_ring;The Earthen Ring;Der Irdene Ring;Cercle terrestre;FALSE;FALSE;FALSE
+1134;gilneas;Gilneas;Gilneas;Gilnéas;FALSE;FALSE;FALSE
+1133;bilgewater_cartel_old;Bilgewater Cartel;Bilgewasserkartell;Cartel Baille-Fonds;FALSE;FALSE;FALSE
+1126;the_frostborn;The Frostborn;Die Frosterben;Givre-nés;FALSE;FALSE;FALSE
+1124;the_sunreavers;The Sunreavers;Die Sonnenhäscher;Saccage-Soleil;FALSE;FALSE;FALSE
+1119;the_sons_of_hodir;The Sons of Hodir;Die Söhne Hodirs;Fils de Hodir;FALSE;FALSE;FALSE
+1117;sholazar_basin;Sholazar Basin;Sholazarbecken;Bassin de Sholazar;FALSE;FALSE;FALSE
+1106;argent_crusade;Argent Crusade;Argentumkreuzzug;Croisade d'argent;FALSE;FALSE;FALSE
+1105;the_oracles;The Oracles;Die Orakel;Oracles;FALSE;FALSE;FALSE
+1104;frenzyheart_tribe;Frenzyheart Tribe;Stamm der Wildherzen;Tribu Frénécœur;FALSE;FALSE;FALSE
+1098;knights_of_the_ebon_blade;Knights of the Ebon Blade;Ritter der Schwarzen Klinge;Chevaliers de la Lame d'ébène;FALSE;FALSE;FALSE
+1094;the_silver_covenant;The Silver Covenant;Der Silberbund;Concordat argenté;FALSE;FALSE;FALSE
+1091;the_wyrmrest_accord;The Wyrmrest Accord;Der Wyrmruhpakt;Accord du Repos du ver;FALSE;FALSE;FALSE
+1090;kirin_tor;Kirin Tor;Kirin Tor;Kirin Tor;FALSE;FALSE;FALSE
+1085;warsong_offensive;Warsong Offensive;Kriegshymnenoffensive;Offensive chanteguerre;FALSE;FALSE;FALSE
+1077;shattered_sun_offensive;Shattered Sun Offensive;Offensive der Zerschmetterten Sonne;Opération Soleil brisé;FALSE;FALSE;FALSE
+1073;the_kaluak;The Kalu'ak;Die Kalu'ak;Kalu'aks;FALSE;FALSE;FALSE
+1068;explorers_league;Explorers' League;Forscherliga;Ligue des explorateurs;FALSE;FALSE;FALSE
+1067;the_hand_of_vengeance;The Hand of Vengeance;Die Hand der Rache;Main de la vengeance;FALSE;FALSE;FALSE
+1064;the_taunka;The Taunka;Die Taunka;Taunkas;FALSE;FALSE;FALSE
+1052;horde_expedition;Horde Expedition;Expedition der Horde;Expédition de la Horde;FALSE;FALSE;FALSE
+1050;valiance_expedition;Valiance Expedition;Expedition Valianz;Expédition de la Bravoure;FALSE;FALSE;FALSE
+1038;ogrila;Ogri'la;Ogri'la;Ogri'la;FALSE;FALSE;FALSE
+1037;alliance_vanguard;Alliance Vanguard;Vorhut der Allianz;Avant-garde de l'Alliance;FALSE;FALSE;FALSE
+1031;shatari_skyguard;Sha'tari Skyguard;Himmelswache der Sha'tari;Garde-ciel sha'tari;FALSE;FALSE;FALSE
+1015;netherwing;Netherwing;Netherschwingen;Aile-du-Néant;FALSE;FALSE;FALSE
+1012;ashtongue_deathsworn;Ashtongue Deathsworn;Die Todeshörigen;Ligemort cendrelangue;FALSE;FALSE;FALSE
+1011;lower_city;Lower City;Unteres Viertel;Ville basse;FALSE;FALSE;FALSE
+990;the_scale_of_the_sands;The Scale of the Sands;Die Wächter der Sande;Balance des sables;FALSE;FALSE;FALSE
+989;keepers_of_time;Keepers of Time;Hüter der Zeit;Gardiens du Temps;FALSE;FALSE;FALSE
+978;kurenai;Kurenai;Kurenai;Kurenaï;FALSE;FALSE;FALSE
+970;sporeggar;Sporeggar;Sporeggar;Sporeggar;FALSE;FALSE;FALSE
+967;the_violet_eye;The Violet Eye;Das Violette Auge;L'Œil pourpre;FALSE;FALSE;FALSE
+947;thrallmar;Thrallmar;Thrallmar;Thrallmar;FALSE;FALSE;FALSE
+946;honor_hold;Honor Hold;Ehrenfeste;Bastion de l'Honneur;FALSE;FALSE;FALSE
+942;cenarion_expedition;Cenarion Expedition;Expedition des Cenarius;Expédition cénarienne;FALSE;FALSE;FALSE
+941;the_maghar;The Mag'har;Die Mag'har;Mag'har;FALSE;FALSE;FALSE
+936;shattrath_city;Shattrath City;Shattrath;Shattrath;FALSE;FALSE;FALSE
+935;the_shatar;The Sha'tar;Die Sha'tar;Sha'tar;FALSE;FALSE;FALSE
+934;the_scryers;The Scryers;Die Seher;Clairvoyants;FALSE;FALSE;FALSE
+933;the_consortium;The Consortium;Das Konsortium;Consortium;FALSE;FALSE;FALSE
+932;the_aldor;The Aldor;Die Aldor;L'Aldor;FALSE;FALSE;FALSE
+930;exodar;Exodar;Die Exodar;Exodar;FALSE;FALSE;FALSE
+922;tranquillien;Tranquillien;Tristessa;Tranquillien;FALSE;FALSE;FALSE
+911;silvermoon_city;Silvermoon City;Silbermond;Lune-d’Argent;FALSE;FALSE;FALSE
+910;brood_of_nozdormu;Brood of Nozdormu;Brut Nozdormus;Progéniture de Nozdormu;FALSE;FALSE;FALSE
+909;darkmoon_faire;Darkmoon Faire;Dunkelmond-Jahrmarkt;Foire de Sombrelune;FALSE;FALSE;FALSE
+892;horde_forces;Horde Forces;Streitkräfte der Horde;Forces de la Horde;FALSE;FALSE;FALSE
+891;alliance_forces;Alliance Forces;Streitkräfte der Allianz;Forces de l'Alliance;FALSE;FALSE;FALSE
+890;silverwing_sentinels;Silverwing Sentinels;Silberschwingen;Sentinelles d'Aile-argent;FALSE;FALSE;FALSE
+889;warsong_outriders;Warsong Outriders;Kriegshymnenklan;Voltigeurs Chanteguerre;FALSE;FALSE;FALSE
+809;shendralar;Shen'dralar;Shen'dralar;Shen'dralar;FALSE;FALSE;FALSE
+749;hydraxian_waterlords;Hydraxian Waterlords;Hydraxianer;Hydraxiens;FALSE;FALSE;FALSE
+730;stormpike_guard;Stormpike Guard;Sturmlanzengarde;Garde Foudrepique;FALSE;FALSE;FALSE
+729;frostwolf_clan;Frostwolf Clan;Frostwolfklan;Clan Loup-de-Givre;FALSE;FALSE;FALSE
+609;cenarion_circle;Cenarion Circle;Zirkel des Cenarius;Cercle cénarien;FALSE;FALSE;FALSE
+589;wintersaber_trainers;Wintersaber Trainers;Wintersäblerausbilder;Éleveurs de sabres-d'hiver;FALSE;FALSE;FALSE
+577;everlook;Everlook;Ewige Warte;Long-Guet;FALSE;FALSE;FALSE
+576;timbermaw_hold;Timbermaw Hold;Holzschlundfeste;Grumegueules;FALSE;FALSE;FALSE
+530;darkspear_trolls;Darkspear Trolls;Dunkelspeertrolle;Trolls sombrelances;FALSE;FALSE;FALSE
+529;argent_dawn;Argent Dawn;Argentumdämmerung;Aube d'argent;FALSE;FALSE;FALSE
+510;the_defilers;The Defilers;Die Entweihten;Profanateurs;FALSE;FALSE;FALSE
+509;the_league_of_arathor;The League of Arathor;Der Bund von Arathor;Ligue d'Arathor;FALSE;FALSE;FALSE
+470;ratchet;Ratchet;Ratschet;Cabestan;FALSE;FALSE;FALSE
+469;alliance;Alliance;Allianz;Alliance;FALSE;FALSE;FALSE
+369;gadgetzan;Gadgetzan;Gadgetzan;Gadgetzan;FALSE;FALSE;FALSE
+349;ravenholdt;Ravenholdt;Rabenholdt;Ravenholdt;FALSE;FALSE;FALSE
+270;zandalar_tribe;Zandalar Tribe;Stamm der Zandalari;Tribu Zandalar;FALSE;FALSE;FALSE
+169;steamwheedle_cartel1;Steamwheedle Cartel;Dampfdruckkartell;Cartel Gentepression;FALSE;FALSE;FALSE
+93;magram_clan_centaur;Magram Clan Centaur;Magramklan;Centaures (Magram);FALSE;FALSE;FALSE
+92;gelkis_clan_centaur;Gelkis Clan Centaur;Gelkisklan;Centaures (Gelkis);FALSE;FALSE;FALSE
+87;bloodsail_buccaneers;Bloodsail Buccaneers;Blutsegelbukaniere;Voile sanglante;FALSE;FALSE;FALSE
+81;thunder_bluff;Thunder Bluff;Donnerfels;Pitons-du-Tonnerre;FALSE;FALSE;FALSE
+76;orgrimmar;Orgrimmar;Orgrimmar;Orgrimmar;FALSE;FALSE;FALSE
+72;stormwind;Stormwind;Sturmwind;Hurlevent;FALSE;FALSE;FALSE
+70;syndicate;Syndicate;Syndikat;Syndicat;FALSE;FALSE;FALSE
+69;darnassus;Darnassus;Darnassus;Darnassus;FALSE;FALSE;FALSE
+68;undercity;Undercity;Unterstadt;Fossoyeuse;FALSE;FALSE;FALSE
+67;horde;Horde;Horde;Horde;FALSE;FALSE;FALSE
+59;thorium_brotherhood;Thorium Brotherhood;Thoriumbruderschaft;Confrérie du thorium;FALSE;FALSE;FALSE
+54;gnomeregan;Gnomeregan;Gnomeregan;Gnomeregan;FALSE;FALSE;FALSE
+47;ironforge;Ironforge;Eisenschmiede;Forgefer;FALSE;FALSE;FALSE
+21;booty_bay;Booty Bay;Beutebucht;Baie-du-Butin;FALSE;FALSE;FALSE

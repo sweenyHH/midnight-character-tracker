@@ -1,0 +1,21 @@
+class CurrencyCatalogDefinition:
+
+    def __init__(
+        self,
+        currency_id,
+        key,
+
+        english_name,
+        german_name,
+        french_name,
+
+        featured=False,
+    ):
+        self.currency_id = currency_id
+        self.key = key
+
+        self.english_name = english_name
+        self.german_name = german_name
+        self.french_name = french_name
+
+        self.featured = featured
