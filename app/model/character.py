@@ -34,6 +34,15 @@ class Character:
         self.equipped_item_level = None
         self.pvp_item_level = None
 
+        # Mythic+   
+        self.mythic_score = None
+
+        # PvP
+        self.honor_level = None
+        self.honor_progress = None
+        self.honor_progress_max = None
+      
+
         # XP
         self.xp = None
         self.xp_to_level = None

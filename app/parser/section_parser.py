@@ -69,4 +69,80 @@ def handle_section(line, current_section, character):
 
         return True
 
+# -------------------------
+# MYTHIC+
+# -------------------------
+
+    if current_section == "mythic_plus":
+
+        if line.startswith(
+            "Overall Score:"
+        ):
+
+            try:
+                character.mythic_score = int(
+                    line.split(
+                        ":",
+                        1
+                    )[1].strip()
+                )
+
+            except ValueError:
+                pass
+
+            return True
+
+# -------------------------
+# PVP
+# -------------------------
+
+    if current_section == "pvp":
+
+        if line.startswith(
+            "Honor Level:"
+        ):
+
+            try:
+
+                character.honor_level = int(
+                    line.split(
+                        ":",
+                        1
+                    )[1].strip()
+                )
+
+            except ValueError:
+                pass
+
+            return True
+
+        if line.startswith(
+            "Honor Progress:"
+        ):
+
+            try:
+
+                value = line.split(
+                    ":",
+                    1
+                )[1].strip()
+
+                current, maximum = value.split(
+                    "/",
+                    1
+                )
+
+                character.honor_progress = int(
+                    current
+                )
+
+                character.honor_progress_max = int(
+                    maximum
+                )
+
+            except ValueError:
+                pass
+
+            return True
+
     return False

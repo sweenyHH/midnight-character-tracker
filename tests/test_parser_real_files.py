@@ -29,6 +29,20 @@ def test_parse_full_character_item_levels():
     assert character.equipped_item_level == 278.94
     assert character.pvp_item_level == 278.94
 
+def test_parse_mythic_and_pvp_progress():
+
+    character = parse_txt(
+        str(DATA_DIR / "full_character.txt")
+    )
+
+    assert character.mythic_score == 0
+
+    assert character.honor_level == 19
+
+    assert character.honor_progress == 4604
+
+    assert character.honor_progress_max == 8800
+
 
 def test_parse_gold_from_real_file():
 
@@ -254,4 +268,17 @@ def test_item_currency_identifiers_are_populated():
         == "item"
     )
 
+def test_parse_mythic_and_pvp_progress_french():
+
+    character = parse_txt(
+        str(DATA_DIR / "french_character.txt")
+    )
+
+    assert character.mythic_score == 2634
+
+    assert character.honor_level == 19
+
+    assert character.honor_progress == 4604
+
+    assert character.honor_progress_max == 8800
 

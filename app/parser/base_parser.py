@@ -109,6 +109,14 @@ def parse_txt(file_path):
             current_section = "combat_ratings"
             continue
 
+        if line == "== Mythic+ ==":
+            current_section = "mythic_plus"
+            continue
+
+        if line == "== PvP ==":
+            current_section = "pvp"
+            continue
+
 # -------------------------------
 # GROUP HEADERS (Currencies)
 # -------------------------------
