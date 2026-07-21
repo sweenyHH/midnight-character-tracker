@@ -1,14 +1,14 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget
 
 from .detail.tracking_tab import TrackingTab
-from .detail.currencies_tab import CurrenciesTab
 
-from .detail.stats_tab import StatsTab
+from app.ui.detail.stats.stats_tab import StatsTab
 from .detail.reputation_tab import ReputationTab
 
-from .detail.overview_tab import OverviewTab
+from app.ui.detail.overview.overview_tab import OverviewTab
 from app.utils.logger import logger
 from app.localization.ui_strings import get_ui_string
+from app.ui.detail.currencies.currencies_tab import CurrenciesTab
 
 
 class DetailView(QWidget):
