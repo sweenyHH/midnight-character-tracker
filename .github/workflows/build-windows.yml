@@ -35,6 +35,7 @@ jobs:
           --name WarbandManager `
           --icon assets/mct_icon.ico `
           --add-data "assets;assets" `
+          --add-data "app/game_data;app/game_data" `
           main.py
 
     - name: Upload Artifact

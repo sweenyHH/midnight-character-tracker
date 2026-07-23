@@ -22,7 +22,7 @@ SolidCompression=yes
 WizardStyle=modern
 
 [Files]
-Source: "Warband Manager.exe"; DestDir: "{app}"
+Source: "WarbandManager.exe"; DestDir: "{app}"
 Source: "_internal\*"; DestDir: "{app}\_internal"; Flags: recursesubdirs createallsubdirs
 
 [Tasks]
