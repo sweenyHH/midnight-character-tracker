@@ -22,7 +22,8 @@ class MainWindow(QMainWindow):
         self.setObjectName("mainWindow")
 
         self.setWindowTitle(APP_NAME)
-        self.setFixedSize(1800, 900)
+        self.resize(1800, 900)
+        self.setMinimumSize(1400, 800)
 
         logger.info("MainWindow initialized")
 
